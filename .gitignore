@@ -21,7 +21,7 @@ Thumbs.db
 [Dd]ebug*/
 *.lib
 *.sbr
-obj/Debug/DesktopApp.*
+Compile/DesktopApp.*
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*

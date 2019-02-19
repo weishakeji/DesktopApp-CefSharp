@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>Compile\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -382,6 +382,9 @@
     <Content Include="WebPage\Scripts\DeskApp.js" />
     <Content Include="WebPage\Scripts\jquery-1.9.1.min.js" />
     <Content Include="WebPage\test.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Compile\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
