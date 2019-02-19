@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webKitBrowser1 = new WebKit.WebKitBrowser();
+            this.webKitBrowser = new WebKit.WebKitBrowser();
             this.SuspendLayout();
             // 
-            // webKitBrowser1
+            // webKitBrowser
             // 
-            this.webKitBrowser1.BackColor = System.Drawing.Color.White;
-            this.webKitBrowser1.Location = new System.Drawing.Point(200, 210);
-            this.webKitBrowser1.Name = "webKitBrowser1";
-            this.webKitBrowser1.Size = new System.Drawing.Size(319, 255);
-            this.webKitBrowser1.TabIndex = 0;
-            this.webKitBrowser1.Url = null;
+            this.webKitBrowser.BackColor = System.Drawing.Color.White;
+            this.webKitBrowser.Location = new System.Drawing.Point(25, 29);
+            this.webKitBrowser.Name = "webKitBrowser";
+            this.webKitBrowser.Size = new System.Drawing.Size(319, 255);
+            this.webKitBrowser.TabIndex = 0;
+            this.webKitBrowser.Url = null;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 534);
-            this.Controls.Add(this.webKitBrowser1);
+            this.Controls.Add(this.webKitBrowser);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -55,7 +55,7 @@
 
         #endregion
 
-        private WebKit.WebKitBrowser webKitBrowser1;
+        private WebKit.WebKitBrowser webKitBrowser;
 
     }
 }
