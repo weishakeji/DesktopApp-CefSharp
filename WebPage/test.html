@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/DeskApp.js"></script>
+</head>
+<body>
+    机器码：<span class="mechcode"></span>
+    <br />
+    useragent：<span class="useragent"></span>
+    <hr />
+    <div class="button">
+        <input name="window_max" type="button" value="最大化窗体">
+        <input name="window_normal" type="button" value="还原窗体">
+        <input name="window_center" type="button" value="窗体居中">        
+        <input name="window_min" type="button" value="最小化窗体">
+        <br />
+        <input name="window_focus" type="button" value="设为最顶层">
+        <input name="window_blur" type="button" value="最消最顶层">
+        <br />
+        <input name="window_close" type="button" value="关闭窗体">
+        <input name="window_exit" type="button" value="退出应用">
+        <hr />
+        <input name="window_full" type="button" value="全屏">
+        <input name="window_normal" type="button" value="还原">
+        <input name="window_toggle" type="button" value="全屏/还原">
+        <hr />
+    </div>
+    <input name="" type="text" id="message">
+    <input name="alert" type="button" value="弹出消息">
+    <br />
+    <input name="window_size" type="button" value="重设窗体大小">
+    <br />
+    <br />
+    <hr />
+    每隔10秒，窗体自动获取焦点,设置自身到最顶层,数秒:<span class="second">0</span>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $("span.useragent").text(navigator.userAgent);
+        $("span.mechcode").text(deskapp.mechcode());
+        //
+        $("div.button input").click(function () {
+            var name = $(this).attr("name");
+            deskapp.window.event(name);
+        });
+        //提示信息
+        $("input[name=alert]").click(function () {
+            var message = $("input[id=message]").val();
+            deskapp.alert(message);
+        });
+        //重设窗体大小
+        $("input[name=window_size]").click(function () {
+            var message = $("input[id=message]").val();
+            deskapp.window.size(600, 300);
+
+        });
+    });
+	//设置窗体到最顶层
+    var time = 0;
+    var t = setInterval(function () {
+        $(".second").text(++time);
+		if(time%10==0)deskapp.window.focus();
+    }, 1000);
+
+</script>
+</html>
