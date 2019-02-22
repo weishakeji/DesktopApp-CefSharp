@@ -53,3 +53,8 @@
 [0221/141245.887:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)
 [0221/141253.964:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)
 [0222/095927.778:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)
+[0222/130352.074:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)
+[0222/130745.724:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)
+[0222/131312.888:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)
+[0222/131358.823:INFO:CONSOLE(43)] "Frame with URL 'https://open.weixin.qq.com/connect/qrconnect?appid=wx32249704a76b8b61&redirect_uri=http%3A%2F%2Fwww.168fff.cn%2Fweixinweblogin.ashx&response_type=code&scope=snsapi_login&state=4&style=black#wechat_redirect' attempted to navigate its top-level window with URL 'http://www.168fff.cn/student/index.ashx#'. Navigating the top-level window from a cross-origin iframe will soon require that the iframe has received a user gesture. See https://www.chromestatus.com/features/5851021045661696.", source: https://open.weixin.qq.com/connect/qrconnect?appid=wx32249704a76b8b61&redirect_uri=http%3A%2F%2Fwww.168fff.cn%2Fweixinweblogin.ashx&response_type=code&scope=snsapi_login&state=4&style=black (43)
+[0222/131512.076:INFO:CONSOLE(10)] "Uncaught SyntaxError: Invalid or unexpected token", source: http://www.168fff.cn/ (10)

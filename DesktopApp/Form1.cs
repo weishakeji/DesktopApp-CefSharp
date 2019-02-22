@@ -25,6 +25,9 @@ namespace DesktopApp
             var setting = new CefSettings();
             string useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36";
             //setting.UserAgent = useragent + string.Format(" Weishakeji - DeskApp({0})", getCpu());
+            setting.Locale = "zh-CN";
+            setting.AcceptLanguageList = "zh-CN";
+
             Cef.Initialize(setting);
             //初始
             string appPath = System.Environment.CurrentDirectory;
@@ -37,7 +40,12 @@ namespace DesktopApp
             //browser.FrameLoadEnd += Browser_FrameLoadEnd;
             //browser.TitleChanged += Browser_TitleChanged;
 
-            //browser.LifeSpanHandler = new OpenPageSelf();
+            //是否在当前窗体打开链接
+            browser.LifeSpanHandler = new Handler.OpenSelf();
+            //禁止右键菜单
+            browser.MenuHandler = new Handler.ContextMenu();
+            //文件下载
+            browser.DownloadHandler = new Handler.Download();
         }
     }
 }
