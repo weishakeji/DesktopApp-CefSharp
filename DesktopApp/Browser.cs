@@ -3,6 +3,7 @@ using CefSharp.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,9 @@ namespace DesktopApp
                 browser = new ChromiumWebBrowser();
             else
                 browser = new ChromiumWebBrowser(url);
+            //事件
+            //当浏览器标题变动时
+            browser.TitleChanged += Browser_TitleChanged;
             return browser;
         }
         /// <summary>
@@ -41,5 +45,53 @@ namespace DesktopApp
         {
             return Generate(string.Empty);
         }
+
+        #region 事件
+        private static void Browser_TitleChanged(object sender, TitleChangedEventArgs e)
+        {
+            //当前浏览器对象
+            ChromiumWebBrowser cwb = (ChromiumWebBrowser)sender;
+            System.Windows.Forms.Form form = null;
+            System.Windows.Forms.Control parent = cwb.Parent;
+            while(!(parent is System.Windows.Forms.Form)){
+                parent = cwb.Parent;
+            }
+            form = (System.Windows.Forms.Form)parent;
+            //= cwb.Parent;
+            //传递过来的js函数
+            string title = e.Title;
+            if (title.IndexOf("@") >= 0)
+                title = title.Substring(title.IndexOf("@") + 1);
+            //
+            
+            JsEvent.Window window = new JsEvent.Window(form);
+            Type type = window.GetType();
+            //获取方法名与参数集合
+            string methodName = title;
+            string[] parameters = null;
+            if (title.IndexOf(":") >= 0)
+            {
+                methodName = title.Substring(title.IndexOf("@") + 1, title.IndexOf(":"));
+                string strpara = title.Substring(title.IndexOf(":") + 1);
+                parameters = strpara.Split(',');
+            }
+            //获取当前对象的所在方法
+            MethodInfo[] info = type.GetMethods();
+            for (int i = 0; i < info.Length; i++)
+            {
+                var md = info[i];
+                //如果传递的方法名与对象中的方法名相同
+                if (md.Name == methodName)
+                {
+                    ParameterInfo[] paramInfos = md.GetParameters();
+                    if (paramInfos.Length == (parameters == null ? 0 : parameters.Length))
+                    {
+                        md.Invoke(window, parameters);
+                        break;
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }
