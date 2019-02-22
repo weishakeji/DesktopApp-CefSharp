@@ -3,6 +3,7 @@ Thumbs.db
 /bin/Debug/GPUCache
 /bin/Debug/GPUCache/*.*
 .vs/
+obj/*.*
 #Ignore files built by Visual Studio
 *.pdb
 *.obj
@@ -29,6 +30,7 @@ Thumbs.db
 *.lib
 *.sbr
 obj/
+obj/*.*
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
