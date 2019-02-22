@@ -21,18 +21,19 @@ namespace DesktopApp
         public ChromiumWebBrowser browser;
         public void InitBrowser()
         {
-            //设置
-            var setting = new CefSettings();
-            string useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36";
-            //setting.UserAgent = useragent + string.Format(" Weishakeji - DeskApp({0})", getCpu());
-            setting.Locale = "zh-CN";
-            setting.AcceptLanguageList = "zh-CN";
+            ////设置
+            //var setting = new CefSettings();
+            //string useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36";
+            //setting.UserAgent = useragent + string.Format(" Weishakeji - DeskApp({0})", Handler.Client.CPUCode);
+            //setting.Locale = "zh-CN";
+            //setting.AcceptLanguageList = "zh-CN";
 
-            Cef.Initialize(setting);
+            //Cef.Initialize(setting);
             //初始
             string appPath = System.Environment.CurrentDirectory;
             string url = appPath + "\\..\\WebPage\\test.html";
-            browser = new ChromiumWebBrowser(url);
+            browser = Browser.Generate(url);
+            //browser.Load(url);
             //browser = new ChromiumWebBrowser("http://www.168fff.cn");
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
