@@ -33,6 +33,8 @@ _ReSharper*/
 #Nuget packages folder
 packages/
 /bin/Debug/DesktopApp.*
+/bin/Debug/debug.log
+/bin/Debug/GPUCache/*.*
 
 ~$*.*
 /*.suo
