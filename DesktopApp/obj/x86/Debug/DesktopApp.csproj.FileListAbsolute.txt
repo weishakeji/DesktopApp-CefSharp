@@ -1,0 +1,15 @@
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\obj\x86\Debug\DesktopApp.Properties.Resources.resources
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\obj\x86\Debug\DesktopApp.csproj.GenerateResource.Cache
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\bin\Debug\DesktopApp.exe.config
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\bin\Debug\DesktopApp.exe
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\bin\Debug\DesktopApp.pdb
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\bin\Debug\CefSharp.Core.dll
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\bin\Debug\CefSharp.dll
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\bin\Debug\CefSharp.WinForms.dll
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\obj\x86\Debug\DesktopApp.csproj.CoreCompileInputs.cache
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\obj\x86\Debug\DesktopApp.csproj.CopyComplete
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\obj\x86\Debug\DesktopApp.exe
+E:\SourceCode\01_LearningSystem\DesktopApp\DesktopApp\obj\x86\Debug\DesktopApp.pdb
+E:\SourceCode\01_LearningSystem\DesktopApp\bin\Debug\DesktopApp.exe.config
+E:\SourceCode\01_LearningSystem\DesktopApp\bin\Debug\DesktopApp.exe
+E:\SourceCode\01_LearningSystem\DesktopApp\bin\Debug\DesktopApp.pdb
