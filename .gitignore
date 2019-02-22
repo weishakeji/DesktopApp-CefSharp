@@ -1,5 +1,8 @@
 ﻿#Ignore thumbnails created by Windows
 Thumbs.db
+/bin/Debug/GPUCache
+/bin/Debug/GPUCache/*.*
+.vs/
 #Ignore files built by Visual Studio
 *.pdb
 *.obj
