@@ -15,6 +15,7 @@ namespace DesktopApp
         /// <summary>
         /// 生成浏览器对象
         /// </summary>
+        /// <param name="url">网址</param>
         /// <returns></returns>
         public static ChromiumWebBrowser Generate(string url)
         {

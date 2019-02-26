@@ -11,9 +11,9 @@ using CefSharp.WinForms;
 
 namespace DesktopApp
 {
-    public partial class Form1 : Form
+    public partial class DebugForm : Form
     {
-        public Form1()
+        public DebugForm()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();

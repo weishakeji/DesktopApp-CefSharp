@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopApp", "DesktopApp\DesktopApp.csproj", "{696A8BFE-A6D9-43A3-98F5-A863CDA9A26B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8E1C1319-9C7F-4BDC-90E2-B9B381D685EA}"
@@ -11,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{8E1C1319-9C7
 		Lib\CefSharp.dll = Lib\CefSharp.dll
 		Lib\CefSharp.WinForms.dll = Lib\CefSharp.WinForms.dll
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setup", "Setup\Setup.csproj", "{C0D277AC-7FFC-4E6D-A711-7D4C391A0BC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +22,10 @@ Global
 		{696A8BFE-A6D9-43A3-98F5-A863CDA9A26B}.Debug|x86.Build.0 = Debug|x86
 		{696A8BFE-A6D9-43A3-98F5-A863CDA9A26B}.Release|x86.ActiveCfg = Release|x86
 		{696A8BFE-A6D9-43A3-98F5-A863CDA9A26B}.Release|x86.Build.0 = Release|x86
+		{C0D277AC-7FFC-4E6D-A711-7D4C391A0BC6}.Debug|x86.ActiveCfg = Debug|x86
+		{C0D277AC-7FFC-4E6D-A711-7D4C391A0BC6}.Debug|x86.Build.0 = Debug|x86
+		{C0D277AC-7FFC-4E6D-A711-7D4C391A0BC6}.Release|x86.ActiveCfg = Release|x86
+		{C0D277AC-7FFC-4E6D-A711-7D4C391A0BC6}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
