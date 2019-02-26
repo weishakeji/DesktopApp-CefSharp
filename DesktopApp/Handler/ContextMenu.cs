@@ -31,6 +31,21 @@ namespace DesktopApp.Handler
 
         public bool OnContextMenuCommand(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, CefMenuCommand commandId, CefEventFlags eventFlags)
         {
+            //当前浏览器对象，通过它获取所在的Form窗体
+            ChromiumWebBrowser cwb = (ChromiumWebBrowser)browserControl;
+            System.Windows.Forms.Form form = null;
+            System.Windows.Forms.Control parent = cwb.Parent;
+            while (!(parent is System.Windows.Forms.Form))            
+                parent = cwb.Parent;            
+            form = (System.Windows.Forms.Form)parent;
+            //处理右键事件
+            int comid = (int)commandId;
+            if (comid == 221)
+            {
+                AboutForm about = new AboutForm();
+                //about.Parent = form;
+                about.ShowDialog();
+            }
             return false;
         }
 

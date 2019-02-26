@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Setup
 {
-    public partial class Form1 : Form
+    public partial class SetupForm : Form
     {
-        public Form1()
+        public SetupForm()
         {
             InitializeComponent();
         }

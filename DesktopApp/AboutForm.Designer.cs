@@ -1,6 +1,6 @@
-﻿namespace Setup
+﻿namespace DesktopApp
 {
-    partial class Form1
+    partial class AboutForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // AboutForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(384, 162);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AboutForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

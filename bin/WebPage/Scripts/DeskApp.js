@@ -55,8 +55,8 @@
     }
     //禁止右键与文本选取
     if (deskapp.isexist()) {
-        document.oncontextmenu = new Function('event.returnValue=false;');
-        document.onselectstart = new Function('event.returnValue=false;');
+        //document.oncontextmenu = new Function('event.returnValue=false;');
+        //document.onselectstart = new Function('event.returnValue=false;');
     }
     //赋为全局变量
     window.deskapp = deskapp;
