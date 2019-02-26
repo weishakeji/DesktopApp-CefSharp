@@ -39,7 +39,7 @@
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form1";
+            this.Text = "AboutForm";
             this.ResumeLayout(false);
 
         }

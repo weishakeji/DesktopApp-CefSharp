@@ -29,6 +29,8 @@ namespace DesktopApp.Handler
             
         }
 
+        //关于我们的窗体
+        private AboutForm aboutForm = null;
         public bool OnContextMenuCommand(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, CefMenuCommand commandId, CefEventFlags eventFlags)
         {
             //当前浏览器对象，通过它获取所在的Form窗体
@@ -42,9 +44,11 @@ namespace DesktopApp.Handler
             int comid = (int)commandId;
             if (comid == 221)
             {
-                AboutForm about = new AboutForm();
-                //about.Parent = form;
-                about.ShowDialog();
+                if(aboutForm==null || aboutForm.IsDisposed)
+                    aboutForm = new AboutForm();
+                aboutForm.TopMost = true;
+                aboutForm.ShowDialog();
+                aboutForm.Focus();
             }
             return false;
         }

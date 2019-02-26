@@ -96,9 +96,19 @@ namespace DesktopApp.JsEvent
         /// </summary>
         public void window_focus()
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                Form f = frm;
+                string name = f.Name;
+                //关闭当前应用中的其它窗口
+                if (!frm.Equals(this.Form))
+                {               
+                    frm.Close();
+                }
+            }
+            //
             this.Form.TopMost = true;
             this.Form.Focus();
-            //this.Form.browser.Focus();
         }
         /// <summary>
         /// 取消窗体最顶层的设置
@@ -107,7 +117,6 @@ namespace DesktopApp.JsEvent
         {
             this.Form.TopMost = false;
             this.Form.Focus();
-            //this.Form.browser.Focus();
         }
         /// <summary>
         /// 关闭窗体
