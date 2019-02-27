@@ -13,6 +13,7 @@ namespace DesktopApp
 {
     public partial class AboutForm : Form
     {
+        public ChromiumWebBrowser browser;
         public AboutForm()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
@@ -22,7 +23,13 @@ namespace DesktopApp
 
         public void InitForm()
         {
-           
+            //初始
+            string appPath = System.Environment.CurrentDirectory;
+            string url = appPath + "\\Setup\\about.html";
+            browser = Browser.Generate(url);
+            this.Controls.Add(browser);
+            browser.Dock = DockStyle.Fill;
         }
+        
     }
 }

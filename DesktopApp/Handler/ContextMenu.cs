@@ -47,6 +47,8 @@ namespace DesktopApp.Handler
                 if(aboutForm==null || aboutForm.IsDisposed)
                     aboutForm = new AboutForm();
                 aboutForm.TopMost = true;
+                //aboutForm.TopLevel = false;
+                //aboutForm.Parent = form;
                 aboutForm.ShowDialog();
                 aboutForm.Focus();
             }
