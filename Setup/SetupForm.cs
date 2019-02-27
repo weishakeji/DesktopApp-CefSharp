@@ -15,5 +15,12 @@ namespace Setup
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+       
     }
 }
