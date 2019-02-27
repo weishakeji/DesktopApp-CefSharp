@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
+
 namespace DesktopApp.JsEvent
 {
     public class Window
@@ -96,16 +97,16 @@ namespace DesktopApp.JsEvent
         /// </summary>
         public void window_focus()
         {
-            foreach (Form frm in Application.OpenForms)
-            {
-                Form f = frm;
-                string name = f.Name;
-                //关闭当前应用中的其它窗口
-                if (!frm.Equals(this.Form))
-                {               
-                    frm.Close();
-                }
-            }
+            //foreach (Form frm in Application.OpenForms)
+            //{
+            //    Form f = frm;
+            //    string name = f.Name;
+            //    //关闭当前应用中的其它窗口
+            //    if (!frm.Equals(this.Form))
+            //    {               
+            //        frm.Close();
+            //    }
+            //}
             //
             this.Form.TopMost = true;
             this.Form.Focus();
