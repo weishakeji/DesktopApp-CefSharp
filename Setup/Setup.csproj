@@ -84,6 +84,12 @@
   <ItemGroup>
     <None Include="Resources\%24this.Icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Confing\Confing.csproj">
+      <Project>{3620187b-749f-480b-92bc-e26d10594b61}</Project>
+      <Name>Confing</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

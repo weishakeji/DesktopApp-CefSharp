@@ -15,12 +15,29 @@ namespace Setup
         {
             InitializeComponent();
         }
+        
+        #region 调试
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void radioBrowser_CheckedChanged(object sender, EventArgs e)
+        {
+            this.panelBrowserMobile.Enabled = radioBroswerMobile.Checked;
+        }
+        #endregion
 
+        #region 底部按钮，确定与关闭
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
-       
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            Confing.Gatway.Record(this);
+        }
+        #endregion
     }
 }
