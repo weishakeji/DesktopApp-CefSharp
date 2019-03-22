@@ -14,6 +14,7 @@ namespace Setup
         public SetupForm()
         {
             InitializeComponent();
+            this.Icon = Setup.Properties.Resources.appicon;
         }
         
         #region 调试

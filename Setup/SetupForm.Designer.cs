@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupForm));
             this.tabSetupConfig = new System.Windows.Forms.TabControl();
             this.tabBase = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -972,7 +971,6 @@
             this.ClientSize = new System.Drawing.Size(624, 442);
             this.Controls.Add(this.tabSetupConfig);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SetupForm";

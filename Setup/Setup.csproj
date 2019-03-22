@@ -36,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,13 +86,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\%24this.Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Confing\Confing.csproj">
       <Project>{3620187b-749f-480b-92bc-e26d10594b61}</Project>
       <Name>Confing</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\research.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

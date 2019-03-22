@@ -16,6 +16,7 @@ namespace DesktopApp
         public MainForm()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
+            this.Icon = DesktopApp.Properties.Resources.appicon;
             InitializeComponent();
             InitBrowser();
         }
