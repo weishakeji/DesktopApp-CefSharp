@@ -7,6 +7,8 @@ namespace Setup
 {
     static class Program
     {
+        private static System.Threading.Mutex mutex;
+
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -15,7 +17,18 @@ namespace Setup
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SetupForm());
+            //Application.Run(new SetupForm());
+
+            mutex = new System.Threading.Mutex(true, "OnlyRun");
+            if (mutex.WaitOne(0, false))
+            {
+                Application.Run(new SetupForm());
+            }
+            else
+            {
+                MessageBox.Show("程序已经在运行！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
+            }
         }
     }
 }

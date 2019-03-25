@@ -43,30 +43,30 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabMain = new System.Windows.Forms.TabPage();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.panelMainRightMenu = new System.Windows.Forms.Panel();
+            this.rbDesnableMainRightMenu = new System.Windows.Forms.RadioButton();
+            this.rbEnableMainRightMenu = new System.Windows.Forms.RadioButton();
+            this.cbIsAbout = new System.Windows.Forms.CheckBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.cbBtnWinMin = new System.Windows.Forms.CheckBox();
+            this.cbBtnWinClose = new System.Windows.Forms.CheckBox();
+            this.cbBtnWinMax = new System.Windows.Forms.CheckBox();
+            this.cbIsEnableLoad = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
             this.panelMainStyle = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.tbMainHeight = new System.Windows.Forms.TextBox();
+            this.tbMainWidth = new System.Windows.Forms.TextBox();
+            this.radioWinNormal = new System.Windows.Forms.RadioButton();
+            this.radioWinMax = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbFixedSize = new System.Windows.Forms.CheckBox();
             this.tbMainUrl = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cbScreenCenter = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnMainBgpicSelect = new System.Windows.Forms.Button();
+            this.pictureMainBgpic = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -111,15 +111,16 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbShow = new System.Windows.Forms.Label();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
             this.panelStartWinfow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picICON)).BeginInit();
             this.tabMain.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelMainRightMenu.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelMainStyle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMainBgpic)).BeginInit();
             this.tbLogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabDebug.SuspendLayout();
@@ -278,16 +279,16 @@
             // 
             // tabMain
             // 
-            this.tabMain.Controls.Add(this.panel8);
+            this.tabMain.Controls.Add(this.panelMainRightMenu);
             this.tabMain.Controls.Add(this.panel7);
-            this.tabMain.Controls.Add(this.checkBox5);
+            this.tabMain.Controls.Add(this.cbIsEnableLoad);
             this.tabMain.Controls.Add(this.label23);
             this.tabMain.Controls.Add(this.panelMainStyle);
             this.tabMain.Controls.Add(this.tbMainUrl);
-            this.tabMain.Controls.Add(this.checkBox3);
+            this.tabMain.Controls.Add(this.cbScreenCenter);
             this.tabMain.Controls.Add(this.label12);
-            this.tabMain.Controls.Add(this.button1);
-            this.tabMain.Controls.Add(this.pictureBox2);
+            this.tabMain.Controls.Add(this.btnMainBgpicSelect);
+            this.tabMain.Controls.Add(this.pictureMainBgpic);
             this.tabMain.Controls.Add(this.label11);
             this.tabMain.Controls.Add(this.label10);
             this.tabMain.Controls.Add(this.label7);
@@ -302,99 +303,99 @@
             this.tabMain.Text = "主窗体";
             this.tabMain.UseVisualStyleBackColor = true;
             // 
-            // panel8
+            // panelMainRightMenu
             // 
-            this.panel8.Controls.Add(this.radioButton6);
-            this.panel8.Controls.Add(this.radioButton7);
-            this.panel8.Controls.Add(this.checkBox2);
-            this.panel8.Location = new System.Drawing.Point(113, 173);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(486, 25);
-            this.panel8.TabIndex = 25;
+            this.panelMainRightMenu.Controls.Add(this.rbDesnableMainRightMenu);
+            this.panelMainRightMenu.Controls.Add(this.rbEnableMainRightMenu);
+            this.panelMainRightMenu.Controls.Add(this.cbIsAbout);
+            this.panelMainRightMenu.Location = new System.Drawing.Point(113, 173);
+            this.panelMainRightMenu.Name = "panelMainRightMenu";
+            this.panelMainRightMenu.Size = new System.Drawing.Size(486, 25);
+            this.panelMainRightMenu.TabIndex = 25;
             // 
-            // radioButton6
+            // rbDesnableMainRightMenu
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(5, 5);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(95, 16);
-            this.radioButton6.TabIndex = 12;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "禁用右键菜单";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbDesnableMainRightMenu.AutoSize = true;
+            this.rbDesnableMainRightMenu.Location = new System.Drawing.Point(5, 5);
+            this.rbDesnableMainRightMenu.Name = "rbDesnableMainRightMenu";
+            this.rbDesnableMainRightMenu.Size = new System.Drawing.Size(95, 16);
+            this.rbDesnableMainRightMenu.TabIndex = 12;
+            this.rbDesnableMainRightMenu.TabStop = true;
+            this.rbDesnableMainRightMenu.Text = "禁用右键菜单";
+            this.rbDesnableMainRightMenu.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbEnableMainRightMenu
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(120, 5);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(95, 16);
-            this.radioButton7.TabIndex = 13;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "启用右键菜单";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbEnableMainRightMenu.AutoSize = true;
+            this.rbEnableMainRightMenu.Location = new System.Drawing.Point(120, 5);
+            this.rbEnableMainRightMenu.Name = "rbEnableMainRightMenu";
+            this.rbEnableMainRightMenu.Size = new System.Drawing.Size(95, 16);
+            this.rbEnableMainRightMenu.TabIndex = 13;
+            this.rbEnableMainRightMenu.TabStop = true;
+            this.rbEnableMainRightMenu.Text = "启用右键菜单";
+            this.rbEnableMainRightMenu.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbIsAbout
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(235, 5);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(108, 16);
-            this.checkBox2.TabIndex = 14;
-            this.checkBox2.Text = "显示“关于”项";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbIsAbout.AutoSize = true;
+            this.cbIsAbout.Location = new System.Drawing.Point(235, 5);
+            this.cbIsAbout.Name = "cbIsAbout";
+            this.cbIsAbout.Size = new System.Drawing.Size(108, 16);
+            this.cbIsAbout.TabIndex = 14;
+            this.cbIsAbout.Text = "显示“关于”项";
+            this.cbIsAbout.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.checkBox6);
-            this.panel7.Controls.Add(this.checkBox8);
-            this.panel7.Controls.Add(this.checkBox7);
+            this.panel7.Controls.Add(this.cbBtnWinMin);
+            this.panel7.Controls.Add(this.cbBtnWinClose);
+            this.panel7.Controls.Add(this.cbBtnWinMax);
             this.panel7.Location = new System.Drawing.Point(113, 119);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(486, 25);
             this.panel7.TabIndex = 27;
             // 
-            // checkBox6
+            // cbBtnWinMin
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(173, 3);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(84, 16);
-            this.checkBox6.TabIndex = 24;
-            this.checkBox6.Text = "最小化按钮";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbBtnWinMin.AutoSize = true;
+            this.cbBtnWinMin.Location = new System.Drawing.Point(173, 3);
+            this.cbBtnWinMin.Name = "cbBtnWinMin";
+            this.cbBtnWinMin.Size = new System.Drawing.Size(84, 16);
+            this.cbBtnWinMin.TabIndex = 24;
+            this.cbBtnWinMin.Text = "最小化按钮";
+            this.cbBtnWinMin.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // cbBtnWinClose
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Location = new System.Drawing.Point(5, 3);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(72, 16);
-            this.checkBox8.TabIndex = 26;
-            this.checkBox8.Text = "关闭按钮";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.cbBtnWinClose.AutoSize = true;
+            this.cbBtnWinClose.Checked = true;
+            this.cbBtnWinClose.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbBtnWinClose.Location = new System.Drawing.Point(5, 3);
+            this.cbBtnWinClose.Name = "cbBtnWinClose";
+            this.cbBtnWinClose.Size = new System.Drawing.Size(72, 16);
+            this.cbBtnWinClose.TabIndex = 26;
+            this.cbBtnWinClose.Text = "关闭按钮";
+            this.cbBtnWinClose.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // cbBtnWinMax
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(83, 3);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(84, 16);
-            this.checkBox7.TabIndex = 25;
-            this.checkBox7.Text = "最大化按钮";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.cbBtnWinMax.AutoSize = true;
+            this.cbBtnWinMax.Location = new System.Drawing.Point(83, 3);
+            this.cbBtnWinMax.Name = "cbBtnWinMax";
+            this.cbBtnWinMax.Size = new System.Drawing.Size(84, 16);
+            this.cbBtnWinMax.TabIndex = 25;
+            this.cbBtnWinMax.Text = "最大化按钮";
+            this.cbBtnWinMax.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbIsEnableLoad
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(118, 210);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(144, 16);
-            this.checkBox5.TabIndex = 23;
-            this.checkBox5.Text = "允许下载网页中的内容";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbIsEnableLoad.AutoSize = true;
+            this.cbIsEnableLoad.Location = new System.Drawing.Point(118, 210);
+            this.cbIsEnableLoad.Name = "cbIsEnableLoad";
+            this.cbIsEnableLoad.Size = new System.Drawing.Size(144, 16);
+            this.cbIsEnableLoad.TabIndex = 23;
+            this.cbIsEnableLoad.Text = "允许下载网页中的内容";
+            this.cbIsEnableLoad.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -409,12 +410,12 @@
             // 
             this.panelMainStyle.Controls.Add(this.label24);
             this.panelMainStyle.Controls.Add(this.label9);
-            this.panelMainStyle.Controls.Add(this.textBox14);
-            this.panelMainStyle.Controls.Add(this.textBox13);
-            this.panelMainStyle.Controls.Add(this.radioButton5);
-            this.panelMainStyle.Controls.Add(this.radioButton4);
+            this.panelMainStyle.Controls.Add(this.tbMainHeight);
+            this.panelMainStyle.Controls.Add(this.tbMainWidth);
+            this.panelMainStyle.Controls.Add(this.radioWinNormal);
+            this.panelMainStyle.Controls.Add(this.radioWinMax);
             this.panelMainStyle.Controls.Add(this.label8);
-            this.panelMainStyle.Controls.Add(this.checkBox1);
+            this.panelMainStyle.Controls.Add(this.cbFixedSize);
             this.panelMainStyle.Location = new System.Drawing.Point(113, 86);
             this.panelMainStyle.Name = "panelMainStyle";
             this.panelMainStyle.Size = new System.Drawing.Size(486, 25);
@@ -438,41 +439,41 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "×";
             // 
-            // textBox14
+            // tbMainHeight
             // 
-            this.textBox14.Location = new System.Drawing.Point(302, 1);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(31, 21);
-            this.textBox14.TabIndex = 12;
+            this.tbMainHeight.Location = new System.Drawing.Point(302, 1);
+            this.tbMainHeight.Name = "tbMainHeight";
+            this.tbMainHeight.Size = new System.Drawing.Size(31, 21);
+            this.tbMainHeight.TabIndex = 12;
             // 
-            // textBox13
+            // tbMainWidth
             // 
-            this.textBox13.Location = new System.Drawing.Point(249, 1);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(31, 21);
-            this.textBox13.TabIndex = 11;
+            this.tbMainWidth.Location = new System.Drawing.Point(249, 1);
+            this.tbMainWidth.Name = "tbMainWidth";
+            this.tbMainWidth.Size = new System.Drawing.Size(31, 21);
+            this.tbMainWidth.TabIndex = 11;
             // 
-            // radioButton5
+            // radioWinNormal
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(121, 5);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(71, 16);
-            this.radioButton5.TabIndex = 7;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "常规窗体";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioWinNormal.AutoSize = true;
+            this.radioWinNormal.Checked = true;
+            this.radioWinNormal.Location = new System.Drawing.Point(121, 5);
+            this.radioWinNormal.Name = "radioWinNormal";
+            this.radioWinNormal.Size = new System.Drawing.Size(71, 16);
+            this.radioWinNormal.TabIndex = 7;
+            this.radioWinNormal.TabStop = true;
+            this.radioWinNormal.Text = "常规窗体";
+            this.radioWinNormal.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioWinMax
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 5);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(83, 16);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.Text = "最大化窗体";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioWinMax.AutoSize = true;
+            this.radioWinMax.Location = new System.Drawing.Point(7, 5);
+            this.radioWinMax.Name = "radioWinMax";
+            this.radioWinMax.Size = new System.Drawing.Size(83, 16);
+            this.radioWinMax.TabIndex = 6;
+            this.radioWinMax.Text = "最大化窗体";
+            this.radioWinMax.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -483,15 +484,15 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "宽高：";
             // 
-            // checkBox1
+            // cbFixedSize
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(406, 5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 16);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "固定大小";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbFixedSize.AutoSize = true;
+            this.cbFixedSize.Location = new System.Drawing.Point(406, 5);
+            this.cbFixedSize.Name = "cbFixedSize";
+            this.cbFixedSize.Size = new System.Drawing.Size(72, 16);
+            this.cbFixedSize.TabIndex = 10;
+            this.cbFixedSize.Text = "固定大小";
+            this.cbFixedSize.UseVisualStyleBackColor = true;
             // 
             // tbMainUrl
             // 
@@ -500,15 +501,15 @@
             this.tbMainUrl.Size = new System.Drawing.Size(322, 21);
             this.tbMainUrl.TabIndex = 20;
             // 
-            // checkBox3
+            // cbScreenCenter
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(118, 150);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(96, 16);
-            this.checkBox3.TabIndex = 19;
-            this.checkBox3.Text = "屏幕中央打开";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbScreenCenter.AutoSize = true;
+            this.cbScreenCenter.Location = new System.Drawing.Point(118, 150);
+            this.cbScreenCenter.Name = "cbScreenCenter";
+            this.cbScreenCenter.Size = new System.Drawing.Size(96, 16);
+            this.cbScreenCenter.TabIndex = 19;
+            this.cbScreenCenter.Text = "屏幕中央打开";
+            this.cbScreenCenter.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -519,22 +520,22 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "位置：";
             // 
-            // button1
+            // btnMainBgpicSelect
             // 
-            this.button1.Location = new System.Drawing.Point(115, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "选择...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMainBgpicSelect.Location = new System.Drawing.Point(115, 232);
+            this.btnMainBgpicSelect.Name = "btnMainBgpicSelect";
+            this.btnMainBgpicSelect.Size = new System.Drawing.Size(75, 23);
+            this.btnMainBgpicSelect.TabIndex = 17;
+            this.btnMainBgpicSelect.Text = "选择...";
+            this.btnMainBgpicSelect.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // pictureMainBgpic
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(196, 232);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 108);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.pictureMainBgpic.Location = new System.Drawing.Point(196, 232);
+            this.pictureMainBgpic.Name = "pictureMainBgpic";
+            this.pictureMainBgpic.Size = new System.Drawing.Size(143, 108);
+            this.pictureMainBgpic.TabIndex = 16;
+            this.pictureMainBgpic.TabStop = false;
             // 
             // label11
             // 
@@ -959,6 +960,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbShow);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnEnter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -966,6 +968,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(624, 35);
             this.panel1.TabIndex = 3;
+            // 
+            // lbShow
+            // 
+            this.lbShow.AutoSize = true;
+            this.lbShow.ForeColor = System.Drawing.Color.Red;
+            this.lbShow.Location = new System.Drawing.Point(23, 12);
+            this.lbShow.Name = "lbShow";
+            this.lbShow.Size = new System.Drawing.Size(65, 12);
+            this.lbShow.TabIndex = 3;
+            this.lbShow.Text = "保存成功！";
+            this.lbShow.Visible = false;
             // 
             // SetupForm
             // 
@@ -987,13 +1000,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picICON)).EndInit();
             this.tabMain.ResumeLayout(false);
             this.tabMain.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panelMainRightMenu.ResumeLayout(false);
+            this.panelMainRightMenu.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panelMainStyle.ResumeLayout(false);
             this.panelMainStyle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMainBgpic)).EndInit();
             this.tbLogin.ResumeLayout(false);
             this.tbLogin.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1009,6 +1022,7 @@
             this.tabAbout.ResumeLayout(false);
             this.tabAbout.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1037,19 +1051,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioWinNormal;
+        private System.Windows.Forms.RadioButton radioWinMax;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbFixedSize;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.CheckBox cbIsAbout;
+        private System.Windows.Forms.RadioButton rbEnableMainRightMenu;
+        private System.Windows.Forms.RadioButton rbDesnableMainRightMenu;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button btnMainBgpicSelect;
+        private System.Windows.Forms.PictureBox pictureMainBgpic;
+        private System.Windows.Forms.CheckBox cbScreenCenter;
         private System.Windows.Forms.TextBox tbMainUrl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tabDebug;
@@ -1087,17 +1101,18 @@
         private System.Windows.Forms.RadioButton radioBrowserPc;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox cbIsEnableLoad;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox cbBtnWinMin;
+        private System.Windows.Forms.CheckBox cbBtnWinClose;
+        private System.Windows.Forms.CheckBox cbBtnWinMax;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelMainRightMenu;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox tbMainHeight;
+        private System.Windows.Forms.TextBox tbMainWidth;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbShow;
     }
 }
 

@@ -29,7 +29,10 @@ namespace Setup
         private void btnEnter_Click(object sender, EventArgs e)
         {
             Confing.Gatway.Record(this);
-            MessageBox.Show("保存成功！");
+            //MessageBox.Show("保存成功！");
+            lbShow.Visible = true;
+            MessageBox.Show("保存成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            lbShow.Visible = false;
         }
         #endregion
         #region 主界面事件

@@ -30,6 +30,7 @@ namespace Confing
         {
             Helper.XML.Read(form);
         }
+        #region 获取参数
         /// <summary>
         /// 获取参数值
         /// </summary>
@@ -80,5 +81,6 @@ namespace Confing
             string val = Helper.XML.Read(itemname);
             return Convert.ToBoolean(val);
         }
+        #endregion
     }
 }

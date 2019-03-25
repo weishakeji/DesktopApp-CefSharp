@@ -120,6 +120,7 @@ namespace Confing.Helper
             {
                 //读取选项卡区域的记录
                 XmlNode xmlTabpage = xmlDoc.SelectSingleNode("Confing/" + p.Name);
+                if (xmlTabpage == null) continue;
                 foreach (XmlNode node in xmlTabpage.ChildNodes)
                 {
                     List<Control> controls = Helper.WinForm.GetChilds<Control>(p);
@@ -142,6 +143,11 @@ namespace Confing.Helper
                 }
             }
         }
+        /// <summary>
+        /// 控件名称为作键值，获取具体的值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static string Read(string key)
         {
             string val = string.Empty;
@@ -163,7 +169,36 @@ namespace Confing.Helper
             }
             return val;
         }
-
+        /// <summary>
+        /// 控件名称为作键值，获取具体的值
+        /// </summary>
+        /// <param name="tabpage">setupform中的选项卡名称，xml作为配置项目的节点</param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static string Read(string tabpage, string key)
+        {
+            string val = string.Empty;
+            //创建xml文件对象，遍历节点
+            XmlDocument xmlDoc = Helper.XML.Create();
+            XmlNode config = xmlDoc.SelectSingleNode("Confing");
+            foreach (XmlNode tab in config.ChildNodes)
+            {
+                if (tabpage.Equals(TrimName(tab.Name), StringComparison.CurrentCultureIgnoreCase))
+                {
+                    foreach (XmlNode node in tab.ChildNodes)
+                    {
+                        string name = TrimName(node.Name);
+                        if (key.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            val = node.InnerText;
+                            break;
+                        }
+                    }
+                }
+                if (!string.IsNullOrWhiteSpace(val)) break;
+            }
+            return val;
+        }
         #endregion
 
         #region 图片的处理
