@@ -56,7 +56,7 @@ namespace Confing.Helper
                 RadioButton rb = (RadioButton)c;
                 if (rb.Checked) trueName = rb.Name;
             }
-            return trueName;
+            return TrimName(trueName);
         }
         /// <summary>
         /// 修减控件的名称，去除前面的小写字母

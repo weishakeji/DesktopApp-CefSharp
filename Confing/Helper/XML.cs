@@ -153,7 +153,7 @@ namespace Confing.Helper
                 foreach (XmlNode node in tabpage.ChildNodes)
                 {
                     string name = TrimName(node.Name);
-                    if(key.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+                    if (key.Equals(name, StringComparison.CurrentCultureIgnoreCase))
                     {
                         val = node.InnerText;
                         break;
@@ -161,8 +161,9 @@ namespace Confing.Helper
                 }
                 if (!string.IsNullOrWhiteSpace(val)) break;
             }
-            return TrimName(val);
+            return val;
         }
+
         #endregion
 
         #region 图片的处理
@@ -215,7 +216,7 @@ namespace Confing.Helper
         /// </summary>
         /// <param name="controlName">控件名称</param>
         /// <returns></returns>
-        private static string TrimName(string controlName)
+        public static string TrimName(string controlName)
         {
             bool isCapital = false;
             StringBuilder sb = new StringBuilder();
