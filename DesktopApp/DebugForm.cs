@@ -37,7 +37,7 @@ namespace DesktopApp
             //是否在当前窗体打开链接
             browser.LifeSpanHandler = new Handler.OpenSelf();
             //禁止右键菜单
-            browser.MenuHandler = new Handler.ContextMenu();
+            //browser.MenuHandler = new Handler.ContextMenu();
             //文件下载
             browser.DownloadHandler = new Handler.Download();
         }

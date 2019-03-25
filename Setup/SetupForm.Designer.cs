@@ -43,9 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabMain = new System.Windows.Forms.TabPage();
-            this.panelMainRightMenu = new System.Windows.Forms.Panel();
-            this.rbDesnableMainRightMenu = new System.Windows.Forms.RadioButton();
-            this.rbEnableMainRightMenu = new System.Windows.Forms.RadioButton();
             this.cbIsAbout = new System.Windows.Forms.CheckBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.cbBtnWinMin = new System.Windows.Forms.CheckBox();
@@ -112,12 +109,12 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
+            this.cbMainEnableRightMenu = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
             this.panelStartWinfow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picICON)).BeginInit();
             this.tabMain.SuspendLayout();
-            this.panelMainRightMenu.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelMainStyle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMainBgpic)).BeginInit();
@@ -279,7 +276,8 @@
             // 
             // tabMain
             // 
-            this.tabMain.Controls.Add(this.panelMainRightMenu);
+            this.tabMain.Controls.Add(this.cbIsAbout);
+            this.tabMain.Controls.Add(this.cbMainEnableRightMenu);
             this.tabMain.Controls.Add(this.panel7);
             this.tabMain.Controls.Add(this.cbIsEnableLoad);
             this.tabMain.Controls.Add(this.label23);
@@ -303,42 +301,10 @@
             this.tabMain.Text = "主窗体";
             this.tabMain.UseVisualStyleBackColor = true;
             // 
-            // panelMainRightMenu
-            // 
-            this.panelMainRightMenu.Controls.Add(this.rbDesnableMainRightMenu);
-            this.panelMainRightMenu.Controls.Add(this.rbEnableMainRightMenu);
-            this.panelMainRightMenu.Controls.Add(this.cbIsAbout);
-            this.panelMainRightMenu.Location = new System.Drawing.Point(113, 173);
-            this.panelMainRightMenu.Name = "panelMainRightMenu";
-            this.panelMainRightMenu.Size = new System.Drawing.Size(486, 25);
-            this.panelMainRightMenu.TabIndex = 25;
-            // 
-            // rbDesnableMainRightMenu
-            // 
-            this.rbDesnableMainRightMenu.AutoSize = true;
-            this.rbDesnableMainRightMenu.Location = new System.Drawing.Point(5, 5);
-            this.rbDesnableMainRightMenu.Name = "rbDesnableMainRightMenu";
-            this.rbDesnableMainRightMenu.Size = new System.Drawing.Size(95, 16);
-            this.rbDesnableMainRightMenu.TabIndex = 12;
-            this.rbDesnableMainRightMenu.TabStop = true;
-            this.rbDesnableMainRightMenu.Text = "禁用右键菜单";
-            this.rbDesnableMainRightMenu.UseVisualStyleBackColor = true;
-            // 
-            // rbEnableMainRightMenu
-            // 
-            this.rbEnableMainRightMenu.AutoSize = true;
-            this.rbEnableMainRightMenu.Location = new System.Drawing.Point(120, 5);
-            this.rbEnableMainRightMenu.Name = "rbEnableMainRightMenu";
-            this.rbEnableMainRightMenu.Size = new System.Drawing.Size(95, 16);
-            this.rbEnableMainRightMenu.TabIndex = 13;
-            this.rbEnableMainRightMenu.TabStop = true;
-            this.rbEnableMainRightMenu.Text = "启用右键菜单";
-            this.rbEnableMainRightMenu.UseVisualStyleBackColor = true;
-            // 
             // cbIsAbout
             // 
             this.cbIsAbout.AutoSize = true;
-            this.cbIsAbout.Location = new System.Drawing.Point(235, 5);
+            this.cbIsAbout.Location = new System.Drawing.Point(285, 179);
             this.cbIsAbout.Name = "cbIsAbout";
             this.cbIsAbout.Size = new System.Drawing.Size(108, 16);
             this.cbIsAbout.TabIndex = 14;
@@ -980,6 +946,16 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
+            // cbMainEnableRightMenu
+            // 
+            this.cbMainEnableRightMenu.AutoSize = true;
+            this.cbMainEnableRightMenu.Location = new System.Drawing.Point(118, 178);
+            this.cbMainEnableRightMenu.Name = "cbMainEnableRightMenu";
+            this.cbMainEnableRightMenu.Size = new System.Drawing.Size(120, 16);
+            this.cbMainEnableRightMenu.TabIndex = 15;
+            this.cbMainEnableRightMenu.Text = "启用默认右键菜单";
+            this.cbMainEnableRightMenu.UseVisualStyleBackColor = true;
+            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1000,8 +976,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picICON)).EndInit();
             this.tabMain.ResumeLayout(false);
             this.tabMain.PerformLayout();
-            this.panelMainRightMenu.ResumeLayout(false);
-            this.panelMainRightMenu.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panelMainStyle.ResumeLayout(false);
@@ -1057,8 +1031,6 @@
         private System.Windows.Forms.CheckBox cbFixedSize;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox cbIsAbout;
-        private System.Windows.Forms.RadioButton rbEnableMainRightMenu;
-        private System.Windows.Forms.RadioButton rbDesnableMainRightMenu;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnMainBgpicSelect;
@@ -1107,12 +1079,12 @@
         private System.Windows.Forms.CheckBox cbBtnWinClose;
         private System.Windows.Forms.CheckBox cbBtnWinMax;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panelMainRightMenu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbMainHeight;
         private System.Windows.Forms.TextBox tbMainWidth;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lbShow;
+        private System.Windows.Forms.CheckBox cbMainEnableRightMenu;
     }
 }
 

@@ -78,8 +78,17 @@ namespace Confing
         }
         public static bool GetBoolean(string itemname)
         {
+            bool tm = false;
             string val = Helper.XML.Read(itemname);
-            return Convert.ToBoolean(val);
+            bool.TryParse(val, out tm);
+            return tm;
+        }
+        public static int GetInt(string itemname)
+        {
+            int tm = 0;
+            string val = Helper.XML.Read(itemname);
+            int.TryParse(val, out tm);
+            return tm;
         }
         #endregion
     }

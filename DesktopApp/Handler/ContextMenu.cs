@@ -11,21 +11,28 @@ namespace DesktopApp.Handler
 
     internal class ContextMenu : IContextMenuHandler
     {
-
+        public ContextMenu(bool isAboutMenu)
+        {
+            IsAboutMenu = isAboutMenu;
+        }
+        /// <summary>
+        /// 右键菜单里，是否显示关于我们
+        /// </summary>
+        public bool IsAboutMenu { get; set; }
         public void OnBeforeContextMenu(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, IMenuModel model)
         {
             if (model.Count > 0)
             {
                 model.Clear();
             }
-            model.AddItem(CefSharp.CefMenuCommand.Copy,"复制");
-            model.AddSeparator();
-            model.AddItem(CefSharp.CefMenuCommand.Back, "返回");
-            model.AddItem(CefSharp.CefMenuCommand.Forward, "前进");
-            model.AddItem(CefSharp.CefMenuCommand.Reload, "刷新");
-            model.AddSeparator();
-            model.AddItem((CefSharp.CefMenuCommand)221, "关于");
-
+            //model.AddItem(CefSharp.CefMenuCommand.Copy,"复制");
+            //model.AddSeparator();
+            //model.AddItem(CefSharp.CefMenuCommand.Back, "返回");
+            //model.AddItem(CefSharp.CefMenuCommand.Forward, "前进");
+            //model.AddItem(CefSharp.CefMenuCommand.Reload, "刷新");
+            //model.AddSeparator();
+            if(IsAboutMenu)
+                model.AddItem((CefSharp.CefMenuCommand)221, "关于");
             
         }
 
