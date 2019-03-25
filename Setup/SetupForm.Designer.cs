@@ -30,14 +30,14 @@
         {
             this.tabSetupConfig = new System.Windows.Forms.TabControl();
             this.tabBase = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelStartWinfow = new System.Windows.Forms.Panel();
+            this.rbMainWindow = new System.Windows.Forms.RadioButton();
+            this.rbLoginWindow = new System.Windows.Forms.RadioButton();
+            this.rbDebugWindow = new System.Windows.Forms.RadioButton();
+            this.btnSelectICON = new System.Windows.Forms.Button();
+            this.tbDomain = new System.Windows.Forms.TextBox();
+            this.picICON = new System.Windows.Forms.PictureBox();
+            this.tbTitle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelMainStyle = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbMainUrl = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -113,12 +113,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelStartWinfow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picICON)).BeginInit();
             this.tabMain.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelMainStyle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tbLogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -145,11 +145,12 @@
             // 
             // tabBase
             // 
-            this.tabBase.Controls.Add(this.panel2);
-            this.tabBase.Controls.Add(this.button3);
-            this.tabBase.Controls.Add(this.textBox2);
-            this.tabBase.Controls.Add(this.pictureBox1);
-            this.tabBase.Controls.Add(this.textBox1);
+            this.tabBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabBase.Controls.Add(this.panelStartWinfow);
+            this.tabBase.Controls.Add(this.btnSelectICON);
+            this.tabBase.Controls.Add(this.tbDomain);
+            this.tabBase.Controls.Add(this.picICON);
+            this.tabBase.Controls.Add(this.tbTitle);
             this.tabBase.Controls.Add(this.label4);
             this.tabBase.Controls.Add(this.label3);
             this.tabBase.Controls.Add(this.label2);
@@ -162,78 +163,81 @@
             this.tabBase.Text = "基础设置";
             this.tabBase.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // panelStartWinfow
             // 
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.radioButton3);
-            this.panel2.Location = new System.Drawing.Point(124, 14);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(356, 27);
-            this.panel2.TabIndex = 12;
+            this.panelStartWinfow.Controls.Add(this.rbMainWindow);
+            this.panelStartWinfow.Controls.Add(this.rbLoginWindow);
+            this.panelStartWinfow.Controls.Add(this.rbDebugWindow);
+            this.panelStartWinfow.Location = new System.Drawing.Point(124, 14);
+            this.panelStartWinfow.Name = "panelStartWinfow";
+            this.panelStartWinfow.Size = new System.Drawing.Size(356, 27);
+            this.panelStartWinfow.TabIndex = 12;
             // 
-            // radioButton2
+            // rbMainWindow
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(87, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 16);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.Text = "主窗体";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbMainWindow.AutoSize = true;
+            this.rbMainWindow.Location = new System.Drawing.Point(92, 3);
+            this.rbMainWindow.Name = "rbMainWindow";
+            this.rbMainWindow.Size = new System.Drawing.Size(59, 16);
+            this.rbMainWindow.TabIndex = 5;
+            this.rbMainWindow.Text = "主窗体";
+            this.rbMainWindow.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbLoginWindow
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(8, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 16);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "登录窗体";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbLoginWindow.AutoSize = true;
+            this.rbLoginWindow.Checked = true;
+            this.rbLoginWindow.Location = new System.Drawing.Point(8, 3);
+            this.rbLoginWindow.Name = "rbLoginWindow";
+            this.rbLoginWindow.Size = new System.Drawing.Size(71, 16);
+            this.rbLoginWindow.TabIndex = 4;
+            this.rbLoginWindow.TabStop = true;
+            this.rbLoginWindow.Text = "登录窗体";
+            this.rbLoginWindow.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbDebugWindow
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(178, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 16);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.Text = "功能调试";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbDebugWindow.AutoSize = true;
+            this.rbDebugWindow.Location = new System.Drawing.Point(164, 3);
+            this.rbDebugWindow.Name = "rbDebugWindow";
+            this.rbDebugWindow.Size = new System.Drawing.Size(71, 16);
+            this.rbDebugWindow.TabIndex = 6;
+            this.rbDebugWindow.Text = "功能调试";
+            this.rbDebugWindow.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSelectICON
             // 
-            this.button3.Location = new System.Drawing.Point(203, 82);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "选择...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSelectICON.Location = new System.Drawing.Point(203, 82);
+            this.btnSelectICON.Name = "btnSelectICON";
+            this.btnSelectICON.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectICON.TabIndex = 10;
+            this.btnSelectICON.Text = "选择...";
+            this.btnSelectICON.UseVisualStyleBackColor = true;
+            this.btnSelectICON.Click += new System.EventHandler(this.btnSelectICON_Click);
             // 
-            // textBox2
+            // tbDomain
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(458, 21);
-            this.textBox2.TabIndex = 9;
+            this.tbDomain.Location = new System.Drawing.Point(124, 153);
+            this.tbDomain.Name = "tbDomain";
+            this.tbDomain.Size = new System.Drawing.Size(458, 21);
+            this.tbDomain.TabIndex = 9;
             // 
-            // pictureBox1
+            // picICON
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(124, 82);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.picICON.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picICON.Location = new System.Drawing.Point(124, 82);
+            this.picICON.Name = "picICON";
+            this.picICON.Size = new System.Drawing.Size(60, 60);
+            this.picICON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picICON.TabIndex = 8;
+            this.picICON.TabStop = false;
             // 
-            // textBox1
+            // tbTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(458, 21);
-            this.textBox1.TabIndex = 7;
+            this.tbTitle.Location = new System.Drawing.Point(124, 47);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(458, 21);
+            this.tbTitle.TabIndex = 7;
             // 
             // label4
             // 
@@ -277,8 +281,8 @@
             this.tabMain.Controls.Add(this.panel7);
             this.tabMain.Controls.Add(this.checkBox5);
             this.tabMain.Controls.Add(this.label23);
-            this.tabMain.Controls.Add(this.panel3);
-            this.tabMain.Controls.Add(this.textBox4);
+            this.tabMain.Controls.Add(this.panelMainStyle);
+            this.tabMain.Controls.Add(this.tbMainUrl);
             this.tabMain.Controls.Add(this.checkBox3);
             this.tabMain.Controls.Add(this.label12);
             this.tabMain.Controls.Add(this.button1);
@@ -287,7 +291,7 @@
             this.tabMain.Controls.Add(this.label10);
             this.tabMain.Controls.Add(this.label7);
             this.tabMain.Controls.Add(this.label6);
-            this.tabMain.Controls.Add(this.textBox3);
+            this.tabMain.Controls.Add(this.tbMainTitle);
             this.tabMain.Controls.Add(this.label5);
             this.tabMain.Location = new System.Drawing.Point(4, 22);
             this.tabMain.Name = "tabMain";
@@ -400,20 +404,20 @@
             this.label23.TabIndex = 22;
             this.label23.Text = "下载：";
             // 
-            // panel3
+            // panelMainStyle
             // 
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBox14);
-            this.panel3.Controls.Add(this.textBox13);
-            this.panel3.Controls.Add(this.radioButton5);
-            this.panel3.Controls.Add(this.radioButton4);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.checkBox1);
-            this.panel3.Location = new System.Drawing.Point(113, 86);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(486, 25);
-            this.panel3.TabIndex = 21;
+            this.panelMainStyle.Controls.Add(this.label24);
+            this.panelMainStyle.Controls.Add(this.label9);
+            this.panelMainStyle.Controls.Add(this.textBox14);
+            this.panelMainStyle.Controls.Add(this.textBox13);
+            this.panelMainStyle.Controls.Add(this.radioButton5);
+            this.panelMainStyle.Controls.Add(this.radioButton4);
+            this.panelMainStyle.Controls.Add(this.label8);
+            this.panelMainStyle.Controls.Add(this.checkBox1);
+            this.panelMainStyle.Location = new System.Drawing.Point(113, 86);
+            this.panelMainStyle.Name = "panelMainStyle";
+            this.panelMainStyle.Size = new System.Drawing.Size(486, 25);
+            this.panelMainStyle.TabIndex = 21;
             // 
             // label24
             // 
@@ -488,12 +492,12 @@
             this.checkBox1.Text = "固定大小";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tbMainUrl
             // 
-            this.textBox4.Location = new System.Drawing.Point(113, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(322, 21);
-            this.textBox4.TabIndex = 20;
+            this.tbMainUrl.Location = new System.Drawing.Point(113, 58);
+            this.tbMainUrl.Name = "tbMainUrl";
+            this.tbMainUrl.Size = new System.Drawing.Size(322, 21);
+            this.tbMainUrl.TabIndex = 20;
             // 
             // checkBox3
             // 
@@ -567,12 +571,12 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "请求页面：";
             // 
-            // textBox3
+            // tbMainTitle
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 21);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(322, 21);
-            this.textBox3.TabIndex = 3;
+            this.tbMainTitle.Location = new System.Drawing.Point(113, 21);
+            this.tbMainTitle.Name = "tbMainTitle";
+            this.tbMainTitle.Size = new System.Drawing.Size(322, 21);
+            this.tbMainTitle.TabIndex = 3;
             // 
             // label5
             // 
@@ -979,17 +983,17 @@
             this.tabSetupConfig.ResumeLayout(false);
             this.tabBase.ResumeLayout(false);
             this.tabBase.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelStartWinfow.ResumeLayout(false);
+            this.panelStartWinfow.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picICON)).EndInit();
             this.tabMain.ResumeLayout(false);
             this.tabMain.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelMainStyle.ResumeLayout(false);
+            this.panelMainStyle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tbLogin.ResumeLayout(false);
             this.tbLogin.PerformLayout();
@@ -1023,14 +1027,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.RadioButton rbDebugWindow;
+        private System.Windows.Forms.RadioButton rbMainWindow;
+        private System.Windows.Forms.RadioButton rbLoginWindow;
+        private System.Windows.Forms.TextBox tbDomain;
+        private System.Windows.Forms.PictureBox picICON;
+        private System.Windows.Forms.TextBox tbTitle;
+        private System.Windows.Forms.Button btnSelectICON;
+        private System.Windows.Forms.TextBox tbMainTitle;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -1047,11 +1051,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbMainUrl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tabDebug;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelStartWinfow;
+        private System.Windows.Forms.Panel panelMainStyle;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label14;
