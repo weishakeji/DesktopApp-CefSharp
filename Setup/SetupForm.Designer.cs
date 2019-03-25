@@ -31,9 +31,9 @@
             this.tabSetupConfig = new System.Windows.Forms.TabControl();
             this.tabBase = new System.Windows.Forms.TabPage();
             this.panelStartWinfow = new System.Windows.Forms.Panel();
-            this.rbMainWindow = new System.Windows.Forms.RadioButton();
-            this.rbLoginWindow = new System.Windows.Forms.RadioButton();
-            this.rbDebugWindow = new System.Windows.Forms.RadioButton();
+            this.rbMainForm = new System.Windows.Forms.RadioButton();
+            this.rbLoginForm = new System.Windows.Forms.RadioButton();
+            this.rbDebugForm = new System.Windows.Forms.RadioButton();
             this.btnSelectICON = new System.Windows.Forms.Button();
             this.tbDomain = new System.Windows.Forms.TextBox();
             this.picICON = new System.Windows.Forms.PictureBox();
@@ -165,45 +165,45 @@
             // 
             // panelStartWinfow
             // 
-            this.panelStartWinfow.Controls.Add(this.rbMainWindow);
-            this.panelStartWinfow.Controls.Add(this.rbLoginWindow);
-            this.panelStartWinfow.Controls.Add(this.rbDebugWindow);
+            this.panelStartWinfow.Controls.Add(this.rbMainForm);
+            this.panelStartWinfow.Controls.Add(this.rbLoginForm);
+            this.panelStartWinfow.Controls.Add(this.rbDebugForm);
             this.panelStartWinfow.Location = new System.Drawing.Point(124, 14);
             this.panelStartWinfow.Name = "panelStartWinfow";
             this.panelStartWinfow.Size = new System.Drawing.Size(356, 27);
             this.panelStartWinfow.TabIndex = 12;
             // 
-            // rbMainWindow
+            // rbMainForm
             // 
-            this.rbMainWindow.AutoSize = true;
-            this.rbMainWindow.Location = new System.Drawing.Point(92, 3);
-            this.rbMainWindow.Name = "rbMainWindow";
-            this.rbMainWindow.Size = new System.Drawing.Size(59, 16);
-            this.rbMainWindow.TabIndex = 5;
-            this.rbMainWindow.Text = "主窗体";
-            this.rbMainWindow.UseVisualStyleBackColor = true;
+            this.rbMainForm.AutoSize = true;
+            this.rbMainForm.Location = new System.Drawing.Point(92, 3);
+            this.rbMainForm.Name = "rbMainForm";
+            this.rbMainForm.Size = new System.Drawing.Size(59, 16);
+            this.rbMainForm.TabIndex = 5;
+            this.rbMainForm.Text = "主窗体";
+            this.rbMainForm.UseVisualStyleBackColor = true;
             // 
-            // rbLoginWindow
+            // rbLoginForm
             // 
-            this.rbLoginWindow.AutoSize = true;
-            this.rbLoginWindow.Checked = true;
-            this.rbLoginWindow.Location = new System.Drawing.Point(8, 3);
-            this.rbLoginWindow.Name = "rbLoginWindow";
-            this.rbLoginWindow.Size = new System.Drawing.Size(71, 16);
-            this.rbLoginWindow.TabIndex = 4;
-            this.rbLoginWindow.TabStop = true;
-            this.rbLoginWindow.Text = "登录窗体";
-            this.rbLoginWindow.UseVisualStyleBackColor = true;
+            this.rbLoginForm.AutoSize = true;
+            this.rbLoginForm.Checked = true;
+            this.rbLoginForm.Location = new System.Drawing.Point(8, 3);
+            this.rbLoginForm.Name = "rbLoginForm";
+            this.rbLoginForm.Size = new System.Drawing.Size(71, 16);
+            this.rbLoginForm.TabIndex = 4;
+            this.rbLoginForm.TabStop = true;
+            this.rbLoginForm.Text = "登录窗体";
+            this.rbLoginForm.UseVisualStyleBackColor = true;
             // 
-            // rbDebugWindow
+            // rbDebugForm
             // 
-            this.rbDebugWindow.AutoSize = true;
-            this.rbDebugWindow.Location = new System.Drawing.Point(164, 3);
-            this.rbDebugWindow.Name = "rbDebugWindow";
-            this.rbDebugWindow.Size = new System.Drawing.Size(71, 16);
-            this.rbDebugWindow.TabIndex = 6;
-            this.rbDebugWindow.Text = "功能调试";
-            this.rbDebugWindow.UseVisualStyleBackColor = true;
+            this.rbDebugForm.AutoSize = true;
+            this.rbDebugForm.Location = new System.Drawing.Point(164, 3);
+            this.rbDebugForm.Name = "rbDebugForm";
+            this.rbDebugForm.Size = new System.Drawing.Size(71, 16);
+            this.rbDebugForm.TabIndex = 6;
+            this.rbDebugForm.Text = "功能调试";
+            this.rbDebugForm.UseVisualStyleBackColor = true;
             // 
             // btnSelectICON
             // 
@@ -1026,9 +1026,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rbDebugWindow;
-        private System.Windows.Forms.RadioButton rbMainWindow;
-        private System.Windows.Forms.RadioButton rbLoginWindow;
+        private System.Windows.Forms.RadioButton rbDebugForm;
+        private System.Windows.Forms.RadioButton rbMainForm;
+        private System.Windows.Forms.RadioButton rbLoginForm;
         private System.Windows.Forms.TextBox tbDomain;
         private System.Windows.Forms.PictureBox picICON;
         private System.Windows.Forms.TextBox tbTitle;

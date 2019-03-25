@@ -20,8 +20,9 @@ namespace DesktopApp
             //判断起始窗体是哪个
             string start = Confing.Gatway.Get("StartWinfow");
             Form form = null;
-            if (start == "MainWindow") form = new MainForm();
-            if (start == "DebugWindow") form = new DebugForm();
+            if (start == "LoginForm") form = new LoginForm();
+            if (start == "MainForm") form = new MainForm();
+            if (start == "DebugForm") form = new DebugForm();
             if (form == null) form = new DebugForm();
             //图标
             form.Icon = Confing.Gatway.GetIcon("ICON");
