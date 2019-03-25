@@ -16,19 +16,9 @@ namespace Setup
         {
             InitializeComponent();
             this.Icon = Setup.Properties.Resources.appicon;
-        }
-        
-        #region 调试
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void radioBrowser_CheckedChanged(object sender, EventArgs e)
-        {
-            this.panelBrowserMobile.Enabled = radioBroswerMobile.Checked;
-        }
-        #endregion
+            Confing.Gatway.Restore(this);
+            this.picICON.Parent = this.tabBase;
+        }        
 
         #region 底部按钮，确定与关闭
         private void btnClose_Click(object sender, EventArgs e)
@@ -39,6 +29,7 @@ namespace Setup
         private void btnEnter_Click(object sender, EventArgs e)
         {
             Confing.Gatway.Record(this);
+            MessageBox.Show("保存成功！");
         }
         #endregion
         #region 主界面事件
@@ -66,6 +57,7 @@ namespace Setup
                 {
                     Image source = Image.FromFile(fileDialog.FileName);
                     this.picICON.Image = source;
+                    this.picICON.Enabled = true;
                 }
             }
         }

@@ -23,12 +23,13 @@ namespace Confing
         /// 将设置项重现到配置界面中
         /// </summary>
         /// <param name="form"></param>
-        public static void Fill(System.Windows.Forms.Form form)
+        public static void Restore(System.Windows.Forms.Form form)
         {
+            Helper.XML.Read(form);
         }
         public static string Get(string itemname)
         {
-            return string.Empty;
+            return Helper.XML.Read(itemname);
         }
         
     }

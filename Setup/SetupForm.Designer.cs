@@ -225,6 +225,7 @@
             // picICON
             // 
             this.picICON.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picICON.Enabled = false;
             this.picICON.Location = new System.Drawing.Point(124, 82);
             this.picICON.Name = "picICON";
             this.picICON.Size = new System.Drawing.Size(60, 60);
@@ -737,7 +738,6 @@
             this.radioBroswerMobile.TabIndex = 7;
             this.radioBroswerMobile.Text = "手机浏览器";
             this.radioBroswerMobile.UseVisualStyleBackColor = true;
-            this.radioBroswerMobile.CheckedChanged += new System.EventHandler(this.radioBrowser_CheckedChanged);
             // 
             // panelBrowserMobile
             // 
@@ -793,7 +793,6 @@
             this.radioBrowserPc.TabStop = true;
             this.radioBrowserPc.Text = "普通桌面浏览器";
             this.radioBrowserPc.UseVisualStyleBackColor = true;
-            this.radioBrowserPc.CheckedChanged += new System.EventHandler(this.radioBrowser_CheckedChanged);
             // 
             // label22
             // 

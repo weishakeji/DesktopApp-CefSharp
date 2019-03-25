@@ -16,8 +16,11 @@ namespace DesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Application.Run(new MainForm());
+            //判断起始窗体是哪个
+            string start = Confing.Gatway.Get("StartWinfow");
+            if(start== "MainWindow") Application.Run(new MainForm());
+            if (start == "DebugWindow") Application.Run(new DebugForm());
+            //Application.Run(new MainForm());
            
 
         }

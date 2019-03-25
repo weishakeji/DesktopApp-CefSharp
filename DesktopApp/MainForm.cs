@@ -26,8 +26,8 @@ namespace DesktopApp
             //初始
             string appPath = System.Environment.CurrentDirectory;
             string url = appPath + "\\..\\WebPage\\test.html";
-            browser = Browser.Generate(url);
-            //browser = new ChromiumWebBrowser("http://www.168fff.cn");
+            //browser = Browser.Generate(url);
+            browser = Browser.Generate("http://www.168fff.cn");
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
 
