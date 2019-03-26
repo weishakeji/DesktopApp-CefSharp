@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.CheckBox cbIsMainBorderNone;
             this.tabSetupConfig = new System.Windows.Forms.TabControl();
             this.tabBase = new System.Windows.Forms.TabPage();
             this.panelStartWinfow = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.cbIsAbout = new System.Windows.Forms.CheckBox();
+            this.cbMainEnableRightMenu = new System.Windows.Forms.CheckBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.cbBtnWinMin = new System.Windows.Forms.CheckBox();
             this.cbBtnWinClose = new System.Windows.Forms.CheckBox();
@@ -62,9 +64,6 @@
             this.tbMainUrl = new System.Windows.Forms.TextBox();
             this.cbScreenCenter = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnMainBgpicSelect = new System.Windows.Forms.Button();
-            this.pictureMainBgpic = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,44 +71,52 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbApiFindPw = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbApiRegister = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbApiLogin = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbLoginTitle = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tabDebug = new System.Windows.Forms.TabPage();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.radioBroswerMobile = new System.Windows.Forms.RadioButton();
+            this.cbDebugHelper = new System.Windows.Forms.CheckBox();
+            this.panelDebugBrowser = new System.Windows.Forms.Panel();
+            this.rbDebugMobile = new System.Windows.Forms.RadioButton();
             this.panelBrowserMobile = new System.Windows.Forms.Panel();
             this.radioBrowserApp = new System.Windows.Forms.RadioButton();
             this.radioBrowserMini = new System.Windows.Forms.RadioButton();
             this.radioBrowerWeixin = new System.Windows.Forms.RadioButton();
-            this.radioBrowserPc = new System.Windows.Forms.RadioButton();
+            this.rbDebugDesktop = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.btnSelectDebugIndex = new System.Windows.Forms.Button();
+            this.tbDebugCustom = new System.Windows.Forms.TextBox();
+            this.panelDebugIndex = new System.Windows.Forms.Panel();
+            this.rbDebugCustom = new System.Windows.Forms.RadioButton();
+            this.rbDebugDefault = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbAboutContext = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbAboutHeight = new System.Windows.Forms.TextBox();
+            this.tbAboutWidth = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
-            this.cbMainEnableRightMenu = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureLoginBg = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cbIsFillWindow = new System.Windows.Forms.CheckBox();
+            this.cbIsMainTopLevel = new System.Windows.Forms.CheckBox();
+            this.cbIsLoginTitle = new System.Windows.Forms.CheckBox();
+            this.cbIsSavePw = new System.Windows.Forms.CheckBox();
+            this.cbIsAutoLing = new System.Windows.Forms.CheckBox();
+            this.btnAboutShow = new System.Windows.Forms.LinkLabel();
+            cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
             this.panelStartWinfow.SuspendLayout();
@@ -117,15 +124,15 @@
             this.tabMain.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelMainStyle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMainBgpic)).BeginInit();
             this.tbLogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabDebug.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelDebugBrowser.SuspendLayout();
             this.panelBrowserMobile.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelDebugIndex.SuspendLayout();
             this.tabAbout.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLoginBg)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSetupConfig
@@ -276,6 +283,8 @@
             // 
             // tabMain
             // 
+            this.tabMain.Controls.Add(this.cbIsMainTopLevel);
+            this.tabMain.Controls.Add(this.cbIsFillWindow);
             this.tabMain.Controls.Add(this.cbIsAbout);
             this.tabMain.Controls.Add(this.cbMainEnableRightMenu);
             this.tabMain.Controls.Add(this.panel7);
@@ -285,9 +294,6 @@
             this.tabMain.Controls.Add(this.tbMainUrl);
             this.tabMain.Controls.Add(this.cbScreenCenter);
             this.tabMain.Controls.Add(this.label12);
-            this.tabMain.Controls.Add(this.btnMainBgpicSelect);
-            this.tabMain.Controls.Add(this.pictureMainBgpic);
-            this.tabMain.Controls.Add(this.label11);
             this.tabMain.Controls.Add(this.label10);
             this.tabMain.Controls.Add(this.label7);
             this.tabMain.Controls.Add(this.label6);
@@ -304,12 +310,22 @@
             // cbIsAbout
             // 
             this.cbIsAbout.AutoSize = true;
-            this.cbIsAbout.Location = new System.Drawing.Point(285, 179);
+            this.cbIsAbout.Location = new System.Drawing.Point(289, 179);
             this.cbIsAbout.Name = "cbIsAbout";
             this.cbIsAbout.Size = new System.Drawing.Size(108, 16);
             this.cbIsAbout.TabIndex = 14;
             this.cbIsAbout.Text = "显示“关于”项";
             this.cbIsAbout.UseVisualStyleBackColor = true;
+            // 
+            // cbMainEnableRightMenu
+            // 
+            this.cbMainEnableRightMenu.AutoSize = true;
+            this.cbMainEnableRightMenu.Location = new System.Drawing.Point(118, 178);
+            this.cbMainEnableRightMenu.Name = "cbMainEnableRightMenu";
+            this.cbMainEnableRightMenu.Size = new System.Drawing.Size(120, 16);
+            this.cbMainEnableRightMenu.TabIndex = 15;
+            this.cbMainEnableRightMenu.Text = "启用默认右键菜单";
+            this.cbMainEnableRightMenu.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
@@ -324,7 +340,7 @@
             // cbBtnWinMin
             // 
             this.cbBtnWinMin.AutoSize = true;
-            this.cbBtnWinMin.Location = new System.Drawing.Point(173, 3);
+            this.cbBtnWinMin.Location = new System.Drawing.Point(177, 3);
             this.cbBtnWinMin.Name = "cbBtnWinMin";
             this.cbBtnWinMin.Size = new System.Drawing.Size(84, 16);
             this.cbBtnWinMin.TabIndex = 24;
@@ -346,7 +362,7 @@
             // cbBtnWinMax
             // 
             this.cbBtnWinMax.AutoSize = true;
-            this.cbBtnWinMax.Location = new System.Drawing.Point(83, 3);
+            this.cbBtnWinMax.Location = new System.Drawing.Point(93, 3);
             this.cbBtnWinMax.Name = "cbBtnWinMax";
             this.cbBtnWinMax.Size = new System.Drawing.Size(84, 16);
             this.cbBtnWinMax.TabIndex = 25;
@@ -374,6 +390,7 @@
             // 
             // panelMainStyle
             // 
+            this.panelMainStyle.Controls.Add(cbIsMainBorderNone);
             this.panelMainStyle.Controls.Add(this.label24);
             this.panelMainStyle.Controls.Add(this.label9);
             this.panelMainStyle.Controls.Add(this.tbMainHeight);
@@ -390,7 +407,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(338, 6);
+            this.label24.Location = new System.Drawing.Point(303, 7);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(29, 12);
             this.label24.TabIndex = 14;
@@ -399,7 +416,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(286, 7);
+            this.label9.Location = new System.Drawing.Point(251, 8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(17, 12);
             this.label9.TabIndex = 13;
@@ -407,14 +424,16 @@
             // 
             // tbMainHeight
             // 
-            this.tbMainHeight.Location = new System.Drawing.Point(302, 1);
+            this.tbMainHeight.Location = new System.Drawing.Point(267, 2);
+            this.tbMainHeight.MaxLength = 4;
             this.tbMainHeight.Name = "tbMainHeight";
             this.tbMainHeight.Size = new System.Drawing.Size(31, 21);
             this.tbMainHeight.TabIndex = 12;
             // 
             // tbMainWidth
             // 
-            this.tbMainWidth.Location = new System.Drawing.Point(249, 1);
+            this.tbMainWidth.Location = new System.Drawing.Point(214, 2);
+            this.tbMainWidth.MaxLength = 4;
             this.tbMainWidth.Name = "tbMainWidth";
             this.tbMainWidth.Size = new System.Drawing.Size(31, 21);
             this.tbMainWidth.TabIndex = 11;
@@ -423,7 +442,7 @@
             // 
             this.radioWinNormal.AutoSize = true;
             this.radioWinNormal.Checked = true;
-            this.radioWinNormal.Location = new System.Drawing.Point(121, 5);
+            this.radioWinNormal.Location = new System.Drawing.Point(93, 5);
             this.radioWinNormal.Name = "radioWinNormal";
             this.radioWinNormal.Size = new System.Drawing.Size(71, 16);
             this.radioWinNormal.TabIndex = 7;
@@ -444,7 +463,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(211, 7);
+            this.label8.Location = new System.Drawing.Point(176, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 12);
             this.label8.TabIndex = 8;
@@ -453,7 +472,7 @@
             // cbFixedSize
             // 
             this.cbFixedSize.AutoSize = true;
-            this.cbFixedSize.Location = new System.Drawing.Point(406, 5);
+            this.cbFixedSize.Location = new System.Drawing.Point(347, 5);
             this.cbFixedSize.Name = "cbFixedSize";
             this.cbFixedSize.Size = new System.Drawing.Size(72, 16);
             this.cbFixedSize.TabIndex = 10;
@@ -485,32 +504,6 @@
             this.label12.Size = new System.Drawing.Size(41, 12);
             this.label12.TabIndex = 18;
             this.label12.Text = "位置：";
-            // 
-            // btnMainBgpicSelect
-            // 
-            this.btnMainBgpicSelect.Location = new System.Drawing.Point(115, 232);
-            this.btnMainBgpicSelect.Name = "btnMainBgpicSelect";
-            this.btnMainBgpicSelect.Size = new System.Drawing.Size(75, 23);
-            this.btnMainBgpicSelect.TabIndex = 17;
-            this.btnMainBgpicSelect.Text = "选择...";
-            this.btnMainBgpicSelect.UseVisualStyleBackColor = true;
-            // 
-            // pictureMainBgpic
-            // 
-            this.pictureMainBgpic.Location = new System.Drawing.Point(196, 232);
-            this.pictureMainBgpic.Name = "pictureMainBgpic";
-            this.pictureMainBgpic.Size = new System.Drawing.Size(143, 108);
-            this.pictureMainBgpic.TabIndex = 16;
-            this.pictureMainBgpic.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(54, 236);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 12);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "背景图：";
             // 
             // label10
             // 
@@ -557,9 +550,15 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.cbIsAutoLing);
+            this.tbLogin.Controls.Add(this.cbIsSavePw);
+            this.tbLogin.Controls.Add(this.cbIsLoginTitle);
+            this.tbLogin.Controls.Add(this.button1);
+            this.tbLogin.Controls.Add(this.pictureLoginBg);
+            this.tbLogin.Controls.Add(this.label25);
             this.tbLogin.Controls.Add(this.groupBox1);
             this.tbLogin.Controls.Add(this.radioButton8);
-            this.tbLogin.Controls.Add(this.textBox5);
+            this.tbLogin.Controls.Add(this.tbLoginTitle);
             this.tbLogin.Controls.Add(this.label13);
             this.tbLogin.Location = new System.Drawing.Point(4, 22);
             this.tbLogin.Name = "tbLogin";
@@ -570,25 +569,25 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.tbApiFindPw);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.tbApiRegister);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.tbApiLogin);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(30, 59);
+            this.groupBox1.Location = new System.Drawing.Point(14, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(556, 127);
+            this.groupBox1.Size = new System.Drawing.Size(572, 127);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "接口地址";
             // 
-            // textBox8
+            // tbApiFindPw
             // 
-            this.textBox8.Location = new System.Drawing.Point(92, 83);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(322, 21);
-            this.textBox8.TabIndex = 26;
+            this.tbApiFindPw.Location = new System.Drawing.Point(95, 83);
+            this.tbApiFindPw.Name = "tbApiFindPw";
+            this.tbApiFindPw.Size = new System.Drawing.Size(322, 21);
+            this.tbApiFindPw.TabIndex = 26;
             // 
             // label16
             // 
@@ -599,33 +598,33 @@
             this.label16.TabIndex = 25;
             this.label16.Text = "找回密码：";
             // 
-            // textBox7
+            // tbApiRegister
             // 
-            this.textBox7.Location = new System.Drawing.Point(92, 56);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(322, 21);
-            this.textBox7.TabIndex = 24;
+            this.tbApiRegister.Location = new System.Drawing.Point(95, 56);
+            this.tbApiRegister.Name = "tbApiRegister";
+            this.tbApiRegister.Size = new System.Drawing.Size(322, 21);
+            this.tbApiRegister.TabIndex = 24;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 59);
+            this.label15.Location = new System.Drawing.Point(45, 59);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 12);
             this.label15.TabIndex = 23;
             this.label15.Text = "注册：";
             // 
-            // textBox6
+            // tbApiLogin
             // 
-            this.textBox6.Location = new System.Drawing.Point(95, 29);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(322, 21);
-            this.textBox6.TabIndex = 22;
+            this.tbApiLogin.Location = new System.Drawing.Point(95, 29);
+            this.tbApiLogin.Name = "tbApiLogin";
+            this.tbApiLogin.Size = new System.Drawing.Size(322, 21);
+            this.tbApiLogin.TabIndex = 22;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 32);
+            this.label14.Location = new System.Drawing.Point(21, 32);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(65, 12);
             this.label14.TabIndex = 21;
@@ -635,7 +634,7 @@
             // 
             this.radioButton8.AutoSize = true;
             this.radioButton8.Checked = true;
-            this.radioButton8.Location = new System.Drawing.Point(108, 206);
+            this.radioButton8.Location = new System.Drawing.Point(108, 192);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(371, 16);
             this.radioButton8.TabIndex = 23;
@@ -643,12 +642,12 @@
             this.radioButton8.Text = "是否允许直接访问主窗体（当前不用登录，进入主窗体后再登录）";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // tbLoginTitle
             // 
-            this.textBox5.Location = new System.Drawing.Point(108, 18);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(478, 21);
-            this.textBox5.TabIndex = 5;
+            this.tbLoginTitle.Location = new System.Drawing.Point(108, 18);
+            this.tbLoginTitle.Name = "tbLoginTitle";
+            this.tbLoginTitle.Size = new System.Drawing.Size(339, 21);
+            this.tbLoginTitle.TabIndex = 5;
             // 
             // label13
             // 
@@ -661,12 +660,12 @@
             // 
             // tabDebug
             // 
-            this.tabDebug.Controls.Add(this.checkBox4);
-            this.tabDebug.Controls.Add(this.panel5);
+            this.tabDebug.Controls.Add(this.cbDebugHelper);
+            this.tabDebug.Controls.Add(this.panelDebugBrowser);
             this.tabDebug.Controls.Add(this.label22);
-            this.tabDebug.Controls.Add(this.button2);
-            this.tabDebug.Controls.Add(this.textBox12);
-            this.tabDebug.Controls.Add(this.panel4);
+            this.tabDebug.Controls.Add(this.btnSelectDebugIndex);
+            this.tabDebug.Controls.Add(this.tbDebugCustom);
+            this.tabDebug.Controls.Add(this.panelDebugIndex);
             this.tabDebug.Controls.Add(this.label21);
             this.tabDebug.Location = new System.Drawing.Point(4, 22);
             this.tabDebug.Name = "tabDebug";
@@ -676,35 +675,35 @@
             this.tabDebug.Text = "功能调试";
             this.tabDebug.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbDebugHelper
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(76, 155);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(108, 16);
-            this.checkBox4.TabIndex = 27;
-            this.checkBox4.Text = "同步打开调试器";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbDebugHelper.AutoSize = true;
+            this.cbDebugHelper.Location = new System.Drawing.Point(76, 155);
+            this.cbDebugHelper.Name = "cbDebugHelper";
+            this.cbDebugHelper.Size = new System.Drawing.Size(108, 16);
+            this.cbDebugHelper.TabIndex = 27;
+            this.cbDebugHelper.Text = "同步打开调试器";
+            this.cbDebugHelper.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // panelDebugBrowser
             // 
-            this.panel5.Controls.Add(this.radioBroswerMobile);
-            this.panel5.Controls.Add(this.panelBrowserMobile);
-            this.panel5.Controls.Add(this.radioBrowserPc);
-            this.panel5.Location = new System.Drawing.Point(66, 106);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(533, 31);
-            this.panel5.TabIndex = 24;
+            this.panelDebugBrowser.Controls.Add(this.rbDebugMobile);
+            this.panelDebugBrowser.Controls.Add(this.panelBrowserMobile);
+            this.panelDebugBrowser.Controls.Add(this.rbDebugDesktop);
+            this.panelDebugBrowser.Location = new System.Drawing.Point(66, 106);
+            this.panelDebugBrowser.Name = "panelDebugBrowser";
+            this.panelDebugBrowser.Size = new System.Drawing.Size(533, 31);
+            this.panelDebugBrowser.TabIndex = 24;
             // 
-            // radioBroswerMobile
+            // rbDebugMobile
             // 
-            this.radioBroswerMobile.AutoSize = true;
-            this.radioBroswerMobile.Location = new System.Drawing.Point(135, 9);
-            this.radioBroswerMobile.Name = "radioBroswerMobile";
-            this.radioBroswerMobile.Size = new System.Drawing.Size(83, 16);
-            this.radioBroswerMobile.TabIndex = 7;
-            this.radioBroswerMobile.Text = "手机浏览器";
-            this.radioBroswerMobile.UseVisualStyleBackColor = true;
+            this.rbDebugMobile.AutoSize = true;
+            this.rbDebugMobile.Location = new System.Drawing.Point(135, 9);
+            this.rbDebugMobile.Name = "rbDebugMobile";
+            this.rbDebugMobile.Size = new System.Drawing.Size(83, 16);
+            this.rbDebugMobile.TabIndex = 7;
+            this.rbDebugMobile.Text = "手机浏览器";
+            this.rbDebugMobile.UseVisualStyleBackColor = true;
             // 
             // panelBrowserMobile
             // 
@@ -749,17 +748,17 @@
             this.radioBrowerWeixin.Text = "微信";
             this.radioBrowerWeixin.UseVisualStyleBackColor = true;
             // 
-            // radioBrowserPc
+            // rbDebugDesktop
             // 
-            this.radioBrowserPc.AutoSize = true;
-            this.radioBrowserPc.Checked = true;
-            this.radioBrowserPc.Location = new System.Drawing.Point(10, 9);
-            this.radioBrowserPc.Name = "radioBrowserPc";
-            this.radioBrowserPc.Size = new System.Drawing.Size(107, 16);
-            this.radioBrowserPc.TabIndex = 6;
-            this.radioBrowserPc.TabStop = true;
-            this.radioBrowserPc.Text = "普通桌面浏览器";
-            this.radioBrowserPc.UseVisualStyleBackColor = true;
+            this.rbDebugDesktop.AutoSize = true;
+            this.rbDebugDesktop.Checked = true;
+            this.rbDebugDesktop.Location = new System.Drawing.Point(10, 9);
+            this.rbDebugDesktop.Name = "rbDebugDesktop";
+            this.rbDebugDesktop.Size = new System.Drawing.Size(107, 16);
+            this.rbDebugDesktop.TabIndex = 6;
+            this.rbDebugDesktop.TabStop = true;
+            this.rbDebugDesktop.Text = "普通桌面浏览器";
+            this.rbDebugDesktop.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
@@ -770,57 +769,57 @@
             this.label22.TabIndex = 26;
             this.label22.Text = "模拟：";
             // 
-            // button2
+            // btnSelectDebugIndex
             // 
-            this.button2.Location = new System.Drawing.Point(550, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 23);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "选择";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSelectDebugIndex.Location = new System.Drawing.Point(550, 60);
+            this.btnSelectDebugIndex.Name = "btnSelectDebugIndex";
+            this.btnSelectDebugIndex.Size = new System.Drawing.Size(52, 23);
+            this.btnSelectDebugIndex.TabIndex = 25;
+            this.btnSelectDebugIndex.Text = "选择";
+            this.btnSelectDebugIndex.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // tbDebugCustom
             // 
-            this.textBox12.Location = new System.Drawing.Point(65, 62);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(478, 21);
-            this.textBox12.TabIndex = 24;
+            this.tbDebugCustom.Location = new System.Drawing.Point(65, 62);
+            this.tbDebugCustom.Name = "tbDebugCustom";
+            this.tbDebugCustom.Size = new System.Drawing.Size(478, 21);
+            this.tbDebugCustom.TabIndex = 24;
             // 
-            // panel4
+            // panelDebugIndex
             // 
-            this.panel4.Controls.Add(this.radioButton9);
-            this.panel4.Controls.Add(this.radioButton10);
-            this.panel4.Location = new System.Drawing.Point(65, 16);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(250, 31);
-            this.panel4.TabIndex = 23;
+            this.panelDebugIndex.Controls.Add(this.rbDebugCustom);
+            this.panelDebugIndex.Controls.Add(this.rbDebugDefault);
+            this.panelDebugIndex.Location = new System.Drawing.Point(65, 16);
+            this.panelDebugIndex.Name = "panelDebugIndex";
+            this.panelDebugIndex.Size = new System.Drawing.Size(250, 31);
+            this.panelDebugIndex.TabIndex = 23;
             // 
-            // radioButton9
+            // rbDebugCustom
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(124, 9);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(95, 16);
-            this.radioButton9.TabIndex = 7;
-            this.radioButton9.Text = "自定义调试页";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbDebugCustom.AutoSize = true;
+            this.rbDebugCustom.Location = new System.Drawing.Point(124, 9);
+            this.rbDebugCustom.Name = "rbDebugCustom";
+            this.rbDebugCustom.Size = new System.Drawing.Size(95, 16);
+            this.rbDebugCustom.TabIndex = 7;
+            this.rbDebugCustom.Text = "自定义调试页";
+            this.rbDebugCustom.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbDebugDefault
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Checked = true;
-            this.radioButton10.Location = new System.Drawing.Point(10, 9);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(83, 16);
-            this.radioButton10.TabIndex = 6;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "默认调试页";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbDebugDefault.AutoSize = true;
+            this.rbDebugDefault.Checked = true;
+            this.rbDebugDefault.Location = new System.Drawing.Point(10, 9);
+            this.rbDebugDefault.Name = "rbDebugDefault";
+            this.rbDebugDefault.Size = new System.Drawing.Size(83, 16);
+            this.rbDebugDefault.TabIndex = 6;
+            this.rbDebugDefault.TabStop = true;
+            this.rbDebugDefault.Text = "默认调试页";
+            this.rbDebugDefault.UseVisualStyleBackColor = true;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(19, 25);
+            this.label21.Location = new System.Drawing.Point(7, 25);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(53, 12);
             this.label21.TabIndex = 22;
@@ -828,11 +827,11 @@
             // 
             // tabAbout
             // 
-            this.tabAbout.Controls.Add(this.label20);
-            this.tabAbout.Controls.Add(this.textBox11);
+            this.tabAbout.Controls.Add(this.btnAboutShow);
+            this.tabAbout.Controls.Add(this.tbAboutContext);
             this.tabAbout.Controls.Add(this.label19);
-            this.tabAbout.Controls.Add(this.textBox10);
-            this.tabAbout.Controls.Add(this.textBox9);
+            this.tabAbout.Controls.Add(this.tbAboutHeight);
+            this.tabAbout.Controls.Add(this.tbAboutWidth);
             this.tabAbout.Controls.Add(this.label17);
             this.tabAbout.Controls.Add(this.label18);
             this.tabAbout.Location = new System.Drawing.Point(4, 22);
@@ -842,52 +841,41 @@
             this.tabAbout.Text = "关于";
             this.tabAbout.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // tbAboutContext
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label20.Location = new System.Drawing.Point(482, 97);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(116, 12);
-            this.label20.TabIndex = 17;
-            this.label20.Text = "点击此处,预览效果";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(10, 113);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(588, 245);
-            this.textBox11.TabIndex = 15;
+            this.tbAboutContext.Location = new System.Drawing.Point(10, 98);
+            this.tbAboutContext.Multiline = true;
+            this.tbAboutContext.Name = "tbAboutContext";
+            this.tbAboutContext.Size = new System.Drawing.Size(588, 267);
+            this.tbAboutContext.TabIndex = 15;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(26, 89);
+            this.label19.Location = new System.Drawing.Point(26, 78);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 12);
             this.label19.TabIndex = 14;
             this.label19.Text = "内容：";
             // 
-            // textBox10
+            // tbAboutHeight
             // 
-            this.textBox10.Location = new System.Drawing.Point(73, 53);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(77, 21);
-            this.textBox10.TabIndex = 13;
+            this.tbAboutHeight.Location = new System.Drawing.Point(73, 45);
+            this.tbAboutHeight.Name = "tbAboutHeight";
+            this.tbAboutHeight.Size = new System.Drawing.Size(77, 21);
+            this.tbAboutHeight.TabIndex = 13;
             // 
-            // textBox9
+            // tbAboutWidth
             // 
-            this.textBox9.Location = new System.Drawing.Point(73, 18);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(77, 21);
-            this.textBox9.TabIndex = 12;
+            this.tbAboutWidth.Location = new System.Drawing.Point(73, 18);
+            this.tbAboutWidth.Name = "tbAboutWidth";
+            this.tbAboutWidth.Size = new System.Drawing.Size(77, 21);
+            this.tbAboutWidth.TabIndex = 12;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(38, 56);
+            this.label17.Location = new System.Drawing.Point(38, 48);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 12);
             this.label17.TabIndex = 11;
@@ -946,15 +934,109 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // cbMainEnableRightMenu
+            // button1
             // 
-            this.cbMainEnableRightMenu.AutoSize = true;
-            this.cbMainEnableRightMenu.Location = new System.Drawing.Point(118, 178);
-            this.cbMainEnableRightMenu.Name = "cbMainEnableRightMenu";
-            this.cbMainEnableRightMenu.Size = new System.Drawing.Size(120, 16);
-            this.cbMainEnableRightMenu.TabIndex = 15;
-            this.cbMainEnableRightMenu.Text = "启用默认右键菜单";
-            this.cbMainEnableRightMenu.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(105, 248);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "选择...";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureLoginBg
+            // 
+            this.pictureLoginBg.Enabled = false;
+            this.pictureLoginBg.Location = new System.Drawing.Point(186, 248);
+            this.pictureLoginBg.Name = "pictureLoginBg";
+            this.pictureLoginBg.Size = new System.Drawing.Size(160, 90);
+            this.pictureLoginBg.TabIndex = 26;
+            this.pictureLoginBg.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(47, 253);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 12);
+            this.label25.TabIndex = 25;
+            this.label25.Text = "背景图：";
+            // 
+            // cbIsFillWindow
+            // 
+            this.cbIsFillWindow.AutoSize = true;
+            this.cbIsFillWindow.Location = new System.Drawing.Point(290, 150);
+            this.cbIsFillWindow.Name = "cbIsFillWindow";
+            this.cbIsFillWindow.Size = new System.Drawing.Size(96, 16);
+            this.cbIsFillWindow.TabIndex = 27;
+            this.cbIsFillWindow.Text = "打开立即全屏";
+            this.cbIsFillWindow.UseVisualStyleBackColor = true;
+            // 
+            // cbIsMainBorderNone
+            // 
+            cbIsMainBorderNone.AutoSize = true;
+            cbIsMainBorderNone.Location = new System.Drawing.Point(420, 5);
+            cbIsMainBorderNone.Name = "cbIsMainBorderNone";
+            cbIsMainBorderNone.Size = new System.Drawing.Size(60, 16);
+            cbIsMainBorderNone.TabIndex = 28;
+            cbIsMainBorderNone.Text = "无边框";
+            cbIsMainBorderNone.UseVisualStyleBackColor = true;
+            // 
+            // cbIsMainTopLevel
+            // 
+            this.cbIsMainTopLevel.AutoSize = true;
+            this.cbIsMainTopLevel.Location = new System.Drawing.Point(423, 150);
+            this.cbIsMainTopLevel.Name = "cbIsMainTopLevel";
+            this.cbIsMainTopLevel.Size = new System.Drawing.Size(96, 16);
+            this.cbIsMainTopLevel.TabIndex = 28;
+            this.cbIsMainTopLevel.Text = "窗体处于顶层";
+            this.cbIsMainTopLevel.UseVisualStyleBackColor = true;
+            // 
+            // cbIsLoginTitle
+            // 
+            this.cbIsLoginTitle.AutoSize = true;
+            this.cbIsLoginTitle.Checked = true;
+            this.cbIsLoginTitle.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsLoginTitle.Location = new System.Drawing.Point(465, 20);
+            this.cbIsLoginTitle.Name = "cbIsLoginTitle";
+            this.cbIsLoginTitle.Size = new System.Drawing.Size(72, 16);
+            this.cbIsLoginTitle.TabIndex = 28;
+            this.cbIsLoginTitle.Text = "显示标题";
+            this.cbIsLoginTitle.UseVisualStyleBackColor = true;
+            // 
+            // cbIsSavePw
+            // 
+            this.cbIsSavePw.AutoSize = true;
+            this.cbIsSavePw.Checked = true;
+            this.cbIsSavePw.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsSavePw.Location = new System.Drawing.Point(264, 221);
+            this.cbIsSavePw.Name = "cbIsSavePw";
+            this.cbIsSavePw.Size = new System.Drawing.Size(120, 16);
+            this.cbIsSavePw.TabIndex = 29;
+            this.cbIsSavePw.Text = "显示“保存密码”";
+            this.cbIsSavePw.UseVisualStyleBackColor = true;
+            // 
+            // cbIsAutoLing
+            // 
+            this.cbIsAutoLing.AutoSize = true;
+            this.cbIsAutoLing.Checked = true;
+            this.cbIsAutoLing.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsAutoLing.Location = new System.Drawing.Point(108, 221);
+            this.cbIsAutoLing.Name = "cbIsAutoLing";
+            this.cbIsAutoLing.Size = new System.Drawing.Size(120, 16);
+            this.cbIsAutoLing.TabIndex = 30;
+            this.cbIsAutoLing.Text = "显示“自动登录”";
+            this.cbIsAutoLing.UseVisualStyleBackColor = true;
+            // 
+            // btnAboutShow
+            // 
+            this.btnAboutShow.AutoSize = true;
+            this.btnAboutShow.Location = new System.Drawing.Point(485, 78);
+            this.btnAboutShow.Name = "btnAboutShow";
+            this.btnAboutShow.Size = new System.Drawing.Size(113, 12);
+            this.btnAboutShow.TabIndex = 16;
+            this.btnAboutShow.TabStop = true;
+            this.btnAboutShow.Text = "点击此处，预览效果";
+            this.btnAboutShow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnAboutShow_LinkClicked);
             // 
             // SetupForm
             // 
@@ -980,23 +1062,23 @@
             this.panel7.PerformLayout();
             this.panelMainStyle.ResumeLayout(false);
             this.panelMainStyle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMainBgpic)).EndInit();
             this.tbLogin.ResumeLayout(false);
             this.tbLogin.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabDebug.ResumeLayout(false);
             this.tabDebug.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelDebugBrowser.ResumeLayout(false);
+            this.panelDebugBrowser.PerformLayout();
             this.panelBrowserMobile.ResumeLayout(false);
             this.panelBrowserMobile.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelDebugIndex.ResumeLayout(false);
+            this.panelDebugIndex.PerformLayout();
             this.tabAbout.ResumeLayout(false);
             this.tabAbout.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLoginBg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1029,12 +1111,9 @@
         private System.Windows.Forms.RadioButton radioWinMax;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox cbFixedSize;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox cbIsAbout;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnMainBgpicSelect;
-        private System.Windows.Forms.PictureBox pictureMainBgpic;
         private System.Windows.Forms.CheckBox cbScreenCenter;
         private System.Windows.Forms.TextBox tbMainUrl;
         private System.Windows.Forms.Panel panel1;
@@ -1042,37 +1121,36 @@
         private System.Windows.Forms.Panel panelStartWinfow;
         private System.Windows.Forms.Panel panelMainStyle;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbApiLogin;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbLoginTitle;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbApiFindPw;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbApiRegister;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbAboutWidth;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.TextBox tbAboutHeight;
+        private System.Windows.Forms.TextBox tbAboutContext;
+        private System.Windows.Forms.Button btnSelectDebugIndex;
+        private System.Windows.Forms.TextBox tbDebugCustom;
+        private System.Windows.Forms.Panel panelDebugIndex;
+        private System.Windows.Forms.RadioButton rbDebugCustom;
+        private System.Windows.Forms.RadioButton rbDebugDefault;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panelBrowserMobile;
         private System.Windows.Forms.RadioButton radioBrowserApp;
         private System.Windows.Forms.RadioButton radioBrowserMini;
         private System.Windows.Forms.RadioButton radioBrowerWeixin;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton radioBroswerMobile;
-        private System.Windows.Forms.RadioButton radioBrowserPc;
+        private System.Windows.Forms.Panel panelDebugBrowser;
+        private System.Windows.Forms.RadioButton rbDebugMobile;
+        private System.Windows.Forms.RadioButton rbDebugDesktop;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox cbDebugHelper;
         private System.Windows.Forms.CheckBox cbIsEnableLoad;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox cbBtnWinMin;
@@ -1085,6 +1163,15 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lbShow;
         private System.Windows.Forms.CheckBox cbMainEnableRightMenu;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureLoginBg;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.CheckBox cbIsFillWindow;
+        private System.Windows.Forms.CheckBox cbIsMainTopLevel;
+        private System.Windows.Forms.CheckBox cbIsLoginTitle;
+        private System.Windows.Forms.CheckBox cbIsAutoLing;
+        private System.Windows.Forms.CheckBox cbIsSavePw;
+        private System.Windows.Forms.LinkLabel btnAboutShow;
     }
 }
 

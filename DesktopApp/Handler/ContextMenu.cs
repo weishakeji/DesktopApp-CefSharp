@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,8 +55,13 @@ namespace DesktopApp.Handler
                 if(aboutForm==null || aboutForm.IsDisposed)
                     aboutForm = new AboutForm();
                 aboutForm.TopMost = true;
-                //aboutForm.TopLevel = false;
-                //aboutForm.Parent = form;
+                //宽高
+                int width= Confing.Gatway.GetInt("AboutWidth");
+                int height= Confing.Gatway.GetInt("AboutHeight");
+                if (width > 0 && height > 0)
+                    aboutForm.Size = new Size(width, height);
+                //要显示的内容
+                aboutForm.ContextText = Confing.Gatway.Get("AboutContext");
                 aboutForm.ShowDialog();
                 aboutForm.Focus();
             }

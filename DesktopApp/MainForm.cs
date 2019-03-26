@@ -32,7 +32,7 @@ namespace DesktopApp
             Control.CheckForIllegalCrossThreadCalls = false;
             this.Icon = DesktopApp.Properties.Resources.appicon;
             InitializeComponent();
-            
+
         }
         public ChromiumWebBrowser browser;
         public void InitBrowser()

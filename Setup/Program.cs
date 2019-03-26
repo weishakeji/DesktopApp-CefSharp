@@ -22,7 +22,9 @@ namespace Setup
             mutex = new System.Threading.Mutex(true, "OnlyRun");
             if (mutex.WaitOne(0, false))
             {
-                Application.Run(new SetupForm());
+                Form form = new SetupForm();
+                form.StartPosition = FormStartPosition.CenterScreen;    //屏幕中央打开
+                Application.Run(form);
             }
             else
             {

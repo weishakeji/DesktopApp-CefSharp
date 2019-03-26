@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Setup
 {
     public partial class SetupForm : Form
-    {
+    {        
         public SetupForm()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace Setup
             lbShow.Visible = false;
         }
         #endregion
-        #region 主界面事件
+        #region 基础设置的界面方法
         /// <summary>
         /// 选择主图标
         /// </summary>
@@ -43,18 +43,18 @@ namespace Setup
         /// <param name="e"></param>
         private void btnSelectICON_Click(object sender, EventArgs e)
         {
-            //声明允许的后缀名
-            string[] limitExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp", "*.ico" };
+            //声明允许上传的图片的后缀名
+            string[] limitImgExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp", "*.ico" };
             OpenFileDialog fileDialog = new OpenFileDialog();
-            string str = string.Format("图片文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitExt), string.Join(";", limitExt));
+            string str = string.Format("图片文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
             fileDialog.Filter = str;
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 //获取用户选择文件的后缀名
                 string extension = Path.GetExtension(fileDialog.FileName);
-                if (!((IList<string>)limitExt).Contains("*" + extension))
+                if (!((IList<string>)limitImgExt).Contains("*" + extension))
                 {
-                    MessageBox.Show(string.Format("只能选择{0}格式的图片！", string.Join("、", limitExt)).Replace("*.", ""));
+                    MessageBox.Show(string.Format("只能选择{0}格式的图片！", string.Join("、", limitImgExt)).Replace("*.", ""));
                 }
                 else
                 {
@@ -63,6 +63,31 @@ namespace Setup
                     this.picICON.Enabled = true;
                 }
             }
+        }
+        #endregion
+
+        #region 主窗体界面的方法
+
+        #endregion
+
+        #region 关于我们的方法
+        /// <summary>
+        /// 预览关于我们的效果
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAboutShow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //宽高
+            int width, height;
+            int.TryParse(tbAboutWidth.Text, out width);
+            int.TryParse(tbAboutHeight.Text, out height);
+            //构建窗体
+            AboutForm aboutForm = new AboutForm();
+            if (width > 0 && height > 0) aboutForm.Size = new Size(width, height);
+            aboutForm.ContextText = tbAboutContext.Text;
+            aboutForm.ShowDialog();
+            aboutForm.Focus();
         }
         #endregion
     }

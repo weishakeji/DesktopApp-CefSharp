@@ -28,24 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.richText = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
+            // 
+            // richText
+            // 
+            this.richText.BackColor = System.Drawing.Color.White;
+            this.richText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richText.Enabled = false;
+            this.richText.Location = new System.Drawing.Point(37, 47);
+            this.richText.Margin = new System.Windows.Forms.Padding(30);
+            this.richText.Name = "richText";
+            this.richText.ReadOnly = true;
+            this.richText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richText.Size = new System.Drawing.Size(256, 267);
+            this.richText.TabIndex = 2;
+            this.richText.Text = "";
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(330, 360);
+            this.Controls.Add(this.richText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " 关于";
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox richText;
     }
 }
 

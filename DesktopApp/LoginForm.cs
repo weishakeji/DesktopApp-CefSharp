@@ -25,5 +25,35 @@ namespace DesktopApp
         {
            
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private Point mousePoint = new Point();
+        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            //base.OnMouseDown(e);
+            this.mousePoint.X = e.X;
+            this.mousePoint.Y = e.Y;
+        }
+
+        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Top = Control.MousePosition.Y - mousePoint.Y;
+                this.Left = Control.MousePosition.X - mousePoint.X;
+            }
+
+        }
+
+        private void lbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
     }
 }

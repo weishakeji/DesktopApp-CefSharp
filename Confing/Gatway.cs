@@ -51,6 +51,7 @@ namespace Confing
         public static Icon GetIcon(string itemname)
         {
             Image image = GetImage(itemname);
+            if (image == null) return null;
             using (MemoryStream msImg = new MemoryStream(), msIco = new MemoryStream())
             {
                 image.Save(msImg, ImageFormat.Png);

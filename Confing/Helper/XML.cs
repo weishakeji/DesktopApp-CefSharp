@@ -72,7 +72,20 @@ namespace Confing.Helper
                     XmlNode xmlItem = xmlPage.SelectSingleNode(c.Name);
                     if (xmlItem == null) xmlItem = xmlDoc.CreateElement(c.Name);
                     //获输入框的取值
-                    if (c is TextBox) xmlItem.InnerText = ((TextBox)c).Text;
+                    if (c is TextBox)
+                    {
+                        TextBox tb = (TextBox)c;
+                        if (tb.Multiline) {
+                            for (int i = 0; i < xmlItem.ChildNodes.Count; i++)
+                                xmlItem.RemoveChild(xmlItem.ChildNodes[i]);
+                            XmlCDataSection cddata = xmlDoc.CreateCDataSection(tb.Text);
+                            xmlItem.AppendChild(cddata);
+                        }
+                        else
+                        {
+                            xmlItem.InnerText = tb.Text;
+                        }
+                    }
                     //复选框
                     if (c is CheckBox) xmlItem.InnerText = ((CheckBox)c).Checked.ToString();
                     //单选框
