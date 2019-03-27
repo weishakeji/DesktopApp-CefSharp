@@ -47,7 +47,7 @@ namespace DesktopApp
         }
 
         #region 事件
-        private static void Browser_TitleChanged(object sender, TitleChangedEventArgs e)
+        public static void Browser_TitleChanged(object sender, TitleChangedEventArgs e)
         {
             //当前浏览器对象
             ChromiumWebBrowser cwb = (ChromiumWebBrowser)sender;

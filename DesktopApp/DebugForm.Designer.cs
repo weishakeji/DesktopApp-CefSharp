@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // DebugForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 522);
+            this.ClientSize = new System.Drawing.Size(984, 562);
             this.Name = "DebugForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DebugForm";
+            this.Load += new System.EventHandler(this.DebugForm_Load);
             this.ResumeLayout(false);
 
         }

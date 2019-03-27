@@ -90,5 +90,10 @@ namespace Setup
             aboutForm.Focus();
         }
         #endregion
+
+        private void rbDebugMobile_CheckedChanged(object sender, EventArgs e)
+        {
+            panelBrowserMobile.Enabled = this.rbDebugMobile.Checked;
+        }
     }
 }

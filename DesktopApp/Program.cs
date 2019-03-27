@@ -31,8 +31,6 @@ namespace DesktopApp
                 form.Text = Confing.Gatway.Get("Title");
             //打开窗体
             Application.Run(form);
-
-
         }
         /// <summary>
         /// 构建登录窗
@@ -102,9 +100,22 @@ namespace DesktopApp
         /// <returns></returns>
         static Form DebugForm()
         {
-            Form form = null;
-            form = new DebugForm();
-            return form;
+            DebugForm form = new DebugForm();
+            //默认页还是自定义
+            string defaultindex = Confing.Gatway.Get("DebugIndex");
+            form.IsCustomUrl = !("DebugDefault".Equals(defaultindex, StringComparison.CurrentCultureIgnoreCase));
+            form.Url = Confing.Gatway.Get("DebugCustom");
+            //是否是手机端
+            string debugBrowser = Confing.Gatway.Get("DebugBrowser");
+            form.IsMobile = "DebugMobile".Equals(debugBrowser, StringComparison.CurrentCultureIgnoreCase);
+            //模板微信，或小程序
+            form.MobileType = Confing.Gatway.Get("BrowserMobile");
+            //如果是手机端，则按手机大小显示窗体
+            if (form.IsMobile)
+            {
+                form.Size = new Size(375+14,667+34);
+            }
+            return (Form)form;
         }
     }
 }
