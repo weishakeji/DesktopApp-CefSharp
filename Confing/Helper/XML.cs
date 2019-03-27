@@ -7,6 +7,7 @@ using System.Xml;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace Confing.Helper
 {
@@ -257,6 +258,49 @@ namespace Confing.Helper
             }
             return bitmap;
         }
+        /// <summary>
+        /// Base64字符串转图片对象
+        /// </summary>
+        /// <param name="base64string"></param>
+        /// <param name="format">图片格式 支持 jpg|bmp|gif|png</param>
+        /// <returns></returns>
+        public static Image FromBase64(string base64string, string format)
+        {
+            //Image image = FromBase64(base64string);
+            //Bitmap bitmap = null;
+
+            //using (MemoryStream ms = new MemoryStream())
+            //{
+            //    image.Save(ms, ImageFormat.Jpeg);
+            //    bitmap = new Bitmap(ms);
+            //}
+            //return (Image)bitmap;
+
+
+
+            //if (string.IsNullOrWhiteSpace(base64string)) return null;
+            //byte[] b = Convert.FromBase64String(base64string);
+            //Bitmap bitmap = null;
+            //using (MemoryStream ms = new MemoryStream(b))
+            //{
+            //    bitmap = new Bitmap(ms);
+            //    bitmap.Save()
+            //    ms.Dispose();
+            //    ms.Close();
+            //}
+            //return bitmap;
+            //
+            //临时文件
+            string tmFile = string.Format("{0}/{1}.{2}", Environment.CurrentDirectory, DateTime.Now.ToString("yyyyMMddHHmmssfff"), format);
+            byte[] arr = Convert.FromBase64String(base64string);
+            MemoryStream ms = new MemoryStream(arr);
+            Bitmap bmp = new Bitmap(ms);
+            if (format.ToLower() == "jpg") bmp.Save(tmFile, ImageFormat.Jpeg);            
+            Image img = Image.FromFile(tmFile);
+            System.IO.File.Delete(tmFile);
+            return img;
+        }
+
         #endregion
 
         /// <summary>

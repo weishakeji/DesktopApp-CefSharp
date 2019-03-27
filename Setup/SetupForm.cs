@@ -35,6 +35,7 @@ namespace Setup
             lbShow.Visible = false;
         }
         #endregion
+
         #region 基础设置的界面方法
         /// <summary>
         /// 选择主图标
@@ -91,9 +92,59 @@ namespace Setup
         }
         #endregion
 
+        #region 调试界面的方法
         private void rbDebugMobile_CheckedChanged(object sender, EventArgs e)
         {
             panelBrowserMobile.Enabled = this.rbDebugMobile.Checked;
         }
+
+        private void btnSelectDebugIndex_Click(object sender, EventArgs e)
+        {
+            //声明允许上传的后缀名
+            string[] limitImgExt = new string[] { "*.htm", "*.html" };
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            string str = string.Format("网页文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
+            fileDialog.Filter = str;
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //获取用户选择文件的后缀名
+                string extension = Path.GetExtension(fileDialog.FileName);
+                if (!((IList<string>)limitImgExt).Contains("*" + extension))
+                {
+                    MessageBox.Show(string.Format("只能选择{0}格式的网页文件！", string.Join("、", limitImgExt)).Replace("*.", ""));
+                }
+                else
+                {
+                    tbDebugCustom.Text = fileDialog.FileName;
+                }
+            }
+        }
+        #endregion
+
+        #region 登录界面的方法
+        private void btnSelectLoginBg_Click(object sender, EventArgs e)
+        {
+            //声明允许上传的图片的后缀名
+            string[] limitImgExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp", "*.ico" };
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            string str = string.Format("图片文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
+            fileDialog.Filter = str;
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //获取用户选择文件的后缀名
+                string extension = Path.GetExtension(fileDialog.FileName);
+                if (!((IList<string>)limitImgExt).Contains("*" + extension))
+                {
+                    MessageBox.Show(string.Format("只能选择{0}格式的图片！", string.Join("、", limitImgExt)).Replace("*.", ""));
+                }
+                else
+                {                    
+                    Image source = Image.FromFile(fileDialog.FileName);
+                    this.pictureLoginBg.Image = source;
+                    this.pictureLoginBg.Enabled = true;
+                }
+            }
+        }
+        #endregion
     }
 }

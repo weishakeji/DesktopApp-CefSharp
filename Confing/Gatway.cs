@@ -41,12 +41,36 @@ namespace Confing
             string val = Helper.XML.Read(itemname);
             return val;
         }
-
+        /// <summary>
+        /// 通过base64转换成图片，图片格式为png
+        /// </summary>
+        /// <param name="itemname"></param>
+        /// <returns></returns>
         public static Image GetImage(string itemname)
         {
             string val= Helper.XML.Read(itemname);
             Image image = Helper.XML.FromBase64(val);
             return image;
+        }
+        /// <summary>
+        /// 通过base64转换成图片
+        /// </summary>
+        /// <param name="itemname">配置项名称</param>
+        /// <param name="format">图片格式 支持 jpg|bmp|gif|png</param>
+        /// <returns></returns>
+        public static Image GetImage(string itemname,string format)
+        {
+            string base64string = Helper.XML.Read(itemname);
+            //临时文件
+            string tmFile = string.Format("{0}/{1}.{2}", Environment.CurrentDirectory, itemname, format);
+            byte[] arr = Convert.FromBase64String(base64string);
+            MemoryStream ms = new MemoryStream(arr);
+            Bitmap bmp = new Bitmap(ms);
+            if (format.ToLower() == "jpg") bmp.Save(tmFile, ImageFormat.Jpeg);
+            if (format.ToLower() == "bmp") bmp.Save(tmFile, ImageFormat.Bmp);
+            if (format.ToLower() == "gif") bmp.Save(tmFile, ImageFormat.Gif);
+            if (format.ToLower() == "png") bmp.Save(tmFile, ImageFormat.Png);
+            return Image.FromFile(tmFile);
         }
         public static Icon GetIcon(string itemname)
         {

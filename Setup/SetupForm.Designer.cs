@@ -75,7 +75,7 @@
             this.cbIsAutoLing = new System.Windows.Forms.CheckBox();
             this.cbIsSavePw = new System.Windows.Forms.CheckBox();
             this.cbIsLoginTitle = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSelectLoginBg = new System.Windows.Forms.Button();
             this.pictureLoginBg = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -583,7 +583,7 @@
             this.tbLogin.Controls.Add(this.cbIsAutoLing);
             this.tbLogin.Controls.Add(this.cbIsSavePw);
             this.tbLogin.Controls.Add(this.cbIsLoginTitle);
-            this.tbLogin.Controls.Add(this.button1);
+            this.tbLogin.Controls.Add(this.btnSelectLoginBg);
             this.tbLogin.Controls.Add(this.pictureLoginBg);
             this.tbLogin.Controls.Add(this.label25);
             this.tbLogin.Controls.Add(this.groupBox1);
@@ -633,14 +633,15 @@
             this.cbIsLoginTitle.Text = "显示标题";
             this.cbIsLoginTitle.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSelectLoginBg
             // 
-            this.button1.Location = new System.Drawing.Point(105, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "选择...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSelectLoginBg.Location = new System.Drawing.Point(105, 248);
+            this.btnSelectLoginBg.Name = "btnSelectLoginBg";
+            this.btnSelectLoginBg.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectLoginBg.TabIndex = 27;
+            this.btnSelectLoginBg.Text = "选择...";
+            this.btnSelectLoginBg.UseVisualStyleBackColor = true;
+            this.btnSelectLoginBg.Click += new System.EventHandler(this.btnSelectLoginBg_Click);
             // 
             // pictureLoginBg
             // 
@@ -648,6 +649,7 @@
             this.pictureLoginBg.Location = new System.Drawing.Point(186, 248);
             this.pictureLoginBg.Name = "pictureLoginBg";
             this.pictureLoginBg.Size = new System.Drawing.Size(160, 90);
+            this.pictureLoginBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureLoginBg.TabIndex = 26;
             this.pictureLoginBg.TabStop = false;
             // 
@@ -872,6 +874,7 @@
             this.btnSelectDebugIndex.TabIndex = 25;
             this.btnSelectDebugIndex.Text = "选择";
             this.btnSelectDebugIndex.UseVisualStyleBackColor = true;
+            this.btnSelectDebugIndex.Click += new System.EventHandler(this.btnSelectDebugIndex_Click);
             // 
             // tbDebugCustom
             // 
@@ -1165,7 +1168,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lbShow;
         private System.Windows.Forms.CheckBox cbMainEnableRightMenu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSelectLoginBg;
         private System.Windows.Forms.PictureBox pictureLoginBg;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.CheckBox cbIsFillWindow;

@@ -42,6 +42,12 @@ namespace DesktopApp
             form.StartPosition = FormStartPosition.CenterScreen;    //屏幕中央打开
             form.TopMost = true;    //最上层
             form.FormBorderStyle = FormBorderStyle.None;    //无边框
+            //背景图
+            Image mainbg = Confing.Gatway.GetImage("LoginBg", "jpg");
+            if (mainbg != null) form.BackgroundImage = mainbg;
+            //string bgfile= Confing.Gatway.Get("LoginBgFile");
+            //Image bg = Image.FromFile(bgfile);
+            //form.BackgroundImage = bg;
             return form;
         }
         /// <summary>
@@ -89,9 +95,7 @@ namespace DesktopApp
             mainform.IsRightMenu = Confing.Gatway.GetBoolean("MainEnableRightMenu");
             mainform.IsAboutMenu = Confing.Gatway.GetBoolean("IsAbout");
             mainform.IsEnableLoad = Confing.Gatway.GetBoolean("IsEnableLoad");
-            ////背景图
-            //Image mainbg = Confing.Gatway.GetImage("MainBgpic");
-            //if (mainbg != null) form.BackgroundImage = mainbg;
+           
             return form;
         }
         /// <summary>

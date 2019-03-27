@@ -95,7 +95,7 @@ namespace DesktopApp
             form = (System.Windows.Forms.Form)parent;
             //
             string title = e.Title;
-            form.Text = title;
+            form.Text = title+" - 功能调试";
         }
     }
 }
