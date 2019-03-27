@@ -16,22 +16,9 @@ namespace DesktopApp
         public LoginForm()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
-            this.Icon = DesktopApp.Properties.Resources.appicon;
             InitializeComponent();
-            InitBrowser();
         }
-
-        public void InitBrowser()
-        {
-           
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Application.Exit();
-        }
-
+        #region 关闭按钮相关
         private Point mousePoint = new Point();
         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
         {
@@ -39,7 +26,6 @@ namespace DesktopApp
             this.mousePoint.X = e.X;
             this.mousePoint.Y = e.Y;
         }
-
         private void LoginForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -49,11 +35,11 @@ namespace DesktopApp
             }
 
         }
-
         private void lbClose_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
+        #endregion
     }
 }

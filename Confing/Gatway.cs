@@ -63,14 +63,21 @@ namespace Confing
             string base64string = Helper.XML.Read(itemname);
             //临时文件
             string tmFile = string.Format("{0}/{1}.{2}", Environment.CurrentDirectory, itemname, format);
-            byte[] arr = Convert.FromBase64String(base64string);
-            MemoryStream ms = new MemoryStream(arr);
-            Bitmap bmp = new Bitmap(ms);
-            if (format.ToLower() == "jpg") bmp.Save(tmFile, ImageFormat.Jpeg);
-            if (format.ToLower() == "bmp") bmp.Save(tmFile, ImageFormat.Bmp);
-            if (format.ToLower() == "gif") bmp.Save(tmFile, ImageFormat.Gif);
-            if (format.ToLower() == "png") bmp.Save(tmFile, ImageFormat.Png);
-            return Image.FromFile(tmFile);
+            try
+            {
+                byte[] arr = Convert.FromBase64String(base64string);
+                MemoryStream ms = new MemoryStream(arr);
+                Bitmap bmp = new Bitmap(ms);
+                if (format.ToLower() == "jpg") bmp.Save(tmFile, ImageFormat.Jpeg);
+                if (format.ToLower() == "bmp") bmp.Save(tmFile, ImageFormat.Bmp);
+                if (format.ToLower() == "gif") bmp.Save(tmFile, ImageFormat.Gif);
+                if (format.ToLower() == "png") bmp.Save(tmFile, ImageFormat.Png);
+                return Image.FromFile(tmFile);
+            }
+            catch
+            {
+                return null;
+            }
         }
         public static Icon GetIcon(string itemname)
         {

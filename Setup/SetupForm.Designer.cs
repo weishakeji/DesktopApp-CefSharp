@@ -116,6 +116,7 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -580,6 +581,7 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.label11);
             this.tbLogin.Controls.Add(this.cbIsAutoLing);
             this.tbLogin.Controls.Add(this.cbIsSavePw);
             this.tbLogin.Controls.Add(this.cbIsLoginTitle);
@@ -646,7 +648,7 @@
             // pictureLoginBg
             // 
             this.pictureLoginBg.Enabled = false;
-            this.pictureLoginBg.Location = new System.Drawing.Point(186, 248);
+            this.pictureLoginBg.Location = new System.Drawing.Point(198, 250);
             this.pictureLoginBg.Name = "pictureLoginBg";
             this.pictureLoginBg.Size = new System.Drawing.Size(160, 90);
             this.pictureLoginBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1043,6 +1045,15 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(105, 278);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "宽高比16:9";
+            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1177,6 +1188,7 @@
         private System.Windows.Forms.CheckBox cbIsAutoLing;
         private System.Windows.Forms.CheckBox cbIsSavePw;
         private System.Windows.Forms.LinkLabel btnAboutShow;
+        private System.Windows.Forms.Label label11;
     }
 }
 
