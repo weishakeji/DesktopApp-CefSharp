@@ -23,10 +23,24 @@ namespace DesktopApp
             InitializeComponent();
             InitForm();
         }
-
+        TransTextBox richText = new TransTextBox();
         public void InitForm()
         {
-
+            //图标
+            this.Icon = Confing.Gatway.GetIcon("ICON");
+            this.TopMost = true;
+            //宽高
+            int width = Confing.Gatway.GetInt("AboutWidth");
+            int height = Confing.Gatway.GetInt("AboutHeight");
+            if (width > 0 && height > 0)
+                this.Size = new Size(width, height);
+            //背景图
+            Image mainbg = Confing.Gatway.GetImage("AboutBgPic", "jpg");
+            if (mainbg != null) this.BackgroundImage = mainbg;
+            //要显示的内容
+            this.ContextText = Confing.Gatway.Get("AboutContext");
+            richText.BorderStyle = BorderStyle.None;
+            this.Controls.Add(richText);
         }
         /// <summary>
         /// 加载关于我们的窗体

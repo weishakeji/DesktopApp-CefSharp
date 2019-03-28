@@ -86,9 +86,35 @@ namespace Setup
             //构建窗体
             AboutForm aboutForm = new AboutForm();
             if (width > 0 && height > 0) aboutForm.Size = new Size(width, height);
+            //背景图
+            aboutForm.BackgroundImage = this.pictureAboutBgPic.Image;
+            //文本内容
             aboutForm.ContextText = tbAboutContext.Text;
             aboutForm.ShowDialog();
             aboutForm.Focus();
+        }
+        private void btnSelectAboutBg_Click(object sender, EventArgs e)
+        {
+            //声明允许上传的图片的后缀名
+            string[] limitImgExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp" };
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            string str = string.Format("图片文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
+            fileDialog.Filter = str;
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //获取用户选择文件的后缀名
+                string extension = Path.GetExtension(fileDialog.FileName);
+                if (!((IList<string>)limitImgExt).Contains("*" + extension))
+                {
+                    MessageBox.Show(string.Format("只能选择{0}格式的图片！", string.Join("、", limitImgExt)).Replace("*.", ""));
+                }
+                else
+                {
+                    Image source = Image.FromFile(fileDialog.FileName);
+                    this.pictureAboutBgPic.Image = source;
+                    this.pictureAboutBgPic.Enabled = true;
+                }
+            }
         }
         #endregion
 
@@ -125,7 +151,7 @@ namespace Setup
         private void btnSelectLoginBg_Click(object sender, EventArgs e)
         {
             //声明允许上传的图片的后缀名
-            string[] limitImgExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp", "*.ico" };
+            string[] limitImgExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp" };
             OpenFileDialog fileDialog = new OpenFileDialog();
             string str = string.Format("图片文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
             fileDialog.Filter = str;
@@ -146,5 +172,7 @@ namespace Setup
             }
         }
         #endregion
+
+        
     }
 }

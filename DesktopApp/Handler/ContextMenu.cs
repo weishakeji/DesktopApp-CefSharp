@@ -53,15 +53,7 @@ namespace DesktopApp.Handler
             if (comid == 221)
             {
                 if(aboutForm==null || aboutForm.IsDisposed)
-                    aboutForm = new AboutForm();
-                aboutForm.TopMost = true;
-                //宽高
-                int width= Confing.Gatway.GetInt("AboutWidth");
-                int height= Confing.Gatway.GetInt("AboutHeight");
-                if (width > 0 && height > 0)
-                    aboutForm.Size = new Size(width, height);
-                //要显示的内容
-                aboutForm.ContextText = Confing.Gatway.Get("AboutContext");
+                    aboutForm = new AboutForm();                              
                 aboutForm.ShowDialog();
                 aboutForm.Focus();
             }

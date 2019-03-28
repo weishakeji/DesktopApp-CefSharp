@@ -119,6 +119,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnSelectAboutBg = new System.Windows.Forms.Button();
+            this.pictureAboutBgPic = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -136,6 +139,7 @@
             this.panelDebugIndex.SuspendLayout();
             this.tabAbout.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAboutBgPic)).BeginInit();
             this.SuspendLayout();
             // 
             // cbIsMainBorderNone
@@ -951,6 +955,9 @@
             // 
             // tabAbout
             // 
+            this.tabAbout.Controls.Add(this.btnSelectAboutBg);
+            this.tabAbout.Controls.Add(this.pictureAboutBgPic);
+            this.tabAbout.Controls.Add(this.label26);
             this.tabAbout.Controls.Add(this.label20);
             this.tabAbout.Controls.Add(this.btnAboutShow);
             this.tabAbout.Controls.Add(this.tbAboutContext);
@@ -1020,7 +1027,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(26, 19);
+            this.label18.Location = new System.Drawing.Point(26, 21);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(41, 12);
             this.label18.TabIndex = 10;
@@ -1079,6 +1086,35 @@
             this.label20.TabIndex = 17;
             this.label20.Text = "像素";
             // 
+            // btnSelectAboutBg
+            // 
+            this.btnSelectAboutBg.Location = new System.Drawing.Point(455, 14);
+            this.btnSelectAboutBg.Name = "btnSelectAboutBg";
+            this.btnSelectAboutBg.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectAboutBg.TabIndex = 30;
+            this.btnSelectAboutBg.Text = "选择...";
+            this.btnSelectAboutBg.UseVisualStyleBackColor = true;
+            this.btnSelectAboutBg.Click += new System.EventHandler(this.btnSelectAboutBg_Click);
+            // 
+            // pictureAboutBgPic
+            // 
+            this.pictureAboutBgPic.Enabled = false;
+            this.pictureAboutBgPic.Location = new System.Drawing.Point(399, 45);
+            this.pictureAboutBgPic.Name = "pictureAboutBgPic";
+            this.pictureAboutBgPic.Size = new System.Drawing.Size(202, 183);
+            this.pictureAboutBgPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureAboutBgPic.TabIndex = 29;
+            this.pictureAboutBgPic.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(396, 21);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(53, 12);
+            this.label26.TabIndex = 28;
+            this.label26.Text = "背景图：";
+            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1120,6 +1156,7 @@
             this.tabAbout.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAboutBgPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1216,6 +1253,9 @@
         private System.Windows.Forms.CheckBox cbIsShowFindPw;
         private System.Windows.Forms.CheckBox cbIsShowRegister;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnSelectAboutBg;
+        private System.Windows.Forms.PictureBox pictureAboutBgPic;
+        private System.Windows.Forms.Label label26;
     }
 }
 

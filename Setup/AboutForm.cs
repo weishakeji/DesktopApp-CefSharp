@@ -22,10 +22,13 @@ namespace Setup
             InitializeComponent();
             InitForm();
         }
-
+        TransTextBox richText = new TransTextBox();
         public void InitForm()
         {
-           
+            //图标
+            this.Icon = Confing.Gatway.GetIcon("ICON");
+            richText.BorderStyle = BorderStyle.None;
+            this.Controls.Add(richText);
         }
         /// <summary>
         /// 加载关于我们的窗体
