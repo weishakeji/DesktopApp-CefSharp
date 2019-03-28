@@ -72,20 +72,22 @@
             this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
-            this.cbIsAutoLing = new System.Windows.Forms.CheckBox();
-            this.cbIsSavePw = new System.Windows.Forms.CheckBox();
+            this.cbIsDirectaccess = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbIsAutoLongin = new System.Windows.Forms.CheckBox();
             this.cbIsLoginTitle = new System.Windows.Forms.CheckBox();
             this.btnSelectLoginBg = new System.Windows.Forms.Button();
             this.pictureLoginBg = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbIsShowFindPw = new System.Windows.Forms.CheckBox();
+            this.cbIsShowRegister = new System.Windows.Forms.CheckBox();
             this.tbApiFindPw = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.tbApiRegister = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tbApiLogin = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.tbLoginTitle = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tabDebug = new System.Windows.Forms.TabPage();
@@ -116,7 +118,6 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -581,15 +582,14 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.cbIsDirectaccess);
             this.tbLogin.Controls.Add(this.label11);
-            this.tbLogin.Controls.Add(this.cbIsAutoLing);
-            this.tbLogin.Controls.Add(this.cbIsSavePw);
+            this.tbLogin.Controls.Add(this.cbIsAutoLongin);
             this.tbLogin.Controls.Add(this.cbIsLoginTitle);
             this.tbLogin.Controls.Add(this.btnSelectLoginBg);
             this.tbLogin.Controls.Add(this.pictureLoginBg);
             this.tbLogin.Controls.Add(this.label25);
             this.tbLogin.Controls.Add(this.groupBox1);
-            this.tbLogin.Controls.Add(this.radioButton8);
             this.tbLogin.Controls.Add(this.tbLoginTitle);
             this.tbLogin.Controls.Add(this.label13);
             this.tbLogin.Location = new System.Drawing.Point(4, 22);
@@ -599,29 +599,38 @@
             this.tbLogin.Text = "登录窗体";
             this.tbLogin.UseVisualStyleBackColor = true;
             // 
-            // cbIsAutoLing
+            // cbIsDirectaccess
             // 
-            this.cbIsAutoLing.AutoSize = true;
-            this.cbIsAutoLing.Checked = true;
-            this.cbIsAutoLing.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsAutoLing.Location = new System.Drawing.Point(108, 221);
-            this.cbIsAutoLing.Name = "cbIsAutoLing";
-            this.cbIsAutoLing.Size = new System.Drawing.Size(120, 16);
-            this.cbIsAutoLing.TabIndex = 30;
-            this.cbIsAutoLing.Text = "显示“自动登录”";
-            this.cbIsAutoLing.UseVisualStyleBackColor = true;
+            this.cbIsDirectaccess.AutoSize = true;
+            this.cbIsDirectaccess.Checked = true;
+            this.cbIsDirectaccess.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsDirectaccess.Location = new System.Drawing.Point(109, 199);
+            this.cbIsDirectaccess.Name = "cbIsDirectaccess";
+            this.cbIsDirectaccess.Size = new System.Drawing.Size(348, 16);
+            this.cbIsDirectaccess.TabIndex = 32;
+            this.cbIsDirectaccess.Text = "允许直接访问主窗体（当前不用登录，进入主窗体后再登录）";
+            this.cbIsDirectaccess.UseVisualStyleBackColor = true;
             // 
-            // cbIsSavePw
+            // label11
             // 
-            this.cbIsSavePw.AutoSize = true;
-            this.cbIsSavePw.Checked = true;
-            this.cbIsSavePw.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsSavePw.Location = new System.Drawing.Point(264, 221);
-            this.cbIsSavePw.Name = "cbIsSavePw";
-            this.cbIsSavePw.Size = new System.Drawing.Size(120, 16);
-            this.cbIsSavePw.TabIndex = 29;
-            this.cbIsSavePw.Text = "显示“保存密码”";
-            this.cbIsSavePw.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(105, 278);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "宽高比16:9";
+            // 
+            // cbIsAutoLongin
+            // 
+            this.cbIsAutoLongin.AutoSize = true;
+            this.cbIsAutoLongin.Checked = true;
+            this.cbIsAutoLongin.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsAutoLongin.Location = new System.Drawing.Point(108, 221);
+            this.cbIsAutoLongin.Name = "cbIsAutoLongin";
+            this.cbIsAutoLongin.Size = new System.Drawing.Size(192, 16);
+            this.cbIsAutoLongin.TabIndex = 30;
+            this.cbIsAutoLongin.Text = "显示“自动登录”和\"保存密码\"";
+            this.cbIsAutoLongin.UseVisualStyleBackColor = true;
             // 
             // cbIsLoginTitle
             // 
@@ -666,6 +675,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbIsShowFindPw);
+            this.groupBox1.Controls.Add(this.cbIsShowRegister);
             this.groupBox1.Controls.Add(this.tbApiFindPw);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.tbApiRegister);
@@ -678,6 +689,30 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "接口地址";
+            // 
+            // cbIsShowFindPw
+            // 
+            this.cbIsShowFindPw.AutoSize = true;
+            this.cbIsShowFindPw.Checked = true;
+            this.cbIsShowFindPw.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsShowFindPw.Location = new System.Drawing.Point(428, 84);
+            this.cbIsShowFindPw.Name = "cbIsShowFindPw";
+            this.cbIsShowFindPw.Size = new System.Drawing.Size(96, 16);
+            this.cbIsShowFindPw.TabIndex = 32;
+            this.cbIsShowFindPw.Text = "显示找回密码";
+            this.cbIsShowFindPw.UseVisualStyleBackColor = true;
+            // 
+            // cbIsShowRegister
+            // 
+            this.cbIsShowRegister.AutoSize = true;
+            this.cbIsShowRegister.Checked = true;
+            this.cbIsShowRegister.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsShowRegister.Location = new System.Drawing.Point(428, 57);
+            this.cbIsShowRegister.Name = "cbIsShowRegister";
+            this.cbIsShowRegister.Size = new System.Drawing.Size(96, 16);
+            this.cbIsShowRegister.TabIndex = 31;
+            this.cbIsShowRegister.Text = "显示在线注册";
+            this.cbIsShowRegister.UseVisualStyleBackColor = true;
             // 
             // tbApiFindPw
             // 
@@ -726,18 +761,6 @@
             this.label14.Size = new System.Drawing.Size(65, 12);
             this.label14.TabIndex = 21;
             this.label14.Text = "登录验证：";
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Checked = true;
-            this.radioButton8.Location = new System.Drawing.Point(108, 192);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(371, 16);
-            this.radioButton8.TabIndex = 23;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "是否允许直接访问主窗体（当前不用登录，进入主窗体后再登录）";
-            this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // tbLoginTitle
             // 
@@ -1045,15 +1068,6 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(105, 278);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 12);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "宽高比16:9";
-            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1136,7 +1150,6 @@
         private System.Windows.Forms.TabPage tabDebug;
         private System.Windows.Forms.Panel panelStartWinfow;
         private System.Windows.Forms.Panel panelMainStyle;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.TextBox tbApiLogin;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tbLoginTitle;
@@ -1185,10 +1198,12 @@
         private System.Windows.Forms.CheckBox cbIsFillWindow;
         private System.Windows.Forms.CheckBox cbIsMainTopLevel;
         private System.Windows.Forms.CheckBox cbIsLoginTitle;
-        private System.Windows.Forms.CheckBox cbIsAutoLing;
-        private System.Windows.Forms.CheckBox cbIsSavePw;
+        private System.Windows.Forms.CheckBox cbIsAutoLongin;
         private System.Windows.Forms.LinkLabel btnAboutShow;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox cbIsDirectaccess;
+        private System.Windows.Forms.CheckBox cbIsShowFindPw;
+        private System.Windows.Forms.CheckBox cbIsShowRegister;
     }
 }
 

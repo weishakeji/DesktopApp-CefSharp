@@ -38,17 +38,17 @@ namespace DesktopApp
         /// <returns></returns>
         static Form LoginForm()
         {
-            Form form = new LoginForm();
+            LoginForm form = new LoginForm();
             form.StartPosition = FormStartPosition.CenterScreen;    //屏幕中央打开
             form.TopMost = true;    //最上层
             form.FormBorderStyle = FormBorderStyle.None;    //无边框
             //背景图
             Image mainbg = Confing.Gatway.GetImage("LoginBg", "jpg");
             if (mainbg != null) form.BackgroundImage = mainbg;
-            //string bgfile= Confing.Gatway.Get("LoginBgFile");
-            //Image bg = Image.FromFile(bgfile);
-            //form.BackgroundImage = bg;
-            return form;
+            //标题
+            form.Title = Confing.Gatway.Get("LoginTitle");
+            if(string.IsNullOrWhiteSpace(form.Title))form.Title = Confing.Gatway.Get("Title");
+            return (Form)form;
         }
         /// <summary>
         /// 构建主窗体

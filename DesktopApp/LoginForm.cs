@@ -13,10 +13,33 @@ namespace DesktopApp
 {
     public partial class LoginForm : Form
     {
+        #region 属性
+        /// <summary>
+        /// 框体的标题
+        /// </summary>
+        public string Title { get; set; }
+
+        #endregion
         public LoginForm()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
+        }
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Title))
+                this.Text = this.lbTitle.Text = Title;
+            //是否显示标题
+            lbTitle.Visible= Confing.Gatway.GetBoolean("IsLoginTitle");
+            //是否显示"自动登录"、"保存密码"
+            cbAutoLogin.Visible = cbSavePw.Visible = Confing.Gatway.GetBoolean("IsAutoLongin");
+            if (!cbAutoLogin.Visible) btnEnter.Top -= 20;
+            //是否显示“注册”链接
+            linkRegister.Visible= Confing.Gatway.GetBoolean("IsShowRegister");
+            //是否显示“找回密码”链接
+            linkFindPw.Visible = Confing.Gatway.GetBoolean("IsShowFindPw");
+            //是否允许直接登录
+            linkDirectaccess.Visible = Confing.Gatway.GetBoolean("IsDirectaccess");
         }
         #region 关闭按钮相关
         private Point mousePoint = new Point();
@@ -41,5 +64,7 @@ namespace DesktopApp
             Application.Exit();
         }
         #endregion
+
+        
     }
 }
