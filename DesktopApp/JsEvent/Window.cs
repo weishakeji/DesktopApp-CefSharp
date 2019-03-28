@@ -97,17 +97,6 @@ namespace DesktopApp.JsEvent
         /// </summary>
         public void window_focus()
         {
-            //foreach (Form frm in Application.OpenForms)
-            //{
-            //    Form f = frm;
-            //    string name = f.Name;
-            //    //关闭当前应用中的其它窗口
-            //    if (!frm.Equals(this.Form))
-            //    {               
-            //        frm.Close();
-            //    }
-            //}
-            //
             this.Form.TopMost = true;
             this.Form.Focus();
         }
@@ -125,6 +114,7 @@ namespace DesktopApp.JsEvent
         public void window_close()
         {
             this.Form.Close();
+            Application.Exit();
         }
         /// <summary>
         /// 关闭窗体和应用
@@ -133,6 +123,14 @@ namespace DesktopApp.JsEvent
         {
             this.Form.Close();
             Application.Exit();
+        }
+        /// <summary>
+        /// 弹出消息
+        /// </summary>
+        /// <param name="alert"></param>
+        public void message(string alert)
+        {
+            MessageBox.Show(alert);
         }
         #endregion
     }
