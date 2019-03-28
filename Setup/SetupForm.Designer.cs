@@ -72,6 +72,7 @@
             this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
+            this.lbLoginBgInfo = new System.Windows.Forms.Label();
             this.cbIsDirectaccess = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbIsAutoLongin = new System.Windows.Forms.CheckBox();
@@ -107,6 +108,12 @@
             this.rbDebugDefault = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
+            this.lbAboutBgWh = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.btnSelectAboutBg = new System.Windows.Forms.Button();
+            this.pictureAboutBgPic = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.btnAboutShow = new System.Windows.Forms.LinkLabel();
             this.tbAboutContext = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -118,10 +125,6 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.btnSelectAboutBg = new System.Windows.Forms.Button();
-            this.pictureAboutBgPic = new System.Windows.Forms.PictureBox();
-            this.label26 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -138,8 +141,8 @@
             this.panelBrowserMobile.SuspendLayout();
             this.panelDebugIndex.SuspendLayout();
             this.tabAbout.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAboutBgPic)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbIsMainBorderNone
@@ -587,6 +590,7 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.lbLoginBgInfo);
             this.tbLogin.Controls.Add(this.cbIsDirectaccess);
             this.tbLogin.Controls.Add(this.label11);
             this.tbLogin.Controls.Add(this.cbIsAutoLongin);
@@ -604,6 +608,14 @@
             this.tbLogin.Text = "登录窗体";
             this.tbLogin.UseVisualStyleBackColor = true;
             // 
+            // lbLoginBgInfo
+            // 
+            this.lbLoginBgInfo.AutoSize = true;
+            this.lbLoginBgInfo.Location = new System.Drawing.Point(313, 253);
+            this.lbLoginBgInfo.Name = "lbLoginBgInfo";
+            this.lbLoginBgInfo.Size = new System.Drawing.Size(0, 12);
+            this.lbLoginBgInfo.TabIndex = 33;
+            // 
             // cbIsDirectaccess
             // 
             this.cbIsDirectaccess.AutoSize = true;
@@ -619,11 +631,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(105, 278);
+            this.label11.Location = new System.Drawing.Point(186, 253);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.Size = new System.Drawing.Size(89, 12);
             this.label11.TabIndex = 31;
-            this.label11.Text = "宽高比16:9";
+            this.label11.Text = "建议宽高比16:9";
             // 
             // cbIsAutoLongin
             // 
@@ -662,12 +674,14 @@
             // pictureLoginBg
             // 
             this.pictureLoginBg.Enabled = false;
-            this.pictureLoginBg.Location = new System.Drawing.Point(198, 250);
+            this.pictureLoginBg.Location = new System.Drawing.Point(109, 277);
             this.pictureLoginBg.Name = "pictureLoginBg";
             this.pictureLoginBg.Size = new System.Drawing.Size(160, 90);
             this.pictureLoginBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureLoginBg.TabIndex = 26;
             this.pictureLoginBg.TabStop = false;
+            this.pictureLoginBg.EnabledChanged += new System.EventHandler(this.pictureLoginBg_EnabledChanged);
+            this.pictureLoginBg.VisibleChanged += new System.EventHandler(this.pictureLoginBg_EnabledChanged);
             // 
             // label25
             // 
@@ -955,6 +969,8 @@
             // 
             // tabAbout
             // 
+            this.tabAbout.Controls.Add(this.lbAboutBgWh);
+            this.tabAbout.Controls.Add(this.label27);
             this.tabAbout.Controls.Add(this.btnSelectAboutBg);
             this.tabAbout.Controls.Add(this.pictureAboutBgPic);
             this.tabAbout.Controls.Add(this.label26);
@@ -972,6 +988,63 @@
             this.tabAbout.TabIndex = 3;
             this.tabAbout.Text = "关于";
             this.tabAbout.UseVisualStyleBackColor = true;
+            // 
+            // lbAboutBgWh
+            // 
+            this.lbAboutBgWh.AutoSize = true;
+            this.lbAboutBgWh.Location = new System.Drawing.Point(468, 240);
+            this.lbAboutBgWh.Name = "lbAboutBgWh";
+            this.lbAboutBgWh.Size = new System.Drawing.Size(0, 12);
+            this.lbAboutBgWh.TabIndex = 32;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(397, 240);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(65, 12);
+            this.label27.TabIndex = 31;
+            this.label27.Text = "图像信息：";
+            // 
+            // btnSelectAboutBg
+            // 
+            this.btnSelectAboutBg.Location = new System.Drawing.Point(455, 14);
+            this.btnSelectAboutBg.Name = "btnSelectAboutBg";
+            this.btnSelectAboutBg.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectAboutBg.TabIndex = 30;
+            this.btnSelectAboutBg.Text = "选择...";
+            this.btnSelectAboutBg.UseVisualStyleBackColor = true;
+            this.btnSelectAboutBg.Click += new System.EventHandler(this.btnSelectAboutBg_Click);
+            // 
+            // pictureAboutBgPic
+            // 
+            this.pictureAboutBgPic.Enabled = false;
+            this.pictureAboutBgPic.Location = new System.Drawing.Point(399, 45);
+            this.pictureAboutBgPic.Name = "pictureAboutBgPic";
+            this.pictureAboutBgPic.Size = new System.Drawing.Size(202, 183);
+            this.pictureAboutBgPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureAboutBgPic.TabIndex = 29;
+            this.pictureAboutBgPic.TabStop = false;
+            this.pictureAboutBgPic.EnabledChanged += new System.EventHandler(this.pictureAboutBgPic_EnabledChanged);
+            this.pictureAboutBgPic.VisibleChanged += new System.EventHandler(this.pictureAboutBgPic_EnabledChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(396, 21);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(53, 12);
+            this.label26.TabIndex = 28;
+            this.label26.Text = "背景图：";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(187, 21);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 12);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "像素";
             // 
             // btnAboutShow
             // 
@@ -1077,44 +1150,6 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(187, 21);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 12);
-            this.label20.TabIndex = 17;
-            this.label20.Text = "像素";
-            // 
-            // btnSelectAboutBg
-            // 
-            this.btnSelectAboutBg.Location = new System.Drawing.Point(455, 14);
-            this.btnSelectAboutBg.Name = "btnSelectAboutBg";
-            this.btnSelectAboutBg.Size = new System.Drawing.Size(75, 23);
-            this.btnSelectAboutBg.TabIndex = 30;
-            this.btnSelectAboutBg.Text = "选择...";
-            this.btnSelectAboutBg.UseVisualStyleBackColor = true;
-            this.btnSelectAboutBg.Click += new System.EventHandler(this.btnSelectAboutBg_Click);
-            // 
-            // pictureAboutBgPic
-            // 
-            this.pictureAboutBgPic.Enabled = false;
-            this.pictureAboutBgPic.Location = new System.Drawing.Point(399, 45);
-            this.pictureAboutBgPic.Name = "pictureAboutBgPic";
-            this.pictureAboutBgPic.Size = new System.Drawing.Size(202, 183);
-            this.pictureAboutBgPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureAboutBgPic.TabIndex = 29;
-            this.pictureAboutBgPic.TabStop = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(396, 21);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 12);
-            this.label26.TabIndex = 28;
-            this.label26.Text = "背景图：";
-            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1154,9 +1189,9 @@
             this.panelDebugIndex.PerformLayout();
             this.tabAbout.ResumeLayout(false);
             this.tabAbout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAboutBgPic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAboutBgPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1256,6 +1291,9 @@
         private System.Windows.Forms.Button btnSelectAboutBg;
         private System.Windows.Forms.PictureBox pictureAboutBgPic;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbAboutBgWh;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbLoginBgInfo;
     }
 }
 

@@ -116,6 +116,14 @@ namespace Setup
                 }
             }
         }
+        private void pictureAboutBgPic_EnabledChanged(object sender, EventArgs e)
+        {
+            Image source = this.pictureAboutBgPic.Image;
+            if (source != null)
+            {
+                lbAboutBgWh.Text = string.Format("{0}×{1} 像素", source.Width, source.Height);
+            }
+        }
         #endregion
 
         #region 调试界面的方法
@@ -171,8 +179,19 @@ namespace Setup
                 }
             }
         }
+
+        private void pictureLoginBg_EnabledChanged(object sender, EventArgs e)
+        {
+            Image source = this.pictureLoginBg.Image;
+            if (source != null)
+            {
+                lbLoginBgInfo.Text = string.Format("图片实际像素:{0}×{1} 像素", source.Width, source.Height);
+            }
+        }
+
+
         #endregion
 
-        
+
     }
 }
