@@ -60,7 +60,10 @@ namespace DesktopApp
         void  Setup(MainForm form)
         {
             form.Icon = Confing.Gatway.GetIcon("ICON");     //图标
-            form.Text = Confing.Gatway.Get("MainTitle");    //标题            
+            form.Text = Confing.Gatway.Get("MainTitle");    //标题    
+            //标题
+            if (string.IsNullOrWhiteSpace(form.Text))
+                form.Text = Confing.Gatway.Get("Title");
             int width = Confing.Gatway.GetInt("MainWidth"); //宽高
             int height = Confing.Gatway.GetInt("MainHeight");
             if (width > 0 && height > 0)
