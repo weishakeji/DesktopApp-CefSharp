@@ -38,7 +38,28 @@ namespace DesktopApp
         {
             Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
-            
+            Setup(this);
+        }
+        /// <summary>
+        /// 构建调试窗
+        /// </summary>
+        /// <returns></returns>
+        void Setup(DebugForm form)
+        {
+            //默认页还是自定义
+            string defaultindex = Confing.Gatway.Get("DebugIndex");
+            form.IsCustomUrl = !("DebugDefault".Equals(defaultindex, StringComparison.CurrentCultureIgnoreCase));
+            form.Url = Confing.Gatway.Get("DebugCustom");
+            //是否是手机端
+            string debugBrowser = Confing.Gatway.Get("DebugBrowser");
+            form.IsMobile = "DebugMobile".Equals(debugBrowser, StringComparison.CurrentCultureIgnoreCase);
+            //模板微信，或小程序
+            form.MobileType = Confing.Gatway.Get("BrowserMobile");
+            //如果是手机端，则按手机大小显示窗体
+            if (form.IsMobile)
+            {
+                form.Size = new Size(375 + 14, 667 + 34);
+            }
         }
         public ChromiumWebBrowser browser;
         private void DebugForm_Load(object sender, EventArgs e)

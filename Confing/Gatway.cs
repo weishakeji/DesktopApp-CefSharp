@@ -39,7 +39,7 @@ namespace Confing
         public static string Get(string itemname)
         {
             string val = Helper.XML.Read(itemname);
-            return val;
+            return val.Trim();
         }
         /// <summary>
         /// 通过base64转换成图片，图片格式为png
@@ -48,7 +48,7 @@ namespace Confing
         /// <returns></returns>
         public static Image GetImage(string itemname)
         {
-            string val= Helper.XML.Read(itemname);
+            string val= Get(itemname);
             Image image = Helper.XML.FromBase64(val);
             return image;
         }
@@ -60,7 +60,7 @@ namespace Confing
         /// <returns></returns>
         public static Image GetImage(string itemname,string format)
         {
-            string base64string = Helper.XML.Read(itemname);
+            string base64string = Get(itemname);
             //临时文件
             string tmFile = string.Format("{0}/{1}.{2}", Environment.CurrentDirectory, itemname, format);
             try

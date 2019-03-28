@@ -123,6 +123,7 @@
             this.linkRegister.TabStop = true;
             this.linkRegister.Text = "在线注册";
             this.linkRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
             // 
             // btnEnter
             // 
@@ -145,6 +146,7 @@
             this.linkDirectaccess.TabStop = true;
             this.linkDirectaccess.Text = "不登录，直接访问";
             this.linkDirectaccess.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkDirectaccess.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDirectaccess_LinkClicked);
             // 
             // lbClose
             // 
@@ -170,6 +172,7 @@
             this.linkFindPw.TabStop = true;
             this.linkFindPw.Text = "找回密码";
             this.linkFindPw.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkFindPw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFindPw_LinkClicked);
             // 
             // LoginForm
             // 

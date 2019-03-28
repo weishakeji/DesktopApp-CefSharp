@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
@@ -18,12 +19,33 @@ namespace DesktopApp
         /// 框体的标题
         /// </summary>
         public string Title { get; set; }
-
+        //默认的注册链接
+        private string DefRegisterUrl = "student/Register.ashx";
+        //默认的找回密码的链接
+        private string DefFindPwUrl = "Student/PwFind.ashx";
         #endregion
         public LoginForm()
         {
             Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
+            Setup(this);
+        }
+        /// <summary>
+        /// 构建登录窗
+        /// </summary>
+        /// <returns></returns>
+        void Setup(LoginForm form)
+        {
+            form.StartPosition = FormStartPosition.CenterScreen;    //屏幕中央打开
+            form.TopMost = true;    //最上层
+            form.FormBorderStyle = FormBorderStyle.None;    //无边框
+            //背景图
+            Image mainbg = Confing.Gatway.GetImage("LoginBg", "jpg");
+            if (mainbg != null) form.BackgroundImage = mainbg;
+            //标题
+            form.Title = Confing.Gatway.Get("LoginTitle");
+            if (string.IsNullOrWhiteSpace(form.Title)) form.Title = Confing.Gatway.Get("Title");
+
         }
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -63,8 +85,49 @@ namespace DesktopApp
             this.Close();
             Application.Exit();
         }
+
         #endregion
 
-        
+        #region 链接按钮事件
+        /// <summary>
+        /// 直接访问
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void linkDirectaccess_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Form main = new MainForm();
+            main.Show();
+        }
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void linkFindPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            string def = Confing.Gatway.Get("ApiFindPw");
+            if (!string.IsNullOrWhiteSpace(def)) DefFindPwUrl = def;
+            Form main = new MainForm(DefFindPwUrl);
+            main.Show();
+        }
+        /// <summary>
+        /// 注册
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            string def = Confing.Gatway.Get("ApiRegister");
+            if (!string.IsNullOrWhiteSpace(def)) DefRegisterUrl = def;
+            Form main = new MainForm(DefRegisterUrl);
+            main.Show();
+        }
+        #endregion
+
+
     }
 }
