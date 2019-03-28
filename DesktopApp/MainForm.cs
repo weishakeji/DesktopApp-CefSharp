@@ -44,9 +44,10 @@ namespace DesktopApp
         /// 通过网址构建窗体
         /// </summary>
         /// <param name="urlpath">网址路径，不包括域名</param>
-        public MainForm(string urlpath) : this(){
+        public MainForm(string urlpath) : this()
+        {
             if (urlpath.StartsWith("/")) urlpath = urlpath.Substring(1);
-             UrlPath = urlpath;
+            UrlPath = urlpath;            
         }
         private void MainForm_Load(object sender, EventArgs e)
         {            
@@ -57,7 +58,8 @@ namespace DesktopApp
         /// </summary>
         /// <returns></returns>
         void  Setup(MainForm form)
-        {  
+        {
+            form.Icon = Confing.Gatway.GetIcon("ICON");     //图标
             form.Text = Confing.Gatway.Get("MainTitle");    //标题            
             int width = Confing.Gatway.GetInt("MainWidth"); //宽高
             int height = Confing.Gatway.GetInt("MainHeight");

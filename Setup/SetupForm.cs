@@ -45,9 +45,9 @@ namespace Setup
         private void btnSelectICON_Click(object sender, EventArgs e)
         {
             //声明允许上传的图片的后缀名
-            string[] limitImgExt = new string[] { "*.gif", "*.jpg", "*.jpeg", "*.png", "*.bmp", "*.ico" };
+            string[] limitImgExt = new string[] { "*.ico" };
             OpenFileDialog fileDialog = new OpenFileDialog();
-            string str = string.Format("图片文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
+            string str = string.Format("图标文件({0})|{1}|All files(*.*)| *.*", string.Join(",", limitImgExt), string.Join(";", limitImgExt));
             fileDialog.Filter = str;
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {

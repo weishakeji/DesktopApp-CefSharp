@@ -118,6 +118,7 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -950,6 +951,7 @@
             // 
             // tabAbout
             // 
+            this.tabAbout.Controls.Add(this.label20);
             this.tabAbout.Controls.Add(this.btnAboutShow);
             this.tabAbout.Controls.Add(this.tbAboutContext);
             this.tabAbout.Controls.Add(this.label19);
@@ -967,7 +969,7 @@
             // btnAboutShow
             // 
             this.btnAboutShow.AutoSize = true;
-            this.btnAboutShow.Location = new System.Drawing.Point(485, 78);
+            this.btnAboutShow.Location = new System.Drawing.Point(60, 352);
             this.btnAboutShow.Name = "btnAboutShow";
             this.btnAboutShow.Size = new System.Drawing.Size(113, 12);
             this.btnAboutShow.TabIndex = 16;
@@ -977,16 +979,16 @@
             // 
             // tbAboutContext
             // 
-            this.tbAboutContext.Location = new System.Drawing.Point(10, 98);
+            this.tbAboutContext.Location = new System.Drawing.Point(62, 45);
             this.tbAboutContext.Multiline = true;
             this.tbAboutContext.Name = "tbAboutContext";
-            this.tbAboutContext.Size = new System.Drawing.Size(588, 267);
+            this.tbAboutContext.Size = new System.Drawing.Size(319, 302);
             this.tbAboutContext.TabIndex = 15;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(26, 78);
+            this.label19.Location = new System.Drawing.Point(24, 45);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 12);
             this.label19.TabIndex = 14;
@@ -994,35 +996,35 @@
             // 
             // tbAboutHeight
             // 
-            this.tbAboutHeight.Location = new System.Drawing.Point(73, 45);
+            this.tbAboutHeight.Location = new System.Drawing.Point(141, 16);
             this.tbAboutHeight.Name = "tbAboutHeight";
-            this.tbAboutHeight.Size = new System.Drawing.Size(77, 21);
+            this.tbAboutHeight.Size = new System.Drawing.Size(40, 21);
             this.tbAboutHeight.TabIndex = 13;
             // 
             // tbAboutWidth
             // 
             this.tbAboutWidth.Location = new System.Drawing.Point(73, 18);
             this.tbAboutWidth.Name = "tbAboutWidth";
-            this.tbAboutWidth.Size = new System.Drawing.Size(77, 21);
+            this.tbAboutWidth.Size = new System.Drawing.Size(40, 21);
             this.tbAboutWidth.TabIndex = 12;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(38, 48);
+            this.label17.Location = new System.Drawing.Point(118, 21);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(29, 12);
+            this.label17.Size = new System.Drawing.Size(17, 12);
             this.label17.TabIndex = 11;
-            this.label17.Text = "高：";
+            this.label17.Text = "×";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(38, 21);
+            this.label18.Location = new System.Drawing.Point(26, 19);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 12);
+            this.label18.Size = new System.Drawing.Size(41, 12);
             this.label18.TabIndex = 10;
-            this.label18.Text = "宽：";
+            this.label18.Text = "宽高：";
             // 
             // btnClose
             // 
@@ -1067,6 +1069,15 @@
             this.lbShow.TabIndex = 3;
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(187, 21);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 12);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "像素";
             // 
             // SetupForm
             // 
@@ -1204,6 +1215,7 @@
         private System.Windows.Forms.CheckBox cbIsDirectaccess;
         private System.Windows.Forms.CheckBox cbIsShowFindPw;
         private System.Windows.Forms.CheckBox cbIsShowRegister;
+        private System.Windows.Forms.Label label20;
     }
 }
 

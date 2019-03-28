@@ -87,6 +87,7 @@
             this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox2.Location = new System.Drawing.Point(132, 109);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(203, 26);
             this.textBox2.TabIndex = 7;
             // 
@@ -116,6 +117,9 @@
             // 
             this.linkRegister.AutoSize = true;
             this.linkRegister.BackColor = System.Drawing.Color.Transparent;
+            this.linkRegister.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.linkRegister.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkRegister.LinkColor = System.Drawing.Color.Green;
             this.linkRegister.Location = new System.Drawing.Point(12, 211);
             this.linkRegister.Name = "linkRegister";
             this.linkRegister.Size = new System.Drawing.Size(53, 12);
@@ -139,6 +143,8 @@
             // 
             this.linkDirectaccess.AutoSize = true;
             this.linkDirectaccess.BackColor = System.Drawing.Color.Transparent;
+            this.linkDirectaccess.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkDirectaccess.LinkColor = System.Drawing.Color.Green;
             this.linkDirectaccess.Location = new System.Drawing.Point(351, 211);
             this.linkDirectaccess.Name = "linkDirectaccess";
             this.linkDirectaccess.Size = new System.Drawing.Size(101, 12);
@@ -165,6 +171,8 @@
             // 
             this.linkFindPw.AutoSize = true;
             this.linkFindPw.BackColor = System.Drawing.Color.Transparent;
+            this.linkFindPw.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkFindPw.LinkColor = System.Drawing.Color.Green;
             this.linkFindPw.Location = new System.Drawing.Point(71, 211);
             this.linkFindPw.Name = "linkFindPw";
             this.linkFindPw.Size = new System.Drawing.Size(53, 12);
