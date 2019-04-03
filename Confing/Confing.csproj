@@ -44,9 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Gatway.cs" />
+    <Compile Include="Helper\INI.cs" />
     <Compile Include="Helper\WinForm.cs" />
     <Compile Include="Helper\XML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Confing.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

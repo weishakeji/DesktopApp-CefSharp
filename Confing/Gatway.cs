@@ -13,7 +13,7 @@ namespace Confing
 {
     public class Gatway
     {
-        
+
         /// <summary>
         /// 将设置项记录到本地
         /// </summary>
@@ -48,7 +48,7 @@ namespace Confing
         /// <returns></returns>
         public static Image GetImage(string itemname)
         {
-            string val= Get(itemname);
+            string val = Get(itemname);
             Image image = Helper.XML.FromBase64(val);
             return image;
         }
@@ -58,7 +58,7 @@ namespace Confing
         /// <param name="itemname">配置项名称</param>
         /// <param name="format">图片格式 支持 jpg|bmp|gif|png</param>
         /// <returns></returns>
-        public static Image GetImage(string itemname,string format)
+        public static Image GetImage(string itemname, string format)
         {
             string base64string = Get(itemname);
             //临时文件
@@ -121,6 +121,23 @@ namespace Confing
             string val = Helper.XML.Read(itemname);
             int.TryParse(val, out tm);
             return tm;
+        }
+        #endregion
+
+        #region 登录接口相关
+        /// <summary>
+        /// 获取接口地址
+        /// </summary>
+        /// <param name="itemname"></param>
+        /// <returns></returns>
+        public static string GetAPI(string itemname)
+        {
+            //来自setup.exe配置的记录项（即用户自主设置的），优先按这个设置项
+            string val = Get(itemname);
+            if (!string.IsNullOrWhiteSpace(val)) return val;
+            //来自confing.ini的配置项
+            val = Helper.INI.Read(itemname);
+            return val;
         }
         #endregion
     }

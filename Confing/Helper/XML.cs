@@ -17,7 +17,7 @@ namespace Confing.Helper
     public class XML
     {
         //配置文件路径
-        private static string xmlPath = System.Environment.CurrentDirectory + "\\Setup.xml";
+        private static string xmlPath = System.Environment.CurrentDirectory + "\\Confing.xml";
         private static XmlDocument xmlDoc = null;
         /// <summary>
         /// 创建XML文档对象

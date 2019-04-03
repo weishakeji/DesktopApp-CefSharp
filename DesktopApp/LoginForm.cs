@@ -19,10 +19,39 @@ namespace DesktopApp
         /// 框体的标题
         /// </summary>
         public string Title { get; set; }
-        //默认的注册链接
-        private string DefRegisterUrl = "student/Register.ashx";
-        //默认的找回密码的链接
-        private string DefFindPwUrl = "Student/PwFind.ashx";
+        /// <summary>
+        /// 默认的注册链接
+        /// </summary>
+        public string DefRegisterUrl
+        {
+            get
+            {
+                string url = Confing.Gatway.Get("ApiRegister");
+                return string.IsNullOrEmpty(url) ? Confing.Gatway.GetAPI("ApiRegister") : url;
+            }
+        }
+        /// <summary>
+        /// 默认的找回密码的链接
+        /// </summary>
+        public string DefFindPwUrl
+        {
+            get
+            {
+                string url = Confing.Gatway.Get("ApiFindPw");
+                return string.IsNullOrEmpty(url) ? Confing.Gatway.GetAPI("ApiFindPw") : url;
+            }
+        }
+        /// <summary>
+        /// 默认登录接口地址
+        /// </summary>
+        public string DefLoginUrl
+        {
+            get
+            {
+                string url = Confing.Gatway.Get("ApiLogin");
+                return string.IsNullOrEmpty(url) ? Confing.Gatway.GetAPI("ApiLogin") : url;
+            }
+        }
         #endregion
         public LoginForm()
         {
@@ -108,8 +137,6 @@ namespace DesktopApp
         private void linkFindPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            string def = Confing.Gatway.Get("ApiFindPw");
-            if (!string.IsNullOrWhiteSpace(def)) DefFindPwUrl = def;
             Form main = new MainForm(DefFindPwUrl);
             main.Show();
         }
@@ -121,8 +148,6 @@ namespace DesktopApp
         private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            string def = Confing.Gatway.Get("ApiRegister");
-            if (!string.IsNullOrWhiteSpace(def)) DefRegisterUrl = def;
             Form main = new MainForm(DefRegisterUrl);
             main.Show();
         }
