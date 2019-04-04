@@ -26,8 +26,7 @@ namespace DesktopApp
         {
             get
             {
-                string url = Confing.Gatway.Get("ApiRegister");
-                return string.IsNullOrEmpty(url) ? Confing.Gatway.GetAPI("ApiRegister") : url;
+                return Confing.Gatway.GetAPI("ApiRegister");
             }
         }
         /// <summary>
@@ -37,8 +36,7 @@ namespace DesktopApp
         {
             get
             {
-                string url = Confing.Gatway.Get("ApiFindPw");
-                return string.IsNullOrEmpty(url) ? Confing.Gatway.GetAPI("ApiFindPw") : url;
+                return Confing.Gatway.GetAPI("ApiFindPw");
             }
         }
         /// <summary>
@@ -48,8 +46,7 @@ namespace DesktopApp
         {
             get
             {
-                string url = Confing.Gatway.Get("ApiLogin");
-                return string.IsNullOrEmpty(url) ? Confing.Gatway.GetAPI("ApiLogin") : url;
+                return Confing.Gatway.GetAPI("ApiLogin");
             }
         }
         #endregion
