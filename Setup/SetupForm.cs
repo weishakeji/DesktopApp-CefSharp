@@ -188,10 +188,46 @@ namespace Setup
                 lbLoginBgInfo.Text = string.Format("图片实际像素:{0}×{1} 像素", source.Width, source.Height);
             }
         }
+        /// <summary>
+        /// 标题颜色设置项的点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tbLoginTitleColor_Enter(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            Color c = colorDialog1.Color;
+            tbLoginTitleColor.Text = ToHexColor(c);
+        }
+        /// <summary>
+        /// 底部链接的颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tbLoginLinkColor_Enter(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            Color c = colorDialog1.Color;
+            tbLoginLinkColor.Text = ToHexColor(c);
+        }
+        private string ToHexColor(Color color)
+        {
+            string R = Convert.ToString(color.R, 16);
+            if (R == "0")
+                R = "00";
+            string G = Convert.ToString(color.G, 16);
+            if (G == "0")
+                G = "00";
+            string B = Convert.ToString(color.B, 16);
+            if (B == "0")
+                B = "00";
+            string HexColor = "#" + R + G + B;
+            return HexColor;
+        }
 
 
         #endregion
 
-
+        
     }
 }

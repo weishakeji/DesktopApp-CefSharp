@@ -81,7 +81,17 @@ namespace DesktopApp
             if (!string.IsNullOrWhiteSpace(Title))
                 this.Text = this.lbTitle.Text = Title;
             //是否显示标题
-            lbTitle.Visible= Confing.Gatway.GetBoolean("IsLoginTitle");
+            lbTitle.Visible = Confing.Gatway.GetBoolean("IsLoginTitle");
+            //标题样式
+            string font= Confing.Gatway.Get("LoginTitleFont");  //字体
+            if (string.IsNullOrWhiteSpace(font)) font = "幼圆";
+            int fontsize= Confing.Gatway.GetInt("LoginTitleSize");  //字号
+            if (fontsize <= 0) fontsize = 10;
+            bool isBold = Confing.Gatway.GetBoolean("LoginTitleBold");  //粗体
+            lbTitle.Font = new Font(font, fontsize, isBold ? FontStyle.Bold : FontStyle.Regular);
+            //标题颜色
+            string color= Confing.Gatway.Get("LoginTitleColor");
+            lbTitle.ForeColor = ColorTranslator.FromHtml(color);
             //是否显示"自动登录"、"保存密码"
             cbAutoLogin.Visible = cbSavePw.Visible = Confing.Gatway.GetBoolean("IsAutoLongin");
             if (!cbAutoLogin.Visible) btnEnter.Top -= 20;
@@ -91,6 +101,11 @@ namespace DesktopApp
             linkFindPw.Visible = Confing.Gatway.GetBoolean("IsShowFindPw");
             //是否允许直接登录
             linkDirectaccess.Visible = Confing.Gatway.GetBoolean("IsDirectaccess");
+            //链接颜色
+            linkRegister.ForeColor = linkFindPw.ForeColor =
+                linkDirectaccess.ForeColor = ColorTranslator.FromHtml(Confing.Gatway.Get("LoginLinkColor"));
+            linkRegister.LinkColor = linkFindPw.LinkColor =
+               linkDirectaccess.LinkColor = ColorTranslator.FromHtml(Confing.Gatway.Get("LoginLinkColor"));
         }
         #region 关闭按钮相关
         private Point mousePoint = new Point();

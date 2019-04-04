@@ -72,25 +72,23 @@
             this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbLoginTitle = new System.Windows.Forms.TextBox();
+            this.cbIsLoginTitle = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbIsShowFindPw = new System.Windows.Forms.CheckBox();
+            this.tbAPPID = new System.Windows.Forms.TextBox();
+            this.cbIsShowRegister = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.lbLoginBgInfo = new System.Windows.Forms.Label();
             this.cbIsDirectaccess = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbIsAutoLongin = new System.Windows.Forms.CheckBox();
-            this.cbIsLoginTitle = new System.Windows.Forms.CheckBox();
             this.btnSelectLoginBg = new System.Windows.Forms.Button();
             this.pictureLoginBg = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbIsShowFindPw = new System.Windows.Forms.CheckBox();
-            this.cbIsShowRegister = new System.Windows.Forms.CheckBox();
-            this.tbApiFindPw = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tbApiRegister = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tbApiLogin = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tbLoginTitle = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabDebug = new System.Windows.Forms.TabPage();
             this.cbDebugHelper = new System.Windows.Forms.CheckBox();
             this.panelDebugBrowser = new System.Windows.Forms.Panel();
@@ -125,6 +123,14 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
+            this.tbLoginTitleFont = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbLoginTitleSize = new System.Windows.Forms.TextBox();
+            this.tbLoginTitleColor = new System.Windows.Forms.TextBox();
+            this.cbLoginTitleBold = new System.Windows.Forms.CheckBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tbLoginLinkColor = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -134,8 +140,8 @@
             this.panel7.SuspendLayout();
             this.panelMainStyle.SuspendLayout();
             this.tbLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLoginBg)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLoginBg)).BeginInit();
             this.tabDebug.SuspendLayout();
             this.panelDebugBrowser.SuspendLayout();
             this.panelBrowserMobile.SuspendLayout();
@@ -590,23 +596,131 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.tbLoginLinkColor);
+            this.tbLogin.Controls.Add(this.label29);
+            this.tbLogin.Controls.Add(this.groupBox1);
+            this.tbLogin.Controls.Add(this.cbIsShowFindPw);
+            this.tbLogin.Controls.Add(this.tbAPPID);
+            this.tbLogin.Controls.Add(this.cbIsShowRegister);
+            this.tbLogin.Controls.Add(this.label28);
             this.tbLogin.Controls.Add(this.lbLoginBgInfo);
             this.tbLogin.Controls.Add(this.cbIsDirectaccess);
             this.tbLogin.Controls.Add(this.label11);
             this.tbLogin.Controls.Add(this.cbIsAutoLongin);
-            this.tbLogin.Controls.Add(this.cbIsLoginTitle);
             this.tbLogin.Controls.Add(this.btnSelectLoginBg);
             this.tbLogin.Controls.Add(this.pictureLoginBg);
             this.tbLogin.Controls.Add(this.label25);
-            this.tbLogin.Controls.Add(this.groupBox1);
-            this.tbLogin.Controls.Add(this.tbLoginTitle);
-            this.tbLogin.Controls.Add(this.label13);
             this.tbLogin.Location = new System.Drawing.Point(4, 22);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(605, 372);
             this.tbLogin.TabIndex = 2;
             this.tbLogin.Text = "登录窗体";
             this.tbLogin.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbLoginTitleBold);
+            this.groupBox1.Controls.Add(this.tbLoginTitleColor);
+            this.groupBox1.Controls.Add(this.tbLoginTitleSize);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.tbLoginTitleFont);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.tbLoginTitle);
+            this.groupBox1.Controls.Add(this.cbIsLoginTitle);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Location = new System.Drawing.Point(9, 38);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(587, 100);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "登录窗标题";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(45, 70);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 12);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "颜色：";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(45, 45);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 12);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "字体：";
+            // 
+            // tbLoginTitle
+            // 
+            this.tbLoginTitle.Location = new System.Drawing.Point(92, 20);
+            this.tbLoginTitle.Name = "tbLoginTitle";
+            this.tbLoginTitle.Size = new System.Drawing.Size(339, 21);
+            this.tbLoginTitle.TabIndex = 5;
+            // 
+            // cbIsLoginTitle
+            // 
+            this.cbIsLoginTitle.AutoSize = true;
+            this.cbIsLoginTitle.Checked = true;
+            this.cbIsLoginTitle.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsLoginTitle.Location = new System.Drawing.Point(441, 22);
+            this.cbIsLoginTitle.Name = "cbIsLoginTitle";
+            this.cbIsLoginTitle.Size = new System.Drawing.Size(72, 16);
+            this.cbIsLoginTitle.TabIndex = 28;
+            this.cbIsLoginTitle.Text = "显示标题";
+            this.cbIsLoginTitle.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(45, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 12);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "标题：";
+            // 
+            // cbIsShowFindPw
+            // 
+            this.cbIsShowFindPw.AutoSize = true;
+            this.cbIsShowFindPw.Checked = true;
+            this.cbIsShowFindPw.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsShowFindPw.Location = new System.Drawing.Point(230, 221);
+            this.cbIsShowFindPw.Name = "cbIsShowFindPw";
+            this.cbIsShowFindPw.Size = new System.Drawing.Size(96, 16);
+            this.cbIsShowFindPw.TabIndex = 32;
+            this.cbIsShowFindPw.Text = "显示找回密码";
+            this.cbIsShowFindPw.UseVisualStyleBackColor = true;
+            // 
+            // tbAPPID
+            // 
+            this.tbAPPID.Location = new System.Drawing.Point(104, 11);
+            this.tbAPPID.Name = "tbAPPID";
+            this.tbAPPID.Size = new System.Drawing.Size(339, 21);
+            this.tbAPPID.TabIndex = 35;
+            // 
+            // cbIsShowRegister
+            // 
+            this.cbIsShowRegister.AutoSize = true;
+            this.cbIsShowRegister.Checked = true;
+            this.cbIsShowRegister.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbIsShowRegister.Location = new System.Drawing.Point(104, 221);
+            this.cbIsShowRegister.Name = "cbIsShowRegister";
+            this.cbIsShowRegister.Size = new System.Drawing.Size(96, 16);
+            this.cbIsShowRegister.TabIndex = 31;
+            this.cbIsShowRegister.Text = "显示在线注册";
+            this.cbIsShowRegister.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(54, 14);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(47, 12);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "APPID：";
             // 
             // lbLoginBgInfo
             // 
@@ -621,7 +735,7 @@
             this.cbIsDirectaccess.AutoSize = true;
             this.cbIsDirectaccess.Checked = true;
             this.cbIsDirectaccess.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsDirectaccess.Location = new System.Drawing.Point(109, 199);
+            this.cbIsDirectaccess.Location = new System.Drawing.Point(105, 177);
             this.cbIsDirectaccess.Name = "cbIsDirectaccess";
             this.cbIsDirectaccess.Size = new System.Drawing.Size(348, 16);
             this.cbIsDirectaccess.TabIndex = 32;
@@ -642,24 +756,12 @@
             this.cbIsAutoLongin.AutoSize = true;
             this.cbIsAutoLongin.Checked = true;
             this.cbIsAutoLongin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsAutoLongin.Location = new System.Drawing.Point(108, 221);
+            this.cbIsAutoLongin.Location = new System.Drawing.Point(104, 199);
             this.cbIsAutoLongin.Name = "cbIsAutoLongin";
             this.cbIsAutoLongin.Size = new System.Drawing.Size(192, 16);
             this.cbIsAutoLongin.TabIndex = 30;
             this.cbIsAutoLongin.Text = "显示“自动登录”和\"保存密码\"";
             this.cbIsAutoLongin.UseVisualStyleBackColor = true;
-            // 
-            // cbIsLoginTitle
-            // 
-            this.cbIsLoginTitle.AutoSize = true;
-            this.cbIsLoginTitle.Checked = true;
-            this.cbIsLoginTitle.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsLoginTitle.Location = new System.Drawing.Point(465, 20);
-            this.cbIsLoginTitle.Name = "cbIsLoginTitle";
-            this.cbIsLoginTitle.Size = new System.Drawing.Size(72, 16);
-            this.cbIsLoginTitle.TabIndex = 28;
-            this.cbIsLoginTitle.Text = "显示标题";
-            this.cbIsLoginTitle.UseVisualStyleBackColor = true;
             // 
             // btnSelectLoginBg
             // 
@@ -691,111 +793,6 @@
             this.label25.Size = new System.Drawing.Size(53, 12);
             this.label25.TabIndex = 25;
             this.label25.Text = "背景图：";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbIsShowFindPw);
-            this.groupBox1.Controls.Add(this.cbIsShowRegister);
-            this.groupBox1.Controls.Add(this.tbApiFindPw);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.tbApiRegister);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.tbApiLogin);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(14, 59);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(572, 127);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "接口地址";
-            // 
-            // cbIsShowFindPw
-            // 
-            this.cbIsShowFindPw.AutoSize = true;
-            this.cbIsShowFindPw.Checked = true;
-            this.cbIsShowFindPw.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsShowFindPw.Location = new System.Drawing.Point(428, 84);
-            this.cbIsShowFindPw.Name = "cbIsShowFindPw";
-            this.cbIsShowFindPw.Size = new System.Drawing.Size(96, 16);
-            this.cbIsShowFindPw.TabIndex = 32;
-            this.cbIsShowFindPw.Text = "显示找回密码";
-            this.cbIsShowFindPw.UseVisualStyleBackColor = true;
-            // 
-            // cbIsShowRegister
-            // 
-            this.cbIsShowRegister.AutoSize = true;
-            this.cbIsShowRegister.Checked = true;
-            this.cbIsShowRegister.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsShowRegister.Location = new System.Drawing.Point(428, 57);
-            this.cbIsShowRegister.Name = "cbIsShowRegister";
-            this.cbIsShowRegister.Size = new System.Drawing.Size(96, 16);
-            this.cbIsShowRegister.TabIndex = 31;
-            this.cbIsShowRegister.Text = "显示在线注册";
-            this.cbIsShowRegister.UseVisualStyleBackColor = true;
-            // 
-            // tbApiFindPw
-            // 
-            this.tbApiFindPw.Location = new System.Drawing.Point(95, 83);
-            this.tbApiFindPw.Name = "tbApiFindPw";
-            this.tbApiFindPw.Size = new System.Drawing.Size(322, 21);
-            this.tbApiFindPw.TabIndex = 26;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 86);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 12);
-            this.label16.TabIndex = 25;
-            this.label16.Text = "找回密码：";
-            // 
-            // tbApiRegister
-            // 
-            this.tbApiRegister.Location = new System.Drawing.Point(95, 56);
-            this.tbApiRegister.Name = "tbApiRegister";
-            this.tbApiRegister.Size = new System.Drawing.Size(322, 21);
-            this.tbApiRegister.TabIndex = 24;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(45, 59);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 12);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "注册：";
-            // 
-            // tbApiLogin
-            // 
-            this.tbApiLogin.Location = new System.Drawing.Point(95, 29);
-            this.tbApiLogin.Name = "tbApiLogin";
-            this.tbApiLogin.Size = new System.Drawing.Size(322, 21);
-            this.tbApiLogin.TabIndex = 22;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(21, 32);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 12);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "登录验证：";
-            // 
-            // tbLoginTitle
-            // 
-            this.tbLoginTitle.Location = new System.Drawing.Point(108, 18);
-            this.tbLoginTitle.Name = "tbLoginTitle";
-            this.tbLoginTitle.Size = new System.Drawing.Size(339, 21);
-            this.tbLoginTitle.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 12);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "登录窗标题：";
             // 
             // tabDebug
             // 
@@ -1150,6 +1147,70 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
+            // tbLoginTitleFont
+            // 
+            this.tbLoginTitleFont.Location = new System.Drawing.Point(92, 43);
+            this.tbLoginTitleFont.Name = "tbLoginTitleFont";
+            this.tbLoginTitleFont.Size = new System.Drawing.Size(100, 21);
+            this.tbLoginTitleFont.TabIndex = 31;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(219, 50);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 12);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "字号：";
+            // 
+            // tbLoginTitleSize
+            // 
+            this.tbLoginTitleSize.Location = new System.Drawing.Point(266, 47);
+            this.tbLoginTitleSize.Name = "tbLoginTitleSize";
+            this.tbLoginTitleSize.Size = new System.Drawing.Size(54, 21);
+            this.tbLoginTitleSize.TabIndex = 33;
+            // 
+            // tbLoginTitleColor
+            // 
+            this.tbLoginTitleColor.Location = new System.Drawing.Point(92, 66);
+            this.tbLoginTitleColor.Name = "tbLoginTitleColor";
+            this.tbLoginTitleColor.Size = new System.Drawing.Size(100, 21);
+            this.tbLoginTitleColor.TabIndex = 34;
+            this.tbLoginTitleColor.Text = "#fff";
+            this.tbLoginTitleColor.Click += new System.EventHandler(this.tbLoginTitleColor_Enter);
+            this.tbLoginTitleColor.Enter += new System.EventHandler(this.tbLoginTitleColor_Enter);
+            // 
+            // cbLoginTitleBold
+            // 
+            this.cbLoginTitleBold.AutoSize = true;
+            this.cbLoginTitleBold.Checked = true;
+            this.cbLoginTitleBold.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLoginTitleBold.Location = new System.Drawing.Point(221, 69);
+            this.cbLoginTitleBold.Name = "cbLoginTitleBold";
+            this.cbLoginTitleBold.Size = new System.Drawing.Size(48, 16);
+            this.cbLoginTitleBold.TabIndex = 35;
+            this.cbLoginTitleBold.Text = "粗体";
+            this.cbLoginTitleBold.UseVisualStyleBackColor = true;
+            // 
+            // tbLoginLinkColor
+            // 
+            this.tbLoginLinkColor.Location = new System.Drawing.Point(100, 144);
+            this.tbLoginLinkColor.Name = "tbLoginLinkColor";
+            this.tbLoginLinkColor.Size = new System.Drawing.Size(100, 21);
+            this.tbLoginLinkColor.TabIndex = 37;
+            this.tbLoginLinkColor.Text = "#fff";
+            this.tbLoginLinkColor.Click += new System.EventHandler(this.tbLoginLinkColor_Enter);
+            this.tbLoginLinkColor.Enter += new System.EventHandler(this.tbLoginLinkColor_Enter);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(35, 147);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 12);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "链接颜色：";
+            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1176,9 +1237,9 @@
             this.panelMainStyle.PerformLayout();
             this.tbLogin.ResumeLayout(false);
             this.tbLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLoginBg)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLoginBg)).EndInit();
             this.tabDebug.ResumeLayout(false);
             this.tabDebug.PerformLayout();
             this.panelDebugBrowser.ResumeLayout(false);
@@ -1233,15 +1294,8 @@
         private System.Windows.Forms.TabPage tabDebug;
         private System.Windows.Forms.Panel panelStartWinfow;
         private System.Windows.Forms.Panel panelMainStyle;
-        private System.Windows.Forms.TextBox tbApiLogin;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tbLoginTitle;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbApiFindPw;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox tbApiRegister;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tbAboutWidth;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -1294,6 +1348,19 @@
         private System.Windows.Forms.Label lbAboutBgWh;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lbLoginBgInfo;
+        private System.Windows.Forms.TextBox tbAPPID;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox cbLoginTitleBold;
+        private System.Windows.Forms.TextBox tbLoginTitleColor;
+        private System.Windows.Forms.TextBox tbLoginTitleSize;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tbLoginTitleFont;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TextBox tbLoginLinkColor;
+        private System.Windows.Forms.Label label29;
     }
 }
 
