@@ -31,12 +31,12 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.cbAutoLogin = new System.Windows.Forms.CheckBox();
             this.cbSavePw = new System.Windows.Forms.CheckBox();
             this.linkRegister = new System.Windows.Forms.LinkLabel();
-            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnEnterLogin = new System.Windows.Forms.Button();
             this.linkDirectaccess = new System.Windows.Forms.LinkLabel();
             this.lbClose = new System.Windows.Forms.Label();
             this.linkFindPw = new System.Windows.Forms.LinkLabel();
@@ -74,22 +74,22 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "密码：";
             // 
-            // textBox1
+            // tbUser
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(133, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 26);
-            this.textBox1.TabIndex = 6;
+            this.tbUser.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbUser.Location = new System.Drawing.Point(133, 74);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(203, 26);
+            this.tbUser.TabIndex = 6;
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(132, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(203, 26);
-            this.textBox2.TabIndex = 7;
+            this.tbPassword.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPassword.Location = new System.Drawing.Point(132, 109);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(203, 26);
+            this.tbPassword.TabIndex = 7;
             // 
             // cbAutoLogin
             // 
@@ -129,15 +129,16 @@
             this.linkRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
             // 
-            // btnEnter
+            // btnEnterLogin
             // 
-            this.btnEnter.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEnter.Location = new System.Drawing.Point(133, 164);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(202, 30);
-            this.btnEnter.TabIndex = 11;
-            this.btnEnter.Text = "登录";
-            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnterLogin.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnEnterLogin.Location = new System.Drawing.Point(133, 164);
+            this.btnEnterLogin.Name = "btnEnterLogin";
+            this.btnEnterLogin.Size = new System.Drawing.Size(202, 30);
+            this.btnEnterLogin.TabIndex = 11;
+            this.btnEnterLogin.Text = "登录";
+            this.btnEnterLogin.UseVisualStyleBackColor = true;
+            this.btnEnterLogin.Click += new System.EventHandler(this.btnEnterLogin_Click);
             // 
             // linkDirectaccess
             // 
@@ -192,12 +193,12 @@
             this.Controls.Add(this.linkFindPw);
             this.Controls.Add(this.lbClose);
             this.Controls.Add(this.linkDirectaccess);
-            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.btnEnterLogin);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.cbSavePw);
             this.Controls.Add(this.cbAutoLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbTitle);
@@ -215,12 +216,12 @@
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.CheckBox cbAutoLogin;
         private System.Windows.Forms.CheckBox cbSavePw;
         private System.Windows.Forms.LinkLabel linkRegister;
-        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnEnterLogin;
         private System.Windows.Forms.LinkLabel linkDirectaccess;
         private System.Windows.Forms.Label lbClose;
         private System.Windows.Forms.LinkLabel linkFindPw;

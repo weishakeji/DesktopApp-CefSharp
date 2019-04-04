@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -46,7 +47,9 @@ namespace DesktopApp
         {
             get
             {
-                return Confing.Gatway.GetAPI("ApiLogin");
+                string url= Confing.Gatway.GetAPI("ApiLogin");
+                if (url.StartsWith("/")) url = url.Substring(1);
+                return url;
             }
         }
         #endregion
@@ -56,6 +59,7 @@ namespace DesktopApp
             InitializeComponent();
             Setup(this);
         }
+        #region 初始化窗体各项设置
         /// <summary>
         /// 构建登录窗
         /// </summary>
@@ -91,7 +95,7 @@ namespace DesktopApp
             lbTitle.ForeColor = ColorTranslator.FromHtml(color);
             //是否显示"自动登录"、"保存密码"
             cbAutoLogin.Visible = cbSavePw.Visible = Confing.Gatway.GetBoolean("IsAutoLongin");
-            if (!cbAutoLogin.Visible) btnEnter.Top -= 20;
+            if (!cbAutoLogin.Visible) btnEnterLogin.Top -= 20;
             //是否显示“注册”链接
             linkRegister.Visible= Confing.Gatway.GetBoolean("IsShowRegister");
             //是否显示“找回密码”链接
@@ -104,6 +108,8 @@ namespace DesktopApp
             linkRegister.LinkColor = linkFindPw.LinkColor =
                linkDirectaccess.LinkColor = ColorTranslator.FromHtml(Confing.Gatway.Get("LoginLinkColor"));
         }
+        #endregion
+
         #region 关闭按钮相关
         private Point mousePoint = new Point();
         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
@@ -163,8 +169,28 @@ namespace DesktopApp
             Form main = new MainForm(DefRegisterUrl);
             main.Show();
         }
+
         #endregion
 
-
+        /// <summary>
+        /// 一个简单的IOC方法,用于采用不同的登录方法，具体在confing.ini中ApiFucntion节点设置
+        /// </summary>
+        /// <returns></returns>
+        public ILogin ToLogin()
+        {
+            string classname = Confing.Gatway.GetAPI("Login");
+            string fullName = string.Format("DesktopApp.LoginFunction.{0}", classname);  //命名空间.类型名
+            object ect = Assembly.Load("DesktopApp").CreateInstance(fullName);//加载程序集，创建程序集里面的 命名空间.类型名 实例
+            ILogin func = ect as ILogin;
+            return func;
+        }
+        private void btnEnterLogin_Click(object sender, EventArgs e)
+        {
+            ILogin login = this.ToLogin();
+            if (login == null) throw new Exception("登录接口为null，请检查Confing.ini配置项是否正确");
+            //
+          
+            string result = this.ToLogin().Login(tbUser.Text, tbPassword.Text);
+        }
     }
 }
