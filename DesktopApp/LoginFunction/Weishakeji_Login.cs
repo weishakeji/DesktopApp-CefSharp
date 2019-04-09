@@ -12,7 +12,7 @@ namespace DesktopApp.LoginFunction
     /// </summary>
     public class Weishakeji_Login : ILogin
     {
-        public string Login(string name, string pw)
+        public LoginFunction.Result Access(string name, string pw)
         {
             //主域地址
             string requestUrl = Program.Domain() + DefLoginUrl();
@@ -30,18 +30,40 @@ namespace DesktopApp.LoginFunction
             string query = string.Empty;
             query = getQuery(query, "APPid", appid);
             query = getQuery(query, "action", "verify");
-            //
-            string domain = "http://desktopapp";            ; ;
+            //请求域,和超管中的单点登录配置项目,要对应
+            string domain = Confing.Gatway.Get("RequstDomain");            ; ;
             query = getQuery(query, "domain", System.Web.HttpUtility.UrlEncode(domain.Trim()));
-            //
-            query = getQuery(query, "user", name);
+            //账号与密码
+            query = getQuery(query, "user", name.Trim());
             pw= System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(pw, "MD5").ToLower();
             query = getQuery(query, "pw", pw);
             requestUrl += "?" + query;
             //获取结果
-            string resultXml = Request.WebResult(requestUrl);
-            return requestUrl;
+            string resultXml = Handler.Client.WebResult(requestUrl);
+            return new Result(resultXml);
         }
+        /// <summary>
+        /// 登录成功后，要主窗体要打开的网页地址
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public string Gourl(string name)
+        {
+            //主域地址
+            string goUrl = DefLoginUrl();
+            string appid = Confing.Gatway.Get("APPID");
+            string query = string.Empty;
+            query = getQuery(query, "APPid", appid);
+            query = getQuery(query, "action", "login");
+            //请求域,和超管中的单点登录配置项目,要对应
+            string domain = Confing.Gatway.Get("RequstDomain"); ; ;
+            query = getQuery(query, "domain", System.Web.HttpUtility.UrlEncode(domain.Trim()));
+            //账号
+            query = getQuery(query, "user", name.Trim());
+            query = getQuery(query, "goto", System.Web.HttpUtility.UrlEncode("/default.ashx"));
+            return goUrl + "?" + query;
+        }
+        #region 私有方法
         /// <summary>
         /// 默认登录接口地址
         /// </summary>
@@ -68,5 +90,6 @@ namespace DesktopApp.LoginFunction
                 url += "&" + key + "=" + value;
             return url;
         }
+        #endregion
     }
 }

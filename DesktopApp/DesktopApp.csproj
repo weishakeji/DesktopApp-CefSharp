@@ -93,7 +93,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginFunction\Other_login.cs" />
-    <Compile Include="LoginFunction\Request.cs" />
+    <Compile Include="LoginFunction\Result.cs" />
     <Compile Include="LoginFunction\Weishakeji_Login.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

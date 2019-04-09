@@ -188,9 +188,15 @@ namespace DesktopApp
         {
             ILogin login = this.ToLogin();
             if (login == null) throw new Exception("登录接口为null，请检查Confing.ini配置项是否正确");
-            //
-          
-            string result = this.ToLogin().Login(tbUser.Text, tbPassword.Text);
+            //验证登录
+            LoginFunction.Result result = this.ToLogin().Access(tbUser.Text, tbPassword.Text);
+            if (result.Success)
+            {
+                string gourl = this.ToLogin().Gourl(tbUser.Text.Trim());
+                this.Hide();
+                Form main = new MainForm(gourl);
+                main.Show();
+            }
         }
     }
 }

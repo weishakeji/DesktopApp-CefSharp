@@ -72,7 +72,14 @@
             this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
+            this.tbLoginLinkColor = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbLoginTitleBold = new System.Windows.Forms.CheckBox();
+            this.tbLoginTitleColor = new System.Windows.Forms.TextBox();
+            this.tbLoginTitleSize = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbLoginTitleFont = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tbLoginTitle = new System.Windows.Forms.TextBox();
@@ -123,14 +130,10 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
-            this.tbLoginTitleFont = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tbLoginTitleSize = new System.Windows.Forms.TextBox();
-            this.tbLoginTitleColor = new System.Windows.Forms.TextBox();
-            this.cbLoginTitleBold = new System.Windows.Forms.CheckBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.tbLoginLinkColor = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
+            this.tbRequstDomain = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -596,6 +599,9 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.label31);
+            this.tbLogin.Controls.Add(this.tbRequstDomain);
+            this.tbLogin.Controls.Add(this.label30);
             this.tbLogin.Controls.Add(this.tbLoginLinkColor);
             this.tbLogin.Controls.Add(this.label29);
             this.tbLogin.Controls.Add(this.groupBox1);
@@ -617,6 +623,25 @@
             this.tbLogin.Text = "登录窗体";
             this.tbLogin.UseVisualStyleBackColor = true;
             // 
+            // tbLoginLinkColor
+            // 
+            this.tbLoginLinkColor.Location = new System.Drawing.Point(423, 218);
+            this.tbLoginLinkColor.Name = "tbLoginLinkColor";
+            this.tbLoginLinkColor.Size = new System.Drawing.Size(50, 21);
+            this.tbLoginLinkColor.TabIndex = 37;
+            this.tbLoginLinkColor.Text = "#fff";
+            this.tbLoginLinkColor.Click += new System.EventHandler(this.tbLoginLinkColor_Enter);
+            this.tbLoginLinkColor.Enter += new System.EventHandler(this.tbLoginLinkColor_Enter);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(358, 222);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 12);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "链接颜色：";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbLoginTitleBold);
@@ -629,17 +654,62 @@
             this.groupBox1.Controls.Add(this.tbLoginTitle);
             this.groupBox1.Controls.Add(this.cbIsLoginTitle);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(9, 38);
+            this.groupBox1.Location = new System.Drawing.Point(3, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(587, 100);
+            this.groupBox1.Size = new System.Drawing.Size(587, 80);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "登录窗标题";
             // 
+            // cbLoginTitleBold
+            // 
+            this.cbLoginTitleBold.AutoSize = true;
+            this.cbLoginTitleBold.Checked = true;
+            this.cbLoginTitleBold.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLoginTitleBold.Location = new System.Drawing.Point(385, 49);
+            this.cbLoginTitleBold.Name = "cbLoginTitleBold";
+            this.cbLoginTitleBold.Size = new System.Drawing.Size(48, 16);
+            this.cbLoginTitleBold.TabIndex = 35;
+            this.cbLoginTitleBold.Text = "粗体";
+            this.cbLoginTitleBold.UseVisualStyleBackColor = true;
+            // 
+            // tbLoginTitleColor
+            // 
+            this.tbLoginTitleColor.Location = new System.Drawing.Point(325, 47);
+            this.tbLoginTitleColor.Name = "tbLoginTitleColor";
+            this.tbLoginTitleColor.Size = new System.Drawing.Size(50, 21);
+            this.tbLoginTitleColor.TabIndex = 34;
+            this.tbLoginTitleColor.Text = "#fff";
+            this.tbLoginTitleColor.Click += new System.EventHandler(this.tbLoginTitleColor_Enter);
+            this.tbLoginTitleColor.Enter += new System.EventHandler(this.tbLoginTitleColor_Enter);
+            // 
+            // tbLoginTitleSize
+            // 
+            this.tbLoginTitleSize.Location = new System.Drawing.Point(208, 47);
+            this.tbLoginTitleSize.Name = "tbLoginTitleSize";
+            this.tbLoginTitleSize.Size = new System.Drawing.Size(50, 21);
+            this.tbLoginTitleSize.TabIndex = 33;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(161, 51);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 12);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "字号：";
+            // 
+            // tbLoginTitleFont
+            // 
+            this.tbLoginTitleFont.Location = new System.Drawing.Point(92, 47);
+            this.tbLoginTitleFont.Name = "tbLoginTitleFont";
+            this.tbLoginTitleFont.Size = new System.Drawing.Size(50, 21);
+            this.tbLoginTitleFont.TabIndex = 31;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(45, 70);
+            this.label15.Location = new System.Drawing.Point(278, 51);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 12);
             this.label15.TabIndex = 30;
@@ -648,7 +718,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(45, 45);
+            this.label14.Location = new System.Drawing.Point(45, 51);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 12);
             this.label14.TabIndex = 29;
@@ -687,7 +757,7 @@
             this.cbIsShowFindPw.AutoSize = true;
             this.cbIsShowFindPw.Checked = true;
             this.cbIsShowFindPw.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsShowFindPw.Location = new System.Drawing.Point(230, 221);
+            this.cbIsShowFindPw.Location = new System.Drawing.Point(230, 220);
             this.cbIsShowFindPw.Name = "cbIsShowFindPw";
             this.cbIsShowFindPw.Size = new System.Drawing.Size(96, 16);
             this.cbIsShowFindPw.TabIndex = 32;
@@ -706,7 +776,7 @@
             this.cbIsShowRegister.AutoSize = true;
             this.cbIsShowRegister.Checked = true;
             this.cbIsShowRegister.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsShowRegister.Location = new System.Drawing.Point(104, 221);
+            this.cbIsShowRegister.Location = new System.Drawing.Point(105, 220);
             this.cbIsShowRegister.Name = "cbIsShowRegister";
             this.cbIsShowRegister.Size = new System.Drawing.Size(96, 16);
             this.cbIsShowRegister.TabIndex = 31;
@@ -716,7 +786,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(54, 14);
+            this.label28.Location = new System.Drawing.Point(42, 14);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(47, 12);
             this.label28.TabIndex = 34;
@@ -735,7 +805,7 @@
             this.cbIsDirectaccess.AutoSize = true;
             this.cbIsDirectaccess.Checked = true;
             this.cbIsDirectaccess.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsDirectaccess.Location = new System.Drawing.Point(105, 177);
+            this.cbIsDirectaccess.Location = new System.Drawing.Point(105, 199);
             this.cbIsDirectaccess.Name = "cbIsDirectaccess";
             this.cbIsDirectaccess.Size = new System.Drawing.Size(348, 16);
             this.cbIsDirectaccess.TabIndex = 32;
@@ -756,7 +826,7 @@
             this.cbIsAutoLongin.AutoSize = true;
             this.cbIsAutoLongin.Checked = true;
             this.cbIsAutoLongin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbIsAutoLongin.Location = new System.Drawing.Point(104, 199);
+            this.cbIsAutoLongin.Location = new System.Drawing.Point(105, 177);
             this.cbIsAutoLongin.Name = "cbIsAutoLongin";
             this.cbIsAutoLongin.Size = new System.Drawing.Size(192, 16);
             this.cbIsAutoLongin.TabIndex = 30;
@@ -1147,69 +1217,30 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // tbLoginTitleFont
+            // tbRequstDomain
             // 
-            this.tbLoginTitleFont.Location = new System.Drawing.Point(92, 43);
-            this.tbLoginTitleFont.Name = "tbLoginTitleFont";
-            this.tbLoginTitleFont.Size = new System.Drawing.Size(100, 21);
-            this.tbLoginTitleFont.TabIndex = 31;
+            this.tbRequstDomain.Location = new System.Drawing.Point(104, 38);
+            this.tbRequstDomain.Name = "tbRequstDomain";
+            this.tbRequstDomain.Size = new System.Drawing.Size(339, 21);
+            this.tbRequstDomain.TabIndex = 39;
             // 
-            // label16
+            // label30
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(219, 50);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 12);
-            this.label16.TabIndex = 32;
-            this.label16.Text = "字号：";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(36, 41);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(53, 12);
+            this.label30.TabIndex = 38;
+            this.label30.Text = "请求域：";
             // 
-            // tbLoginTitleSize
+            // label31
             // 
-            this.tbLoginTitleSize.Location = new System.Drawing.Point(266, 47);
-            this.tbLoginTitleSize.Name = "tbLoginTitleSize";
-            this.tbLoginTitleSize.Size = new System.Drawing.Size(54, 21);
-            this.tbLoginTitleSize.TabIndex = 33;
-            // 
-            // tbLoginTitleColor
-            // 
-            this.tbLoginTitleColor.Location = new System.Drawing.Point(92, 66);
-            this.tbLoginTitleColor.Name = "tbLoginTitleColor";
-            this.tbLoginTitleColor.Size = new System.Drawing.Size(100, 21);
-            this.tbLoginTitleColor.TabIndex = 34;
-            this.tbLoginTitleColor.Text = "#fff";
-            this.tbLoginTitleColor.Click += new System.EventHandler(this.tbLoginTitleColor_Enter);
-            this.tbLoginTitleColor.Enter += new System.EventHandler(this.tbLoginTitleColor_Enter);
-            // 
-            // cbLoginTitleBold
-            // 
-            this.cbLoginTitleBold.AutoSize = true;
-            this.cbLoginTitleBold.Checked = true;
-            this.cbLoginTitleBold.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbLoginTitleBold.Location = new System.Drawing.Point(221, 69);
-            this.cbLoginTitleBold.Name = "cbLoginTitleBold";
-            this.cbLoginTitleBold.Size = new System.Drawing.Size(48, 16);
-            this.cbLoginTitleBold.TabIndex = 35;
-            this.cbLoginTitleBold.Text = "粗体";
-            this.cbLoginTitleBold.UseVisualStyleBackColor = true;
-            // 
-            // tbLoginLinkColor
-            // 
-            this.tbLoginLinkColor.Location = new System.Drawing.Point(100, 144);
-            this.tbLoginLinkColor.Name = "tbLoginLinkColor";
-            this.tbLoginLinkColor.Size = new System.Drawing.Size(100, 21);
-            this.tbLoginLinkColor.TabIndex = 37;
-            this.tbLoginLinkColor.Text = "#fff";
-            this.tbLoginLinkColor.Click += new System.EventHandler(this.tbLoginLinkColor_Enter);
-            this.tbLoginLinkColor.Enter += new System.EventHandler(this.tbLoginLinkColor_Enter);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(35, 147);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(65, 12);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "链接颜色：";
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(107, 62);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(233, 12);
+            this.label31.TabIndex = 40;
+            this.label31.Text = "(此处与系统超管的单点登录设置保持一致)";
             // 
             // SetupForm
             // 
@@ -1361,6 +1392,9 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TextBox tbLoginLinkColor;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox tbRequstDomain;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
     }
 }
 

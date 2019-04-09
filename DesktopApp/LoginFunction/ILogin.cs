@@ -14,6 +14,12 @@ namespace DesktopApp
         /// <param name="name">账号</param>
         /// <param name="pw">密码</param>
         /// <returns></returns>
-        string Login(string name, string pw);
+        LoginFunction.Result Access(string name, string pw);
+        /// <summary>
+        /// 登录成功后，要主窗体要打开的网页地址
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        string Gourl(string name);
     }
 }
