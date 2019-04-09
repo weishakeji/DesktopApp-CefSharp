@@ -92,6 +92,7 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginFunction\LoginInfo.cs" />
     <Compile Include="LoginFunction\Other_login.cs" />
     <Compile Include="LoginFunction\Result.cs" />
     <Compile Include="LoginFunction\Weishakeji_Login.cs" />

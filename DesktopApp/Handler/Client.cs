@@ -69,5 +69,16 @@ namespace DesktopApp.Handler
             responseStream.Close();
             return str;
         }
+
+        /// <summary>
+        /// MD5加密
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string MD5(string str)
+        {
+            if (string.IsNullOrWhiteSpace(str)) return string.Empty;
+            return System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(str.Trim(), "MD5").ToLower();
+        }
     }
 }

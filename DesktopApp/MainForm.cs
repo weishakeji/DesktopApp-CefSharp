@@ -49,6 +49,12 @@ namespace DesktopApp
             if (urlpath.StartsWith("/")) urlpath = urlpath.Substring(1);
             UrlPath = urlpath;            
         }
+        public MainForm(string urlpath, Form form) : this(urlpath)
+        {
+            if (urlpath.StartsWith("/")) urlpath = urlpath.Substring(1);
+            UrlPath = urlpath;
+            form.Hide();
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {            
             InitBrowser();
@@ -103,7 +109,14 @@ namespace DesktopApp
         {
             //主域地址
             string domain = Program.Domain();
-            browser = Browser.Generate(domain+this.UrlPath);
+            if (this.UrlPath.StartsWith("http://") || this.UrlPath.StartsWith("https://"))
+            {
+                browser = Browser.Generate(this.UrlPath);
+            }
+            else
+            {
+                browser = Browser.Generate(domain + this.UrlPath);
+            }
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
 

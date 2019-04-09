@@ -72,6 +72,9 @@
             this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tbRequstDomain = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.tbLoginLinkColor = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -131,9 +134,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.tbRequstDomain = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -622,6 +622,31 @@
             this.tbLogin.TabIndex = 2;
             this.tbLogin.Text = "登录窗体";
             this.tbLogin.UseVisualStyleBackColor = true;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(107, 62);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(233, 12);
+            this.label31.TabIndex = 40;
+            this.label31.Text = "(此处与系统超管的单点登录设置保持一致)";
+            // 
+            // tbRequstDomain
+            // 
+            this.tbRequstDomain.Location = new System.Drawing.Point(104, 38);
+            this.tbRequstDomain.Name = "tbRequstDomain";
+            this.tbRequstDomain.Size = new System.Drawing.Size(339, 21);
+            this.tbRequstDomain.TabIndex = 39;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(36, 41);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(53, 12);
+            this.label30.TabIndex = 38;
+            this.label30.Text = "请求域：";
             // 
             // tbLoginLinkColor
             // 
@@ -1216,31 +1241,6 @@
             this.lbShow.TabIndex = 3;
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
-            // 
-            // tbRequstDomain
-            // 
-            this.tbRequstDomain.Location = new System.Drawing.Point(104, 38);
-            this.tbRequstDomain.Name = "tbRequstDomain";
-            this.tbRequstDomain.Size = new System.Drawing.Size(339, 21);
-            this.tbRequstDomain.TabIndex = 39;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(36, 41);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 12);
-            this.label30.TabIndex = 38;
-            this.label30.Text = "请求域：";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(107, 62);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(233, 12);
-            this.label31.TabIndex = 40;
-            this.label31.Text = "(此处与系统超管的单点登录设置保持一致)";
             // 
             // SetupForm
             // 

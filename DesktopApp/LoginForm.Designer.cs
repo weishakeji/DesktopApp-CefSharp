@@ -80,7 +80,8 @@
             this.tbUser.Location = new System.Drawing.Point(133, 74);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(203, 26);
-            this.tbUser.TabIndex = 6;
+            this.tbUser.TabIndex = 1;
+            this.tbUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUser_KeyPress);
             // 
             // tbPassword
             // 
@@ -89,7 +90,8 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(203, 26);
-            this.tbPassword.TabIndex = 7;
+            this.tbPassword.TabIndex = 2;
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // cbAutoLogin
             // 
@@ -98,9 +100,10 @@
             this.cbAutoLogin.Location = new System.Drawing.Point(133, 142);
             this.cbAutoLogin.Name = "cbAutoLogin";
             this.cbAutoLogin.Size = new System.Drawing.Size(72, 16);
-            this.cbAutoLogin.TabIndex = 8;
+            this.cbAutoLogin.TabIndex = 3;
             this.cbAutoLogin.Text = "自动登录";
             this.cbAutoLogin.UseVisualStyleBackColor = false;
+            this.cbAutoLogin.CheckedChanged += new System.EventHandler(this.cbAutoLogin_CheckedChanged);
             // 
             // cbSavePw
             // 
@@ -109,9 +112,10 @@
             this.cbSavePw.Location = new System.Drawing.Point(211, 142);
             this.cbSavePw.Name = "cbSavePw";
             this.cbSavePw.Size = new System.Drawing.Size(72, 16);
-            this.cbSavePw.TabIndex = 9;
+            this.cbSavePw.TabIndex = 4;
             this.cbSavePw.Text = "记住密码";
             this.cbSavePw.UseVisualStyleBackColor = false;
+            this.cbSavePw.CheckedChanged += new System.EventHandler(this.cbSavePw_CheckedChanged);
             // 
             // linkRegister
             // 
@@ -123,7 +127,7 @@
             this.linkRegister.Location = new System.Drawing.Point(12, 211);
             this.linkRegister.Name = "linkRegister";
             this.linkRegister.Size = new System.Drawing.Size(53, 12);
-            this.linkRegister.TabIndex = 10;
+            this.linkRegister.TabIndex = 6;
             this.linkRegister.TabStop = true;
             this.linkRegister.Text = "在线注册";
             this.linkRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -135,7 +139,7 @@
             this.btnEnterLogin.Location = new System.Drawing.Point(133, 164);
             this.btnEnterLogin.Name = "btnEnterLogin";
             this.btnEnterLogin.Size = new System.Drawing.Size(202, 30);
-            this.btnEnterLogin.TabIndex = 11;
+            this.btnEnterLogin.TabIndex = 5;
             this.btnEnterLogin.Text = "登录";
             this.btnEnterLogin.UseVisualStyleBackColor = true;
             this.btnEnterLogin.Click += new System.EventHandler(this.btnEnterLogin_Click);
@@ -149,7 +153,7 @@
             this.linkDirectaccess.Location = new System.Drawing.Point(351, 211);
             this.linkDirectaccess.Name = "linkDirectaccess";
             this.linkDirectaccess.Size = new System.Drawing.Size(101, 12);
-            this.linkDirectaccess.TabIndex = 12;
+            this.linkDirectaccess.TabIndex = 8;
             this.linkDirectaccess.TabStop = true;
             this.linkDirectaccess.Text = "不登录，直接访问";
             this.linkDirectaccess.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -177,7 +181,7 @@
             this.linkFindPw.Location = new System.Drawing.Point(71, 211);
             this.linkFindPw.Name = "linkFindPw";
             this.linkFindPw.Size = new System.Drawing.Size(53, 12);
-            this.linkFindPw.TabIndex = 14;
+            this.linkFindPw.TabIndex = 7;
             this.linkFindPw.TabStop = true;
             this.linkFindPw.Text = "找回密码";
             this.linkFindPw.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -205,6 +209,7 @@
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Shown += new System.EventHandler(this.LoginForm_Shown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             this.ResumeLayout(false);

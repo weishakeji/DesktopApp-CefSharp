@@ -35,7 +35,7 @@ namespace DesktopApp.LoginFunction
             query = getQuery(query, "domain", System.Web.HttpUtility.UrlEncode(domain.Trim()));
             //账号与密码
             query = getQuery(query, "user", name.Trim());
-            pw= System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(pw, "MD5").ToLower();
+            //pw= System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(pw, "MD5").ToLower();
             query = getQuery(query, "pw", pw);
             requestUrl += "?" + query;
             //获取结果

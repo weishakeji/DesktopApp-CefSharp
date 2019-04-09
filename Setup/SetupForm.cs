@@ -28,7 +28,15 @@ namespace Setup
         }
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            Confing.Gatway.Record(this);
+            //验证
+            if (!(this.tbDomain.Text.StartsWith("http://") || this.tbDomain.Text.StartsWith("https://")))
+            {
+                MessageBox.Show("网络服务地址必须以“http://或https://”开头");
+                tabSetupConfig.SelectTab(0);
+                tbDomain.Focus();
+                return;
+            }
+                Confing.Gatway.Record(this);
             //MessageBox.Show("保存成功！");
             lbShow.Visible = true;
             MessageBox.Show("保存成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
