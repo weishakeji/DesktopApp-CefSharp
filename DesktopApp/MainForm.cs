@@ -38,6 +38,7 @@ namespace DesktopApp
             InitializeComponent();
             //请求路径
             UrlPath = Confing.Gatway.Get("MainUrl");
+            if (UrlPath.StartsWith("/")) UrlPath = UrlPath.Substring(1);
             Setup(this);
         }
         /// <summary>

@@ -52,8 +52,6 @@ namespace DesktopApp
                 return url;
             }
         }
-        ////是否更改了密码，默认当“保存密码”选中时，密码取记录的md5密码，如果更改了，则取输入框的
-        //private bool isChangePw = false;
         #endregion
         public LoginForm()
         {
@@ -221,42 +219,44 @@ namespace DesktopApp
             //验证登录
             LoginFunction.Result result = null;
             //如果来自登录按钮的触发
-            if (sender is Button || sender is TextBox)
+            try
             {
-                //密码
-                string pw = tbPassword.Text;
-                LoginFunction.LoginInfo loginfo = LoginFunction.LoginInfo.Get(tbUser.Text.Trim());
-                if (loginfo != null && !string.IsNullOrWhiteSpace(loginfo.Password))
+                if (sender is Button || sender is TextBox)
                 {
-                    if (tbPassword.Text == loginfo.Password) pw = loginfo.Password;
-                    else
+                    //密码
+                    string pw = tbPassword.Text;
+                    LoginFunction.LoginInfo loginfo = LoginFunction.LoginInfo.Get(tbUser.Text.Trim());
+                    if(loginfo == null || string.IsNullOrWhiteSpace(loginfo.Password) || pw != loginfo.Password)
                         pw = Handler.Client.MD5(tbPassword.Text);
+                    else
+                        pw = loginfo.Password;
+                     result = this.ToLogin().Access(tbUser.Text, pw);
+                    if (result.Success && cbSavePw.Checked) LoginFunction.LoginInfo.Set(tbUser.Text, pw);
+                    if (result.Success && !cbSavePw.Checked) LoginFunction.LoginInfo.Set(tbUser.Text, string.Empty);
+                }
+                //如果来自自动登录
+                if (sender is CheckBox)
+                {
+                    LoginFunction.LoginInfo info = LoginFunction.LoginInfo.Get(tbUser.Text.Trim());
+                    result = this.ToLogin().Access(info.User, info.Password);
+                }
+                if (result.Success)
+                {
+                    string gourl = this.ToLogin().Gourl(tbUser.Text.Trim());
+                    this.Hide();
+                    Form main = new MainForm(gourl);
+                    main.Show();
                 }
                 else
                 {
-                    pw = Handler.Client.MD5(tbPassword.Text);
+                    MessageBox.Show(result.Message);
                 }
-                result = this.ToLogin().Access(tbUser.Text, pw);
-                if (result.Success && cbSavePw.Checked) LoginFunction.LoginInfo.Set(tbUser.Text, pw);
-                if (result.Success && !cbSavePw.Checked) LoginFunction.LoginInfo.Set(tbUser.Text, string.Empty);
             }
-            //如果来自自动登录
-            if (sender is CheckBox)
+            catch (Exception ex)
             {
-                LoginFunction.LoginInfo info = LoginFunction.LoginInfo.Get(tbUser.Text.Trim());
-                result = this.ToLogin().Access(info.User, info.Password);
+                MessageBox.Show(ex.Message);
             }
-            if (result.Success)
-            {
-                string gourl = this.ToLogin().Gourl(tbUser.Text.Trim());
-                this.Hide();
-                Form main = new MainForm(gourl);
-                main.Show();
-            }
-            else
-            {
-                MessageBox.Show(result.Message);
-            }
+            
         }
         #region 控件事件
         /// <summary>

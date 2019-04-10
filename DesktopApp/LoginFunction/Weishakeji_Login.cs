@@ -31,7 +31,7 @@ namespace DesktopApp.LoginFunction
             query = getQuery(query, "APPid", appid);
             query = getQuery(query, "action", "verify");
             //请求域,和超管中的单点登录配置项目,要对应
-            string domain = Confing.Gatway.Get("RequstDomain");            ; ;
+            string domain = Confing.Gatway.Get("RequstDomain"); ; ;
             query = getQuery(query, "domain", System.Web.HttpUtility.UrlEncode(domain.Trim()));
             //账号与密码
             query = getQuery(query, "user", name.Trim());
@@ -39,8 +39,15 @@ namespace DesktopApp.LoginFunction
             query = getQuery(query, "pw", pw);
             requestUrl += "?" + query;
             //获取结果
-            string resultXml = Handler.Client.WebResult(requestUrl);
-            return new Result(resultXml);
+            try
+            {
+                string resultXml = Handler.Client.WebResult(requestUrl);
+                return new Result(resultXml);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         /// <summary>
         /// 登录成功后，要主窗体要打开的网页地址

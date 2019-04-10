@@ -151,7 +151,7 @@ namespace DesktopApp.LoginFunction
                 if (user.Equals(i.User, StringComparison.CurrentCultureIgnoreCase))
                 {
                     info = i;
-                    info.Password = Handler.Client.MD5(pw);
+                    info.Password = pw;
                     list.RemoveAt(j);
                     break;
                 }
@@ -162,7 +162,7 @@ namespace DesktopApp.LoginFunction
             XmlDocument xmlDoc = LoginInfo.Create();
             XmlNode root = xmlDoc.SelectSingleNode("LoginInfo");
             //删除原有，重建
-            foreach (XmlNode x in root.ChildNodes) x.RemoveAll();
+            foreach (XmlNode x in root.ChildNodes) root.RemoveChild(x);
             for (int j = 0; j < list.Count; j++)
             {
                 LoginInfo i = list[j];
