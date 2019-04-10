@@ -97,7 +97,7 @@ namespace Confing.Helper
                     if (c is PictureBox)
                     {
                         PictureBox picbox = ((PictureBox)c);
-                        if (picbox.Enabled && picbox.Image != null)
+                        if (picbox.Enabled)
                         {
                             for (int i = 0; i < xmlItem.ChildNodes.Count; i++)
                                 xmlItem.RemoveChild(xmlItem.ChildNodes[i]);
@@ -223,6 +223,7 @@ namespace Confing.Helper
         /// <returns></returns>
         public static string ToBase64(Image img)
         {
+            if (img == null) return string.Empty;
             string base64 = string.Empty;
             Image image = (Image)img.Clone();
             using (Bitmap bmp = (Bitmap)image)

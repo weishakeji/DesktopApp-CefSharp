@@ -72,6 +72,8 @@
             this.tbMainTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TabPage();
+            this.tbLoginCheckColor = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.tbRequstDomain = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -134,8 +136,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.tbLoginCheckColor = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
+            this.linkAboutDelbg = new System.Windows.Forms.LinkLabel();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -627,6 +628,25 @@
             this.tbLogin.Text = "登录窗体";
             this.tbLogin.UseVisualStyleBackColor = true;
             // 
+            // tbLoginCheckColor
+            // 
+            this.tbLoginCheckColor.Location = new System.Drawing.Point(423, 172);
+            this.tbLoginCheckColor.Name = "tbLoginCheckColor";
+            this.tbLoginCheckColor.Size = new System.Drawing.Size(50, 21);
+            this.tbLoginCheckColor.TabIndex = 42;
+            this.tbLoginCheckColor.Text = "#fff";
+            this.tbLoginCheckColor.Click += new System.EventHandler(this.tbLoginCheckColor_Enter);
+            this.tbLoginCheckColor.Enter += new System.EventHandler(this.tbLoginCheckColor_Enter);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(322, 178);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(101, 12);
+            this.label32.TabIndex = 41;
+            this.label32.Text = "复选框字体颜色：";
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -1065,6 +1085,7 @@
             // 
             // tabAbout
             // 
+            this.tabAbout.Controls.Add(this.linkAboutDelbg);
             this.tabAbout.Controls.Add(this.lbAboutBgWh);
             this.tabAbout.Controls.Add(this.label27);
             this.tabAbout.Controls.Add(this.btnSelectAboutBg);
@@ -1246,24 +1267,16 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // tbLoginCheckColor
+            // linkAboutDelbg
             // 
-            this.tbLoginCheckColor.Location = new System.Drawing.Point(423, 172);
-            this.tbLoginCheckColor.Name = "tbLoginCheckColor";
-            this.tbLoginCheckColor.Size = new System.Drawing.Size(50, 21);
-            this.tbLoginCheckColor.TabIndex = 42;
-            this.tbLoginCheckColor.Text = "#fff";
-            this.tbLoginCheckColor.Click += new System.EventHandler(this.tbLoginCheckColor_Enter);
-            this.tbLoginCheckColor.Enter += new System.EventHandler(this.tbLoginCheckColor_Enter);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(322, 178);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(101, 12);
-            this.label32.TabIndex = 41;
-            this.label32.Text = "复选框字体颜色：";
+            this.linkAboutDelbg.AutoSize = true;
+            this.linkAboutDelbg.Location = new System.Drawing.Point(536, 21);
+            this.linkAboutDelbg.Name = "linkAboutDelbg";
+            this.linkAboutDelbg.Size = new System.Drawing.Size(53, 12);
+            this.linkAboutDelbg.TabIndex = 33;
+            this.linkAboutDelbg.TabStop = true;
+            this.linkAboutDelbg.Text = "删除背景";
+            this.linkAboutDelbg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAboutDelbg_LinkClicked);
             // 
             // SetupForm
             // 
@@ -1420,6 +1433,7 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox tbLoginCheckColor;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.LinkLabel linkAboutDelbg;
     }
 }
 

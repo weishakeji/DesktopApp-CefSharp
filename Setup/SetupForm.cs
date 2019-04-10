@@ -131,6 +131,20 @@ namespace Setup
             {
                 lbAboutBgWh.Text = string.Format("{0}×{1} 像素", source.Width, source.Height);
             }
+            else
+            {
+                lbAboutBgWh.Text = string.Format("{0}×{1} 像素", 0, 0);
+            }
+        }
+        private void linkAboutDelbg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (MessageBox.Show("是否确定删除关于我们的背景图?", "确认操作", 
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                pictureAboutBgPic.Image = null;
+                pictureAboutBgPic.Enabled = true;
+                pictureAboutBgPic_EnabledChanged(null, null);
+            }
         }
         #endregion
 
@@ -243,6 +257,7 @@ namespace Setup
             string HexColor = "#" + R + G + B;
             return HexColor;
         }
+
 
 
 

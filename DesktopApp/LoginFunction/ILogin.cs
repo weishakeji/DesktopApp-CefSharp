@@ -12,7 +12,7 @@ namespace DesktopApp
         /// 登录
         /// </summary>
         /// <param name="name">账号</param>
-        /// <param name="pw">密码</param>
+        /// <param name="pw">密码（方法没有对密码加密，这里最好提供加密后的密码）</param>
         /// <returns></returns>
         LoginFunction.Result Access(string name, string pw);
         /// <summary>
