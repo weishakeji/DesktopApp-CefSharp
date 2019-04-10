@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.lbTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.cbAutoLogin = new System.Windows.Forms.CheckBox();
@@ -40,6 +38,10 @@
             this.linkDirectaccess = new System.Windows.Forms.LinkLabel();
             this.lbClose = new System.Windows.Forms.Label();
             this.linkFindPw = new System.Windows.Forms.LinkLabel();
+            this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.picturePw = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePw)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -52,44 +54,23 @@
             this.lbTitle.TabIndex = 3;
             this.lbTitle.Text = "lbTitle";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(84, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 14);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "账号：";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(84, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 14);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "密码：";
-            // 
             // tbUser
             // 
+            this.tbUser.BackColor = System.Drawing.SystemColors.Window;
             this.tbUser.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbUser.Location = new System.Drawing.Point(133, 74);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(203, 26);
+            this.tbUser.Size = new System.Drawing.Size(200, 26);
             this.tbUser.TabIndex = 1;
             this.tbUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUser_KeyPress);
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPassword.Location = new System.Drawing.Point(132, 109);
+            this.tbPassword.Location = new System.Drawing.Point(133, 109);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(203, 26);
+            this.tbPassword.Size = new System.Drawing.Size(200, 26);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
@@ -97,7 +78,7 @@
             // 
             this.cbAutoLogin.AutoSize = true;
             this.cbAutoLogin.BackColor = System.Drawing.Color.Transparent;
-            this.cbAutoLogin.Location = new System.Drawing.Point(133, 142);
+            this.cbAutoLogin.Location = new System.Drawing.Point(136, 142);
             this.cbAutoLogin.Name = "cbAutoLogin";
             this.cbAutoLogin.Size = new System.Drawing.Size(72, 16);
             this.cbAutoLogin.TabIndex = 3;
@@ -109,7 +90,7 @@
             // 
             this.cbSavePw.AutoSize = true;
             this.cbSavePw.BackColor = System.Drawing.Color.Transparent;
-            this.cbSavePw.Location = new System.Drawing.Point(211, 142);
+            this.cbSavePw.Location = new System.Drawing.Point(214, 142);
             this.cbSavePw.Name = "cbSavePw";
             this.cbSavePw.Size = new System.Drawing.Size(72, 16);
             this.cbSavePw.TabIndex = 4;
@@ -138,7 +119,7 @@
             this.btnEnterLogin.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEnterLogin.Location = new System.Drawing.Point(133, 164);
             this.btnEnterLogin.Name = "btnEnterLogin";
-            this.btnEnterLogin.Size = new System.Drawing.Size(202, 30);
+            this.btnEnterLogin.Size = new System.Drawing.Size(200, 30);
             this.btnEnterLogin.TabIndex = 5;
             this.btnEnterLogin.Text = "登录";
             this.btnEnterLogin.UseVisualStyleBackColor = true;
@@ -187,6 +168,26 @@
             this.linkFindPw.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.linkFindPw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFindPw_LinkClicked);
             // 
+            // pictureUser
+            // 
+            this.pictureUser.BackColor = System.Drawing.Color.Transparent;
+            this.pictureUser.Location = new System.Drawing.Point(97, 71);
+            this.pictureUser.Name = "pictureUser";
+            this.pictureUser.Size = new System.Drawing.Size(30, 30);
+            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureUser.TabIndex = 14;
+            this.pictureUser.TabStop = false;
+            // 
+            // picturePw
+            // 
+            this.picturePw.BackColor = System.Drawing.Color.Transparent;
+            this.picturePw.Location = new System.Drawing.Point(97, 109);
+            this.picturePw.Name = "picturePw";
+            this.picturePw.Size = new System.Drawing.Size(30, 30);
+            this.picturePw.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePw.TabIndex = 15;
+            this.picturePw.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -194,6 +195,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(464, 232);
+            this.Controls.Add(this.picturePw);
+            this.Controls.Add(this.pictureUser);
             this.Controls.Add(this.linkFindPw);
             this.Controls.Add(this.lbClose);
             this.Controls.Add(this.linkDirectaccess);
@@ -203,8 +206,6 @@
             this.Controls.Add(this.cbAutoLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUser);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbTitle);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
@@ -212,6 +213,8 @@
             this.Shown += new System.EventHandler(this.LoginForm_Shown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePw)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,8 +222,6 @@
 
         #endregion
         private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.CheckBox cbAutoLogin;
@@ -230,6 +231,8 @@
         private System.Windows.Forms.LinkLabel linkDirectaccess;
         private System.Windows.Forms.Label lbClose;
         private System.Windows.Forms.LinkLabel linkFindPw;
+        private System.Windows.Forms.PictureBox pictureUser;
+        private System.Windows.Forms.PictureBox picturePw;
     }
 }
 

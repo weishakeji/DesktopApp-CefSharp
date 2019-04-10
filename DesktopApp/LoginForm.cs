@@ -91,6 +91,8 @@ namespace DesktopApp
             lbTitle.ForeColor = ColorTranslator.FromHtml(color);
             //是否显示"自动登录"、"保存密码"
             cbAutoLogin.Visible = cbSavePw.Visible = Confing.Gatway.GetBoolean("IsAutoLongin");
+            string colorCheck = Confing.Gatway.Get("LoginCheckColor");
+            cbAutoLogin.ForeColor = cbSavePw.ForeColor= ColorTranslator.FromHtml(colorCheck);
             //是否显示“注册”链接
             linkRegister.Visible = Confing.Gatway.GetBoolean("IsShowRegister");
             //是否显示“找回密码”链接
@@ -111,7 +113,10 @@ namespace DesktopApp
             //自动登录与保存密码的状态
             cbAutoLogin.Checked = LoginFunction.LoginInfo.AutoLogin;
             cbSavePw.Checked = LoginFunction.LoginInfo.SavePw;
-            
+
+            pictureUser.Image = DesktopApp.Properties.Resources.user.ToBitmap();
+            picturePw.Image= DesktopApp.Properties.Resources.password.ToBitmap();
+
         }
         private void LoginForm_Shown(object sender, EventArgs e)
         {

@@ -134,6 +134,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tbLoginCheckColor = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -599,6 +601,8 @@
             // 
             // tbLogin
             // 
+            this.tbLogin.Controls.Add(this.tbLoginCheckColor);
+            this.tbLogin.Controls.Add(this.label32);
             this.tbLogin.Controls.Add(this.label31);
             this.tbLogin.Controls.Add(this.tbRequstDomain);
             this.tbLogin.Controls.Add(this.label30);
@@ -1242,6 +1246,25 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
+            // tbLoginCheckColor
+            // 
+            this.tbLoginCheckColor.Location = new System.Drawing.Point(423, 172);
+            this.tbLoginCheckColor.Name = "tbLoginCheckColor";
+            this.tbLoginCheckColor.Size = new System.Drawing.Size(50, 21);
+            this.tbLoginCheckColor.TabIndex = 42;
+            this.tbLoginCheckColor.Text = "#fff";
+            this.tbLoginCheckColor.Click += new System.EventHandler(this.tbLoginCheckColor_Enter);
+            this.tbLoginCheckColor.Enter += new System.EventHandler(this.tbLoginCheckColor_Enter);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(322, 178);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(101, 12);
+            this.label32.TabIndex = 41;
+            this.label32.Text = "复选框字体颜色：";
+            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1395,6 +1418,8 @@
         private System.Windows.Forms.TextBox tbRequstDomain;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox tbLoginCheckColor;
+        private System.Windows.Forms.Label label32;
     }
 }
 

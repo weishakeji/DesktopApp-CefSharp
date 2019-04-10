@@ -36,7 +36,7 @@ namespace Setup
                 tbDomain.Focus();
                 return;
             }
-                Confing.Gatway.Record(this);
+            Confing.Gatway.Record(this);
             //MessageBox.Show("保存成功！");
             lbShow.Visible = true;
             MessageBox.Show("保存成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -208,6 +208,17 @@ namespace Setup
             tbLoginTitleColor.Text = ToHexColor(c);
         }
         /// <summary>
+        /// 复选框的字体颜色，即自动登录和保存密码
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tbLoginCheckColor_Enter(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            Color c = colorDialog1.Color;
+            tbLoginCheckColor.Text = ToHexColor(c);
+        }
+        /// <summary>
         /// 底部链接的颜色
         /// </summary>
         /// <param name="sender"></param>
@@ -232,6 +243,7 @@ namespace Setup
             string HexColor = "#" + R + G + B;
             return HexColor;
         }
+
 
 
         #endregion

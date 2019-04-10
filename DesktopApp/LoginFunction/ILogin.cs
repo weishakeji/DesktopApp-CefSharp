@@ -16,7 +16,7 @@ namespace DesktopApp
         /// <returns></returns>
         LoginFunction.Result Access(string name, string pw);
         /// <summary>
-        /// 登录成功后，要主窗体要打开的网页地址
+        /// 登录成功后，在主窗体要打开的网页地址
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
