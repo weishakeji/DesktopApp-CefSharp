@@ -50,20 +50,24 @@ namespace Confing.Helper
         public static void Write(Form form)
         {
             XmlDocument xmlDoc = Helper.XML.Create();
-            XmlNode confing = xmlDoc.SelectSingleNode("Confing");
+            XmlNode config = xmlDoc.SelectSingleNode("Confing");
+            XmlAttribute attr = xmlDoc.CreateAttribute("key");
+            attr.Value = "aes";
+            config.Attributes.Append(attr);
+
             //创建配置项的主节点，即窗体中的TabPage部分
             List<TabPage> pages = Helper.WinForm.GetChilds<TabPage>(form);
             foreach (TabPage p in pages)
             {
                 string name = p.Name;
-                XmlNode xmlPage = confing.SelectSingleNode(name);
+                XmlNode xmlPage = config.SelectSingleNode(name);
                 if (xmlPage == null)
                 {
                     xmlPage = xmlDoc.CreateElement(name);
-                    confing.AppendChild(xmlPage);
+                    config.AppendChild(xmlPage);
                 }
                 //每个主配置项目的子项
-                xmlPage = confing.SelectSingleNode(name);
+                xmlPage = config.SelectSingleNode(name);
                 List<Control> controls = Helper.WinForm.GetChilds<Control>(p);
                 foreach (Control c in controls)
                 {

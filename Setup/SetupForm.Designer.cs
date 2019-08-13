@@ -118,6 +118,7 @@
             this.rbDebugDefault = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
+            this.linkAboutDelbg = new System.Windows.Forms.LinkLabel();
             this.lbAboutBgWh = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.btnSelectAboutBg = new System.Windows.Forms.Button();
@@ -136,7 +137,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.linkAboutDelbg = new System.Windows.Forms.LinkLabel();
+            this.cbIsBlankLink = new System.Windows.Forms.CheckBox();
+            this.label33 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -315,6 +317,8 @@
             // 
             // tabMain
             // 
+            this.tabMain.Controls.Add(this.cbIsBlankLink);
+            this.tabMain.Controls.Add(this.label33);
             this.tabMain.Controls.Add(this.cbIsMainTopLevel);
             this.tabMain.Controls.Add(this.cbIsFillWindow);
             this.tabMain.Controls.Add(this.cbIsAbout);
@@ -368,6 +372,7 @@
             this.cbIsAbout.TabIndex = 14;
             this.cbIsAbout.Text = "显示“关于”项";
             this.cbIsAbout.UseVisualStyleBackColor = true;
+            this.cbIsAbout.CheckedChanged += new System.EventHandler(this.cbIsAbout_CheckedChanged);
             // 
             // cbMainEnableRightMenu
             // 
@@ -378,6 +383,7 @@
             this.cbMainEnableRightMenu.TabIndex = 15;
             this.cbMainEnableRightMenu.Text = "启用默认右键菜单";
             this.cbMainEnableRightMenu.UseVisualStyleBackColor = true;
+            this.cbMainEnableRightMenu.CheckedChanged += new System.EventHandler(this.cbMainEnableRightMenu_CheckedChanged);
             // 
             // panel7
             // 
@@ -1106,6 +1112,17 @@
             this.tabAbout.Text = "关于";
             this.tabAbout.UseVisualStyleBackColor = true;
             // 
+            // linkAboutDelbg
+            // 
+            this.linkAboutDelbg.AutoSize = true;
+            this.linkAboutDelbg.Location = new System.Drawing.Point(536, 21);
+            this.linkAboutDelbg.Name = "linkAboutDelbg";
+            this.linkAboutDelbg.Size = new System.Drawing.Size(53, 12);
+            this.linkAboutDelbg.TabIndex = 33;
+            this.linkAboutDelbg.TabStop = true;
+            this.linkAboutDelbg.Text = "删除背景";
+            this.linkAboutDelbg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAboutDelbg_LinkClicked);
+            // 
             // lbAboutBgWh
             // 
             this.lbAboutBgWh.AutoSize = true;
@@ -1267,16 +1284,24 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // linkAboutDelbg
+            // cbIsBlankLink
             // 
-            this.linkAboutDelbg.AutoSize = true;
-            this.linkAboutDelbg.Location = new System.Drawing.Point(536, 21);
-            this.linkAboutDelbg.Name = "linkAboutDelbg";
-            this.linkAboutDelbg.Size = new System.Drawing.Size(53, 12);
-            this.linkAboutDelbg.TabIndex = 33;
-            this.linkAboutDelbg.TabStop = true;
-            this.linkAboutDelbg.Text = "删除背景";
-            this.linkAboutDelbg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAboutDelbg_LinkClicked);
+            this.cbIsBlankLink.AutoSize = true;
+            this.cbIsBlankLink.Location = new System.Drawing.Point(118, 237);
+            this.cbIsBlankLink.Name = "cbIsBlankLink";
+            this.cbIsBlankLink.Size = new System.Drawing.Size(312, 16);
+            this.cbIsBlankLink.TabIndex = 30;
+            this.cbIsBlankLink.Text = "超链接可以在新窗口打开（a标签target=\'_blank\'时）";
+            this.cbIsBlankLink.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(54, 237);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(53, 12);
+            this.label33.TabIndex = 29;
+            this.label33.Text = "超链接：";
             // 
             // SetupForm
             // 
@@ -1434,6 +1459,8 @@
         private System.Windows.Forms.TextBox tbLoginCheckColor;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.LinkLabel linkAboutDelbg;
+        private System.Windows.Forms.CheckBox cbIsBlankLink;
+        private System.Windows.Forms.Label label33;
     }
 }
 

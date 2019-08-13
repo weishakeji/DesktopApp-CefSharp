@@ -125,7 +125,10 @@ namespace DesktopApp
             //browser.TitleChanged += Browser_TitleChanged;
 
             //是否在当前窗体打开链接
-            browser.LifeSpanHandler = new Handler.OpenSelf();
+            if (!Confing.Gatway.GetBoolean("IsBlankLink"))
+            {
+                browser.LifeSpanHandler = new Handler.OpenSelf();
+            }
             //禁止右键菜单
             if (!IsRightMenu)
             {

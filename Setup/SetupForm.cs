@@ -76,7 +76,15 @@ namespace Setup
         #endregion
 
         #region 主窗体界面的方法
+        private void cbMainEnableRightMenu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbMainEnableRightMenu.Checked) cbIsAbout.Checked = false;
+        }
 
+        private void cbIsAbout_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbIsAbout.Checked) cbMainEnableRightMenu.Checked = false;
+        }
         #endregion
 
         #region 关于我们的方法
@@ -257,6 +265,7 @@ namespace Setup
             string HexColor = "#" + R + G + B;
             return HexColor;
         }
+
 
 
 
