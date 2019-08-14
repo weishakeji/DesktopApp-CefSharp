@@ -44,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabMain = new System.Windows.Forms.TabPage();
+            this.cbIsBlankLink = new System.Windows.Forms.CheckBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.cbIsMainTopLevel = new System.Windows.Forms.CheckBox();
             this.cbIsFillWindow = new System.Windows.Forms.CheckBox();
             this.cbIsAbout = new System.Windows.Forms.CheckBox();
@@ -137,8 +139,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.cbIsBlankLink = new System.Windows.Forms.CheckBox();
-            this.label33 = new System.Windows.Forms.Label();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -343,6 +343,25 @@
             this.tabMain.Text = "主窗体";
             this.tabMain.UseVisualStyleBackColor = true;
             // 
+            // cbIsBlankLink
+            // 
+            this.cbIsBlankLink.AutoSize = true;
+            this.cbIsBlankLink.Location = new System.Drawing.Point(118, 237);
+            this.cbIsBlankLink.Name = "cbIsBlankLink";
+            this.cbIsBlankLink.Size = new System.Drawing.Size(312, 16);
+            this.cbIsBlankLink.TabIndex = 30;
+            this.cbIsBlankLink.Text = "超链接可以在新窗口打开（a标签target=\'_blank\'时）";
+            this.cbIsBlankLink.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(54, 237);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(53, 12);
+            this.label33.TabIndex = 29;
+            this.label33.Text = "超链接：";
+            // 
             // cbIsMainTopLevel
             // 
             this.cbIsMainTopLevel.AutoSize = true;
@@ -377,7 +396,7 @@
             // cbMainEnableRightMenu
             // 
             this.cbMainEnableRightMenu.AutoSize = true;
-            this.cbMainEnableRightMenu.Location = new System.Drawing.Point(118, 178);
+            this.cbMainEnableRightMenu.Location = new System.Drawing.Point(118, 179);
             this.cbMainEnableRightMenu.Name = "cbMainEnableRightMenu";
             this.cbMainEnableRightMenu.Size = new System.Drawing.Size(120, 16);
             this.cbMainEnableRightMenu.TabIndex = 15;
@@ -430,7 +449,7 @@
             // cbIsEnableLoad
             // 
             this.cbIsEnableLoad.AutoSize = true;
-            this.cbIsEnableLoad.Location = new System.Drawing.Point(118, 210);
+            this.cbIsEnableLoad.Location = new System.Drawing.Point(118, 208);
             this.cbIsEnableLoad.Name = "cbIsEnableLoad";
             this.cbIsEnableLoad.Size = new System.Drawing.Size(144, 16);
             this.cbIsEnableLoad.TabIndex = 23;
@@ -440,7 +459,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(66, 210);
+            this.label23.Location = new System.Drawing.Point(66, 208);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(41, 12);
             this.label23.TabIndex = 22;
@@ -1283,25 +1302,6 @@
             this.lbShow.TabIndex = 3;
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
-            // 
-            // cbIsBlankLink
-            // 
-            this.cbIsBlankLink.AutoSize = true;
-            this.cbIsBlankLink.Location = new System.Drawing.Point(118, 237);
-            this.cbIsBlankLink.Name = "cbIsBlankLink";
-            this.cbIsBlankLink.Size = new System.Drawing.Size(312, 16);
-            this.cbIsBlankLink.TabIndex = 30;
-            this.cbIsBlankLink.Text = "超链接可以在新窗口打开（a标签target=\'_blank\'时）";
-            this.cbIsBlankLink.UseVisualStyleBackColor = true;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(54, 237);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 12);
-            this.label33.TabIndex = 29;
-            this.label33.Text = "超链接：";
             // 
             // SetupForm
             // 

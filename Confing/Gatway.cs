@@ -39,7 +39,7 @@ namespace Confing
         public static string Get(string itemname)
         {
             string val = Helper.XML.Read(itemname);
-            return val.Trim();
+            return string.IsNullOrWhiteSpace(val) ? "" : val.Trim();
         }
         /// <summary>
         /// 通过base64转换成图片，图片格式为png
