@@ -16,6 +16,8 @@ namespace Confing.Helper
     /// </summary>
     public class XML
     {
+        //加密的密钥
+        public static string EncryptKey = "information";
         //配置文件路径
         private static string xmlPath = System.Environment.CurrentDirectory + "\\Confing.xml";
         private static XmlDocument xmlDoc = null;
@@ -52,7 +54,7 @@ namespace Confing.Helper
             XmlDocument xmlDoc = Helper.XML.Create();
             XmlNode config = xmlDoc.SelectSingleNode("Confing");
             XmlAttribute attr = xmlDoc.CreateAttribute("key");
-            attr.Value = "aes";
+            attr.Value = "weishakeji";
             config.Attributes.Append(attr);
 
             //创建配置项的主节点，即窗体中的TabPage部分
@@ -109,6 +111,8 @@ namespace Confing.Helper
                             xmlItem.AppendChild(cddata);
                         }
                     }
+                    //加密后存储
+                    xmlItem.InnerText = Helper.DataConvert.EncryptForDES(xmlItem.InnerText, EncryptKey);
                     xmlPage.AppendChild(xmlItem);
                 }
                 Helper.XML.Save();
@@ -142,19 +146,21 @@ namespace Confing.Helper
                 foreach (XmlNode node in xmlTabpage.ChildNodes)
                 {
                     List<Control> controls = Helper.WinForm.GetChilds<Control>(p);
+                    //解密
+                    string txt = Helper.DataConvert.DecryptForDES(node.InnerText, EncryptKey);
                     foreach (Control c in controls)
                     {
                         if (node.Name != c.Name) continue;
                         //获输入框的取值
-                        if (c is TextBox) ((TextBox)c).Text = node.InnerText;
+                        if (c is TextBox) ((TextBox)c).Text = txt;
                         //复选框
-                        if (c is CheckBox) ((CheckBox)c).Checked = Convert.ToBoolean(node.InnerText);
+                        if (c is CheckBox) ((CheckBox)c).Checked = Convert.ToBoolean(txt);
                         //单选框
-                        if (c is RadioButton) ((RadioButton)c).Checked = Convert.ToBoolean(node.InnerText);
+                        if (c is RadioButton) ((RadioButton)c).Checked = Convert.ToBoolean(txt);
                         //如果是图片
                         if (c is PictureBox)
                         {
-                            Image image = FromBase64(node.InnerText);
+                            Image image = FromBase64(txt);
                             if (image != null) ((PictureBox)c).Image = image;
                         }
                     }
@@ -185,7 +191,7 @@ namespace Confing.Helper
                 }
                 if (!string.IsNullOrWhiteSpace(val)) break;
             }
-            return val;
+            return Helper.DataConvert.DecryptForDES(val, EncryptKey);
         }
         /// <summary>
         /// 控件名称为作键值，获取具体的值
@@ -215,7 +221,7 @@ namespace Confing.Helper
                 }
                 if (!string.IsNullOrWhiteSpace(val)) break;
             }
-            return val;
+            return Helper.DataConvert.DecryptForDES(val, EncryptKey);
         }
         #endregion
 

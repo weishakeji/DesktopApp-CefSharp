@@ -10,6 +10,7 @@ namespace Confing.Helper
     
     public class INI
     {
+        
         //配置文件路径
         private static string iniPath = System.Environment.CurrentDirectory + "\\Confing.ini";
         //键值对
