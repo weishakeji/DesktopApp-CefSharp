@@ -29,6 +29,11 @@ namespace DesktopApp.Handler
                 
         }
 
+        public void OnBeforeDownload(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem, IBeforeDownloadCallback callback)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool OnDownloadUpdated(CefSharp.DownloadItem downloadItem)
         {
             return false;
@@ -37,6 +42,11 @@ namespace DesktopApp.Handler
         public void OnDownloadUpdated(IBrowser browser, DownloadItem downloadItem, IDownloadItemCallback callback)
         {
             
+        }
+
+        public void OnDownloadUpdated(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem, IDownloadItemCallback callback)
+        {
+            throw new NotImplementedException();
         }
     }
 

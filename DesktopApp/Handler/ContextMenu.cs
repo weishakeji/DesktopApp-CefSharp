@@ -32,9 +32,11 @@ namespace DesktopApp.Handler
             //model.AddItem(CefSharp.CefMenuCommand.Forward, "前进");
             //model.AddItem(CefSharp.CefMenuCommand.Reload, "刷新");
             //model.AddSeparator();
-            if(IsAboutMenu)
+            if (IsAboutMenu)
+            {
                 model.AddItem((CefSharp.CefMenuCommand)221, "关于");
-            
+            }
+
         }
 
         //关于我们的窗体

@@ -95,8 +95,8 @@ namespace DesktopApp
             browser.Dock = DockStyle.Fill;
             //是否在当前窗体打开链接
             browser.LifeSpanHandler = new Handler.OpenSelf();
-            //禁止右键菜单
-            //browser.MenuHandler = new Handler.ContextMenu();
+            //右键菜单
+            browser.MenuHandler = new Handler.ContextMenuDebug(true);
             //文件下载
             browser.DownloadHandler = new Handler.Download();
             browser.TitleChanged += Browser.Browser_TitleChanged;

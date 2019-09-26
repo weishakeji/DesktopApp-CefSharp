@@ -118,6 +118,7 @@ namespace DesktopApp
             {
                 browser = Browser.Generate(domain + this.UrlPath);
             }
+            
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
 
