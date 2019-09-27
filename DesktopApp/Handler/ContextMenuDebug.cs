@@ -29,12 +29,12 @@ namespace DesktopApp.Handler
             if (IsAboutMenu)
             {
                 model.AddItem((CefSharp.CefMenuCommand)223, "调试");
+                model.AddItem((CefSharp.CefMenuCommand)224, "刷新");
             }
             
         }
 
-        //关于我们的窗体
-        private AboutForm aboutForm = null;
+
         public bool OnContextMenuCommand(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, CefMenuCommand commandId, CefEventFlags eventFlags)
         {
             //当前浏览器对象，通过它获取所在的Form窗体
@@ -46,10 +46,13 @@ namespace DesktopApp.Handler
             form = (System.Windows.Forms.Form)parent;
             //处理右键事件
             int comid = (int)commandId;
-            if (comid == 223)
-            {
+            //打开调试窗，F12
+            if (comid == 223)            
                 cwb.ShowDevTools();
-            }
+            //刷新页面
+            if (comid == 224)
+                cwb.Reload();
+   
             return false;
         }
 
