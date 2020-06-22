@@ -139,6 +139,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.cbbDebugCustom = new System.Windows.Forms.ComboBox();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -940,6 +941,7 @@
             // 
             // tabDebug
             // 
+            this.tabDebug.Controls.Add(this.cbbDebugCustom);
             this.tabDebug.Controls.Add(this.cbDebugHelper);
             this.tabDebug.Controls.Add(this.panelDebugBrowser);
             this.tabDebug.Controls.Add(this.label22);
@@ -958,20 +960,19 @@
             // cbDebugHelper
             // 
             this.cbDebugHelper.AutoSize = true;
-            this.cbDebugHelper.Location = new System.Drawing.Point(76, 155);
+            this.cbDebugHelper.Location = new System.Drawing.Point(65, 350);
             this.cbDebugHelper.Name = "cbDebugHelper";
             this.cbDebugHelper.Size = new System.Drawing.Size(108, 16);
             this.cbDebugHelper.TabIndex = 27;
             this.cbDebugHelper.Text = "同步打开调试器";
             this.cbDebugHelper.UseVisualStyleBackColor = true;
-            this.cbDebugHelper.Visible = false;
             // 
             // panelDebugBrowser
             // 
             this.panelDebugBrowser.Controls.Add(this.rbDebugMobile);
             this.panelDebugBrowser.Controls.Add(this.panelBrowserMobile);
             this.panelDebugBrowser.Controls.Add(this.rbDebugDesktop);
-            this.panelDebugBrowser.Location = new System.Drawing.Point(66, 106);
+            this.panelDebugBrowser.Location = new System.Drawing.Point(55, 301);
             this.panelDebugBrowser.Name = "panelDebugBrowser";
             this.panelDebugBrowser.Size = new System.Drawing.Size(533, 31);
             this.panelDebugBrowser.TabIndex = 24;
@@ -1045,7 +1046,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(19, 117);
+            this.label22.Location = new System.Drawing.Point(8, 312);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 12);
             this.label22.TabIndex = 26;
@@ -1303,6 +1304,14 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
+            // cbbDebugCustom
+            // 
+            this.cbbDebugCustom.FormattingEnabled = true;
+            this.cbbDebugCustom.Location = new System.Drawing.Point(65, 99);
+            this.cbbDebugCustom.Name = "cbbDebugCustom";
+            this.cbbDebugCustom.Size = new System.Drawing.Size(121, 20);
+            this.cbbDebugCustom.TabIndex = 28;
+            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1461,6 +1470,7 @@
         private System.Windows.Forms.LinkLabel linkAboutDelbg;
         private System.Windows.Forms.CheckBox cbIsBlankLink;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox cbbDebugCustom;
     }
 }
 

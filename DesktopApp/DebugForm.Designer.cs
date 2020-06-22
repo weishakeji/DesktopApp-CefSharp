@@ -39,6 +39,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DebugForm";
             this.Load += new System.EventHandler(this.DebugForm_Load);
+            this.Shown += new System.EventHandler(this.DebugForm_Shown);
             this.ResumeLayout(false);
 
         }

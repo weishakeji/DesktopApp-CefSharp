@@ -92,9 +92,14 @@ namespace Confing.Helper
                         {
                             xmlItem.InnerText = tb.Text;
                         }
+                        continue;
                     }
                     //复选框
-                    if (c is CheckBox) xmlItem.InnerText = ((CheckBox)c).Checked.ToString();
+                    if (c is CheckBox)
+                    {
+                        xmlItem.InnerText = ((CheckBox)c).Checked.ToString();
+                        continue;
+                    }
                     //单选框
                     if (c is RadioButton) xmlItem.InnerText = ((RadioButton)c).Checked.ToString();
                     //如果单选框组

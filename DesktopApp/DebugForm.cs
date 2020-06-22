@@ -59,7 +59,8 @@ namespace DesktopApp
             if (form.IsMobile)
             {
                 form.Size = new Size(375 + 14, 667 + 34);
-            }
+            }          
+            
         }
         public ChromiumWebBrowser browser;
         private void DebugForm_Load(object sender, EventArgs e)
@@ -101,8 +102,31 @@ namespace DesktopApp
             browser.DownloadHandler = new Handler.Download();
             browser.TitleChanged += Browser.Browser_TitleChanged;
             browser.TitleChanged += Browser_TitleChanged;
+            browser.IsBrowserInitializedChanged += Browser_IsBrowserInitializedChanged;
+        }
+        /// <summary>
+        /// 浏览器加载初始化事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Browser_IsBrowserInitializedChanged(object sender, IsBrowserInitializedChangedEventArgs e)
+        {
+            if (e.IsBrowserInitialized)
+            {
+                //是否打开调试窗口
+                bool isShowDev = Confing.Gatway.GetBoolean("DebugHelper");
+                if (isShowDev)
+                {
+                    ChromiumWebBrowser cwb = (ChromiumWebBrowser)sender;
+                    cwb.ShowDevTools();
+                }
+            }
         }
 
+        private void DebugForm_Shown(object sender, EventArgs e)
+        {
+            
+        }
         private void Browser_TitleChanged(object sender, TitleChangedEventArgs e)
         {
             //当前浏览器对象
@@ -118,5 +142,7 @@ namespace DesktopApp
             string title = e.Title;
             form.Text = title+" - 功能调试";
         }
+
+        
     }
 }
