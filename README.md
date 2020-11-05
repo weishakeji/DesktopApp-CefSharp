@@ -12,7 +12,7 @@
 * 编译后可以执行的程序在\bin\Debug文件夹。
 * 主程序是DesktopApp.exe
 * 配置所用的程序是 Setup.exe，用于设置DesktopApp打开时的页面，或相关设置；当程序提供给客户时，可以把它删掉。
-* Setup.exe的设置项记录在Confing.xml文件。
+* Confing.xml文件记录Setup.exe的设置项。
 
 ## 开发说明：
 * 解决方案中，共四个项目，一个文件夹Lib，lib中是需要引用的dll文件（不要用Nuget中的官方版本，如前所述，他们的不支持mp4播放）。
@@ -23,7 +23,7 @@
 
 ## 开源地址：
 * GitHub ：<a href="https://github.com/weishakeji/DesktopApp-CefSharp" target="_blank">https://github.com/weishakeji/DesktopApp-CefSharp</a> 
-* Gitee（同步镜像）： <a href="https://gitee.com/weishakeji/LearningSystem" target="_blank">https://gitee.com/weishakeji/LearningSystem</a> 
+* Gitee（同步镜像）： <a href="https://gitee.com/weishakeji/desktop-app-cef-sharp" target="_blank">https://gitee.com/weishakeji/desktop-app-cef-sharp</a> 
 
 
 ## 开发交流：
