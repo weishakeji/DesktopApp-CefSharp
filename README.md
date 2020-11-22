@@ -25,6 +25,8 @@
 * GitHub ：<a href="https://github.com/weishakeji/DesktopApp-CefSharp" target="_blank">https://github.com/weishakeji/DesktopApp-CefSharp</a> 
 * Gitee（同步镜像）： <a href="https://gitee.com/weishakeji/desktop-app-cef-sharp" target="_blank">https://gitee.com/weishakeji/desktop-app-cef-sharp</a> 
 
+## 开发团队：
+郑州微厦计算机科技有限公司
 
 ## 开发交流：
 >QQ交流群：10237400
