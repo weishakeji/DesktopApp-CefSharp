@@ -26,12 +26,11 @@
 * Gitee（同步镜像）： <a href="https://gitee.com/weishakeji/desktop-app-cef-sharp" target="_blank">https://gitee.com/weishakeji/desktop-app-cef-sharp</a> 
 
 ## 开发团队：
->郑州微厦计算机科技有限公司
->QQ交流群：10237400
+* 郑州微厦计算机科技有限公司
+* QQ交流群：10237400
 
 <hr/>
 
-<hr/>
 
 # 其它开源项目：
 <b> 微厦在线学习云服务平台</b>
