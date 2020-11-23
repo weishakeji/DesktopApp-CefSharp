@@ -139,7 +139,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbShow = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.cbbDebugCustom = new System.Windows.Forms.ComboBox();
             cbIsMainBorderNone = new System.Windows.Forms.CheckBox();
             this.tabSetupConfig.SuspendLayout();
             this.tabBase.SuspendLayout();
@@ -941,7 +940,6 @@
             // 
             // tabDebug
             // 
-            this.tabDebug.Controls.Add(this.cbbDebugCustom);
             this.tabDebug.Controls.Add(this.cbDebugHelper);
             this.tabDebug.Controls.Add(this.panelDebugBrowser);
             this.tabDebug.Controls.Add(this.label22);
@@ -1304,14 +1302,6 @@
             this.lbShow.Text = "保存成功！";
             this.lbShow.Visible = false;
             // 
-            // cbbDebugCustom
-            // 
-            this.cbbDebugCustom.FormattingEnabled = true;
-            this.cbbDebugCustom.Location = new System.Drawing.Point(65, 99);
-            this.cbbDebugCustom.Name = "cbbDebugCustom";
-            this.cbbDebugCustom.Size = new System.Drawing.Size(121, 20);
-            this.cbbDebugCustom.TabIndex = 28;
-            // 
             // SetupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1470,7 +1460,6 @@
         private System.Windows.Forms.LinkLabel linkAboutDelbg;
         private System.Windows.Forms.CheckBox cbIsBlankLink;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox cbbDebugCustom;
     }
 }
 
