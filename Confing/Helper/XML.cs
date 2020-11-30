@@ -98,20 +98,18 @@ namespace Confing.Helper
                         }
                         else
                         {
-                            xmlItem.InnerText = tb.Text;
+                            xmlItem.InnerText = tb.Text;                            
                         }
-                        continue;
                     }
                     //复选框
-                    if (c is CheckBox)
-                    {
-                        xmlItem.InnerText = ((CheckBox)c).Checked.ToString();
-                        continue;
-                    }
+                    if (c is CheckBox)                  
+                        xmlItem.InnerText = ((CheckBox)c).Checked.ToString();                 
                     //单选框
-                    if (c is RadioButton) xmlItem.InnerText = ((RadioButton)c).Checked.ToString();
+                    if (c is RadioButton) 
+                        xmlItem.InnerText = ((RadioButton)c).Checked.ToString();
                     //如果单选框组
-                    if (c is Panel) xmlItem.InnerText = Helper.WinForm.GetRadioButton((Panel)c);
+                    if (c is Panel) 
+                        xmlItem.InnerText = Helper.WinForm.GetRadioButton((Panel)c);
                     //如果是图片
                     if (c is PictureBox)
                     {
@@ -171,9 +169,11 @@ namespace Confing.Helper
                     {
                         if (node.Name != c.Name) continue;
                         //获输入框的取值
-                        if (c is TextBox) ((TextBox)c).Text = txt;
+                        if (c is TextBox) 
+                            ((TextBox)c).Text = txt;
                         //复选框
-                        if (c is CheckBox) ((CheckBox)c).Checked = Convert.ToBoolean(txt);
+                        if (c is CheckBox) 
+                            ((CheckBox)c).Checked = Convert.ToBoolean(txt);
                         //单选框
                         if (c is RadioButton) ((RadioButton)c).Checked = Convert.ToBoolean(txt);
                         //如果是图片
