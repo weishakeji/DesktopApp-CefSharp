@@ -48,6 +48,7 @@ namespace DesktopApp
         {
             Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
+            this.statusStrip1.Renderer =new CustomRenderer();
             Setup(this);
         }
         /// <summary>
@@ -113,7 +114,19 @@ namespace DesktopApp
             browser.TitleChanged += Browser.Browser_TitleChanged;
             browser.TitleChanged += Browser_TitleChanged;
             browser.IsBrowserInitializedChanged += Browser_IsBrowserInitializedChanged;
+            browser.AddressChanged += Browser_AddressChanged;
         }
+        /// <summary>
+        /// 当浏览器地址变更时（例如页面跳转了）
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Browser_AddressChanged(object sender, AddressChangedEventArgs e)
+        {           
+            urlStrip.Text = e.Address;
+            urlStrip.ToolTipText = e.Address;
+        }
+
         /// <summary>
         /// 浏览器加载初始化事件
         /// </summary>
@@ -153,6 +166,52 @@ namespace DesktopApp
             form.Text = title+" - 功能调试";
         }
 
-        
+        private void 测试ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChromiumWebBrowser browser = this.browser;
+            IFrame frame = browser.GetMainFrame();
+
+            string t = frame.Name;
+            //frame.ViewSource();
+            frame.GetSourceAsync().ContinueWith(taskHtml =>
+            {
+                var html = taskHtml.Result;
+            });
+        }
+        /// <summary>
+        /// 查看源码
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolBtnShowCode_Click(object sender, EventArgs e)
+        {
+            ChromiumWebBrowser browser = this.browser;
+            IFrame frame = browser.GetMainFrame();
+
+            string t = frame.Name;
+            frame.ViewSource();
+        }
+        /// <summary>
+        /// 打开调试窗
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolBtnDebut_Click(object sender, EventArgs e)
+        {
+            ChromiumWebBrowser cwb = this.browser;
+            cwb.ShowDevTools();
+        }
+    }
+    public class CustomRenderer : ToolStripProfessionalRenderer
+    {
+        protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
+        {
+            if (e.Item is ToolStripStatusLabel)
+                TextRenderer.DrawText(e.Graphics, e.Text, e.TextFont,
+                    e.TextRectangle, e.TextColor, Color.Transparent,
+                    e.TextFormat | TextFormatFlags.EndEllipsis);
+            else
+                base.OnRenderItemText(e);
+        }
     }
 }
