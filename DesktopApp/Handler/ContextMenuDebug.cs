@@ -38,6 +38,7 @@ namespace DesktopApp.Handler
             }
             if (IsAboutMenu)
             {
+                model.AddItem((CefSharp.CefMenuCommand)222, "源码");
                 model.AddItem((CefSharp.CefMenuCommand)223, "调试");
                 model.AddItem((CefSharp.CefMenuCommand)224, "刷新");
             }
@@ -56,6 +57,9 @@ namespace DesktopApp.Handler
             form = (System.Windows.Forms.Form)parent;
             //处理右键事件
             int comid = (int)commandId;
+            //刷新页面
+            if (comid == 222)
+                cwb.ViewSource();
             //打开调试窗，F12
             if (comid == 223)            
                 cwb.ShowDevTools();

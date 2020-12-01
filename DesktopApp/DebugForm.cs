@@ -166,18 +166,6 @@ namespace DesktopApp
             form.Text = title+" - 功能调试";
         }
 
-        private void 测试ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChromiumWebBrowser browser = this.browser;
-            IFrame frame = browser.GetMainFrame();
-
-            string t = frame.Name;
-            //frame.ViewSource();
-            frame.GetSourceAsync().ContinueWith(taskHtml =>
-            {
-                var html = taskHtml.Result;
-            });
-        }
         /// <summary>
         /// 查看源码
         /// </summary>
@@ -185,11 +173,14 @@ namespace DesktopApp
         /// <param name="e"></param>
         private void toolBtnShowCode_Click(object sender, EventArgs e)
         {
-            ChromiumWebBrowser browser = this.browser;
-            IFrame frame = browser.GetMainFrame();
-
+            ChromiumWebBrowser browser = this.browser; 
+            browser.GetSourceAsync().ContinueWith(taskHtml =>
+            {
+                var html = taskHtml.Result;
+            });
+            IFrame frame = browser.GetMainFrame();          
             string t = frame.Name;
-            frame.ViewSource();
+            frame.ViewSource(); 
         }
         /// <summary>
         /// 打开调试窗
